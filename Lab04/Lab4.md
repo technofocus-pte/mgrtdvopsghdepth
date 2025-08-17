@@ -1,4 +1,4 @@
-Lab 04 - Simulate Dry Run Migration of Multiple Repositories from ADO to
+# Lab 04 - Simulate Dry Run Migration of Multiple Repositories from ADO to
 GEC
 
 **Objective**
@@ -13,7 +13,7 @@ actual transfers.
 ### Task 1 : Create an Azure DevOps personal access token
 
 1.  Create an Azure DevOps personal access token (PAT). Open a new tab
-    in your browser and navigate to - <https://portal.azure.com/> and
+    in your browser and navigate to - +++https://portal.azure.com/+++ and
     sign in with assigned account.
 
 2.  Search for **Azure DevOps** and select **Azure DevOps
@@ -86,40 +86,32 @@ content may be incorrect.](./media/image11.png)
 
 1.  Switch back to GitBash and run below commands to create directory..
 
-> mkdir Lab04-MultiRepo && cd Lab04-MultiRepo
->
-> ![A black screen with colorful text AI-generated content may be
-> incorrect.](./media/image13.png)
+ +++mkdir Lab04-MultiRepo && cd Lab04-MultiRepo+++
+
+ ![A black screen with colorful text AI-generated content may be
+ incorrect.](./media/image13.png)
 
 2.  Run below script to create repositories
+``for repo in repo1 repo2 repo3
+do
+  mkdir $repo && cd $repo
+  git init
+  echo "# $repo for migration" > README.md
+  git add . && git commit -m "Initial commit for $repo"
+  cd ..
+done``
 
-> for repo in repo1 repo2 repo3
->
-> do
->
-> mkdir $repo && cd $repo
->
-> git init
->
-> echo "# $repo for migration" \> README.md
->
-> git add . && git commit -m "Initial commit for $repo"
->
-> cd ..
->
-> done
->
-> ![A screen shot of a computer program AI-generated content may be
-> incorrect.](./media/image14.png)
+
+ ![A screen shot of a computer program AI-generated content may be  incorrect.](./media/image14.png)
 
 3.  **Open GitBash from Desktop and run below command to navigate to the
     project repo and commit changes**
 
-git init
++++git init+++
 
-git add .
++++git add .+++
 
-git commit -m "Lab 04 multi repo migration lab"
++++git commit -m "Lab 04 multi repo migration lab"+++
 
 ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image15.png)
@@ -127,7 +119,7 @@ incorrect.](./media/image15.png)
 4.  **Switch back to GitBash and run below command to sign into Azure.
     Sign in with your Azure subscription account.**
 
-**az login**
++++az login+++
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image16.png)
@@ -137,10 +129,10 @@ incorrect.](./media/image17.png)
 
 ### Task 3 : Create Repos in Azure DevOps
 
-1.  Go to your Azure DevOps -\>
-    **devopmultirepo-\>multirepo-proj**![](./media/image18.png)
+1.  Go to your Azure DevOps ->     **devopmultirepo-\>multirepo-proj**
+2. ![](./media/image18.png)
 
-2.  Navigate to **Repos** → Click the repo dropdown → **New Repository**
+3.  Navigate to **Repos** → Click the repo dropdown → **New Repository**
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image19.png)
@@ -148,11 +140,11 @@ incorrect.](./media/image19.png)
 3.  Create the following repositories (leave default settings): Do NOT
     add README/gitignore here, as your local repos already have those.
 
-- repo1
+- +++repo1+++
 
-- repo2
+- +++repo2+++
 
-- repo3
+- +++repo3+++
 
 ![](./media/image20.png)
 
@@ -169,41 +161,35 @@ incorrect.](./media/image19.png)
 1.  Switch back to GitBash.Replace origin url with your repo urls and
     run the commands
 
-**cd repo1**
++++cd repo1+++
 
-**git remote add origin
-https://dev.azure.com/devopmultirepo/multirepo-proj/\_git/repo1**
++++git remote add origin https://dev.azure.com/devopmultirepo/multirepo-proj/_git/repo1+++
 
-**git push -u origin --all**
++++git push -u origin --all+++
 
-**cd ..**
++++cd ..+++
+
 
 ![](./media/image25.png)
 
 2.  Run below commands to push repo2
 
-**cd repo2**
++++cd repo2+++
++++git remote add origin https://dev.azure.com/devopmultirepo/multirepo-proj/_git/repo2+++
++++git push -u origin --all+++
++++cd ..+++
 
-**git remote add origin
-https://dev.azure.com/devopmultirepo/multirepo-proj/\_git/repo2**
-
-**git push -u origin --all**
-
-**cd ..**
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image26.png)
 
 3.  Run below commands to push repo3
 
-**cd repo3**
++++cd repo3+++
++++git remote add origin https://dev.azure.com/devopmultirepo/multirepo-proj/_git/repo3+++
++++git push -u origin --all+++
++++cd ..+++
 
-**git remote add origin
-https://dev.azure.com/devopmultirepo/multirepo-proj/\_git/repo3**
-
-**git push -u origin --all**
-
-**cd ..**
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image27.png)
@@ -221,9 +207,9 @@ incorrect.](./media/image29.png)
 
 1.  Update below commands with your ADO’sPAT and GitHub’s PAT and run
 
-export AZURE_DEVOPS_PAT=your_ado_pat_here
++++export AZURE_DEVOPS_PAT=your_ado_pat_here+++
 
-export GH_PAT=your_github_pat_here
++++export GH_PAT=your_github_pat_here+++
 
 ![A black screen with colorful text AI-generated content may be
 incorrect.](./media/image30.png)
@@ -232,7 +218,7 @@ incorrect.](./media/image30.png)
     then save the file. This CSV acts as the migration map to control
     which ADO repos go to which GitHub repos.
 
-vi repo-dryrun-map.csv
++++vi repo-dryrun-map.csv+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image31.png)
@@ -241,13 +227,11 @@ incorrect.](./media/image31.png)
     ado_org,ado_project,ado_repo,github_org,github_repo with your
     values) (Esc +wq and press enter)
 
-ado_org,ado_project,ado_repo,github_org,github_repo
+``ado_org,ado_project,ado_repo,github_org,github_repo
+https://dev.azure.com/devopmultirepo,multirepo-proj,repo1,devopstogtihub,repo1-migrated
+https://dev.azure.com/devopmultirepo,multirepo-proj,repo2,devopstogtihub,repo2-migrated
+https://dev.azure.com/devopmultirepo,multirepo-proj,repo3,devopstogtihub,repo3-migrated``
 
-https://dev.azure.com/devopmultirepo,**multirepo-proj**,repo1,**devopstogtihub**,repo1-migrated
-
-https://dev.azure.com/devopmultirepo,**multirepo-proj**,repo2,**devopstogtihub**,repo2-migrated
-
-https://dev.azure.com/devopmultirepo,**multirepo-proj**,repo3,**devopstogtihub**,repo3-migrated
 
 ![A computer screen shot of a black screen AI-generated content may be
 incorrect.](./media/image32.png)
@@ -255,66 +239,45 @@ incorrect.](./media/image32.png)
 4.  Create another file with the name **dryrun-multi.sh** . Each
     migration will be queued in dry-run mode
 
-vi **dryrun-multi.sh**
++++vi dryrun-multi.sh+++
 
 ![A computer screen with white text AI-generated content may be
 incorrect.](./media/image33.png)
 
 5.  Add the below code to it and save the file (Esc +wq and press enter)
 
-\#!/bin/bash
-
+``#!/bin/bash
 echo " Starting Dry Run Migration for Multiple Repos"
-
-\# Skip header
-
-tail -n +2 repo-dryrun-map.csv | while IFS=',' read -r ado_org
-ado_project ado_repo github_org github_repo
-
+# Skip header
+tail -n +2 repo-dryrun-map.csv | while IFS=',' read -r ado_org ado_project ado_repo github_org github_repo
 do
-
-\# Skip empty lines
-
-if \[\[ -z "$ado_repo" || -z "$github_repo" \]\]; then
-
-continue
-
-fi
-
-echo "Migrating $ado_repo ➜ $github_repo"
-
-gh ado2gh migrate-repo \\
-
---ado-org "$ado_org" \\
-
---ado-team-project "$ado_project" \\
-
---ado-repo "$ado_repo" \\
-
---github-org "$github_org" \\
-
---github-repo "$github_repo" \\
-
---ado-pat "$AZURE_DEVOPS_PAT" \\
-
---github-pat "$GH_PAT" \\
-
---queue-only
-
-echo "Dry Run Queued for $ado_repo"
-
-echo "--------------------------------------"
-
+  # Skip empty lines
+  if [[ -z "$ado_repo" || -z "$github_repo" ]]; then
+    continue
+  fi
+  echo "Migrating $ado_repo ➜ $github_repo"
+  gh ado2gh migrate-repo \
+    --ado-org "$ado_org" \
+    --ado-team-project "$ado_project" \
+    --ado-repo "$ado_repo" \
+    --github-org "$github_org" \
+    --github-repo "$github_repo" \
+    --ado-pat "$AZURE_DEVOPS_PAT" \
+    --github-pat "$GH_PAT" \
+    --queue-only
+  echo "Dry Run Queued for $ado_repo"
+  echo "--------------------------------------"
 done
+``
 
 ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image34.png)
 
 6.  Run below commands to allow script to run
 
-chmod +x dryrun-multi.sh
++++chmod +x dryrun-multi.sh+++
 
-./dryrun-multi.sh
++++./dryrun-multi.sh+++
 
 ![](./media/image35.png)
 
@@ -344,3 +307,4 @@ In this lab, you learnt:
 
 6.  **Validate that each migration has been queued**, and optionally
     monitor results via gh ado2gh wait-for-migration and logs.
+
