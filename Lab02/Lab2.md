@@ -21,7 +21,7 @@ to set up metadata, permissions, security, and insights.
 1.  Switch back to GitBah and run below command. This opens the repo in
     browser.
 
-gh repo view devopstogtihub/dev-github-proj-migrated-trial –web
++++gh repo view devopstogtihub/dev-github-proj-migrated-trial –web+++
 
 ![A black screen with white text AI-generated content may be
 incorrect.](./media/image1.png)
@@ -54,19 +54,17 @@ incorrect.](./media/image4.png)
 
 2.  Switch back to GitBash and run below command .
 
-gh repo edit devopstogtihub/dev-github-proj-migrated-trial --description
-"Migrated repo: Exploring GitHub settings" --add-topic migration
---add-topic github-enterprise --add-topic training
+``gh repo edit devopstogtihub/dev-github-proj-migrated-trial --description "Migrated repo: Exploring GitHub settings" --add-topic migration
+--add-topic github-enterprise --add-topic training``
 
 ![](./media/image5.png)
 
-Note : Use relevant topics that reflect the project purpose (e.g.,
-data-science, migrated-repo, azure, gei, etc.).
+>Note : Use relevant topics that reflect the project purpose (e.g.,data-science, migrated-repo, azure, gei, etc.).
 
 3.  Run this command in Git Bash to open the repository in your browser.
     This will open the repo's **homepage on GitHub**
 
-gh repo view devopstogtihub/dev-github-proj-migrated-trial –web
++++gh repo view devopstogtihub/dev-github-proj-migrated-trial –web+++
 
 ![](./media/image6.png)
 
@@ -83,9 +81,8 @@ gh repo view devopstogtihub/dev-github-proj-migrated-trial –web
     repo. Assigns them the **Write** permission (they can push changes,
     but not manage repo settings)
 
-gh api -X PUT -H "Accept: application/vnd.github+json"
-repos/devopstogtihub/dev-github-proj-migrated-trial/collaborators/GITHUB_USERNAME
--f permission=write
+``gh api -X PUT -H "Accept: application/vnd.github+json" repos/devopstogtihub/dev-github-proj-migrated-trial/collaborators/GITHUB_USERNAME
+-f permission=write``
 
 ![A computer screen with green and blue text AI-generated content may be
 incorrect.](./media/image8.png)
@@ -99,8 +96,7 @@ incorrect.](./media/image10.png)
 3.  Ask your team mate fi they got invitation and ask them to
     authenticate
 
-> ![A screenshot of a web page AI-generated content may be
-> incorrect.](./media/image11.png)
+ ![A screenshot of a web page AI-generated content may be incorrect.](./media/image11.png)
 
 4.  Your team mate should have access to write permission to the repo
 
@@ -108,7 +104,7 @@ incorrect.](./media/image10.png)
 incorrect.](./media/image12.png)
 
 5.  Switch back to your GitHub account and the migrate repo . Click on
-    **Settings -\>** **Collaborators and Teams** and you should see your
+    **Settings ->** **Collaborators and Teams** and you should see your
     team mate name under Manage access section with correct role.
 
 ![](./media/image13.png)
@@ -166,3 +162,4 @@ incorrect.](./media/image20.png)
 
 - Ensured the repository is ready for collaboration and compliant with
   common DevOps standards
+
