@@ -35,7 +35,7 @@ Ensure the following before you start:
 
 ###  Task 1 : Start GitHub Enterprise Cloud Free Trial
 
-1.  Open a browser and go to <https://github.com/enterprise/trial> and
+1.  Open a browser and go to +++https://github.com/enterprise/trial+++ and
     click on sign in. sign in with your GitHub account.
 
 ![](./media/image1.png)
@@ -52,7 +52,7 @@ Ensure the following before you start:
 
     1.  Enterprise name : **tfdevops-migr**
 
-    2.  Enterprise URL slug : tfdevops-migr
+    2.  Enterprise URL slug : +++tfdevops-migr+++
 
     3.  Industry : education (you can select as per your requirement)
 
@@ -93,7 +93,7 @@ incorrect.](./media/image8.png)
 
 1.  Open Powershell as administrator.
 
-winget install --id GitHub.cli
++++winget install --id GitHub.cli+++
 
 ![](./media/image11.png)
 
@@ -105,7 +105,7 @@ may be incorrect.](./media/image12.png)
 3.  By default, GitHub CLI is installed in below location. Add GitHub
     CLI to system PATH
 
-> C:\Program Files\GitHub CLI
+ +++C:\Program Files\GitHub CLI+++
 
 4.  Press **Win + S** and search for **Environment Variables** and
     select **Edit the system environment variables**
@@ -125,15 +125,15 @@ may be incorrect.](./media/image12.png)
 7.  Click **New** and **add** GitHub CLI path and then click
     **OK-\>OK-\>OK**.
 
-> C:\Program Files\GitHub CLI
->
-> ![](./media/image16.png)
++++C:\Program Files\GitHub CLI+++
+
+ ![](./media/image16.png)
 
 8.  Restart the PowerShell and run below command login.
 
-gh --version
++++gh --version+++
 
-gh auth login
++++gh auth login+++
 
 ![A computer screen with white text AI-generated content may be
 incorrect.](./media/image17.png)
@@ -168,7 +168,7 @@ be incorrect.](./media/image23.png)
 
 12. After login, confirm by running:
 
-gh auth status
++++gh auth status+++
 
 ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image24.png)
@@ -177,7 +177,7 @@ incorrect.](./media/image24.png)
     properly authenticated and ready.Replace ORG-NAME with your
     organization name and then run it.
 
-> gh repo list ORG-NAME
+  +++gh repo list ORG-NAME+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image25.png)
@@ -186,19 +186,21 @@ incorrect.](./media/image25.png)
 
 1.  Run below command to install GitHub Enterprise importer extension.
 
-Gh extension install github/gh-gei ![A screen shot of a computer
++++gh extension install github/gh-gei+++
+
+![A screen shot of a computer
 AI-generated content may be incorrect.](./media/image26.png)
 
 2.  Confirm installation:
 
-> gh gei -h
+ +++gh gei -h+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image27.png)
 
 3.  Verify installation:
 
-gh gei --help
++++gh gei --help+++
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image28.png)
@@ -206,7 +208,7 @@ incorrect.](./media/image28.png)
 ### Task 4 : Create an Azure DevOps personal access token
 
 1.  Create an Azure DevOps personal access token (PAT). Open a new tab
-    in your browser and navigate to - <https://portal.azure.com/> and
+    in your browser and navigate to - +++https://portal.azure.com/+++ and
     sign in with assigned account.
 
 2.  Search for **Azure DevOps** and select **Azure DevOps
@@ -230,7 +232,7 @@ incorrect.](./media/image31.png)
 ![A screenshot of a computer error AI-generated content may be
 incorrect.](./media/image32.png)
 
-6.  Enter the organization name as : **tffabrikamXXX** (should be
+6.  Enter the organization name as : +++tffabrikamXXX+++ (should be
     unique, replace XXX with number)enter the characters shown in your
     screen and then click on **Continue**.
 
@@ -296,23 +298,23 @@ incorrect.](./media/image37.png)
 1.  **Open GitBash from Desktop and run below command to navigate to the
     project repo.**
 
-**cd “C:\LabFiles\azure-search-openai-demo”**
++++cd “C:\LabFiles\azure-search-openai-demo”+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image38.png)
 
 2.  **Run below commands to push the repo.**
 
-git init
++++git init+++
 
-git add .
++++git add .+++
 
-git commit -m "Initial commit for migration lab"
++++git commit -m "Initial commit for migration lab"+++
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image39.png)
 
-3.  **Click on** Repos- \> File **from left navigation menu.**
+3.  **Click on** Repos- > File **from left navigation menu.**
 
 ![](./media/image40.png)
 
@@ -325,7 +327,7 @@ incorrect.](./media/image39.png)
 5.  **Switch back to GitBash and run below command to sign into Azure.
     Sign in with your Azure subscription account.**
 
-**az login**
++++az login+++
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image42.png)
@@ -334,24 +336,24 @@ incorrect.](./media/image42.png)
 incorrect.](./media/image43.png)
 
 6.  **Run below command to push local folder to Azure Devops .(Replace
-    <https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj>
+    https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj
     with your org link )**
 
-> git remote add origin **https://dev.azure.com/dev2gthubmigr/dev-github-proj/\_git/dev-github-proj**
->
-> **https://dev.azure.com/newdevorg123/newdev_proj/\_git/dev-github-proj**
->
+ +++git remote add origin https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj+++
+
+ **https://dev.azure.com/newdevorg123/newdev_proj/\_git/dev-github-proj**
+
 > ![A screen shot of a computer code AI-generated content may be
 > incorrect.](./media/image44.png)
 
 7.  **Run below commands to pull remote repos.**
 
-> **git pull origin main --allow-unrelated-histories**
+ +++git pull origin main --allow-unrelated-histories+++
 
 8.  **Run below command to push the repo to Devops . it prompts you to
     sign in . sign in with your Devops account.**
 
-> git push -u origin --all
+ +++git push -u origin --all+++
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image45.png)
@@ -368,7 +370,7 @@ and resolve conflict – 1. Pull from DevOps with unrelated history:**
 conflicts in files like .gitignore, README.md. Step 3 : Stage the
 resolved files - git add .**
 
-**git commit -m "Resolved merge conflicts"**
++++git commit -m "Resolved merge conflicts"+++
 
 9.  **Go back to Azure Devops project and check Repos-\> Files .You
     should see your repo here .**
@@ -407,20 +409,19 @@ incorrect.](./media/image48.png)
 1.  Switch back to GitBash. Run the following commands in your terminal
     (replace with your real tokens):
 
-export GH_PAT=ghp_yourgithubpat
++++export GH_PAT=ghp_yourgithubpat+++
 
-export AZURE_DEVOPS_PAT=youradopat
++++export AZURE_DEVOPS_PAT=youradopat+++
 
-export AZURE_DEVOPS_source_ORG=yourdevopsorg
++++export AZURE_DEVOPS_source_ORG=yourdevopsorg+++
 
-export AZURE_GITHUB_target_org=yourenterprisegithuborg
++++export AZURE_GITHUB_target_org=yourenterprisegithuborg+++
 
 ![](./media/image54.png)
 
 2.  Run below command to provide migrator role
 
-gh gei grant-migrator-role --github-org devopstogtihub --actor
-chintharlamanjula --actor-type USER
++++gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER+++
 
 ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image55.png)
@@ -437,21 +438,15 @@ incorrect.](./media/image55.png)
     your org url and run the command and devopstogithub-org- your GitHub
     **org name**
 
-gh ado2gh migrate-repo --ado-org dev2gthubmigr --ado-team-project
-dev-github-proj --ado-repo dev-github-proj --github-org devopstogtihub
---github-repo dev-github-proj-migrated-trial --ado-pat $AZURE_DEVOPS_PAT
---github-pat $GH_PAT --queue-only
+``gh ado2gh migrate-repo --ado-org dev2gthubmigr --ado-team-project dev-github-proj --ado-repo dev-github-proj --github-org devopstogtihub
+--github-repo dev-github-proj-migrated-trial --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only``
 
 ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image56.png)
 
-gh ado2gh wait-for-migration --migration-id RM_xxxxxx --github-pat
-$GH_PAT
+>gh ado2gh wait-for-migration --migration-id RM_xxxxxx --github-pat $GH_PAT
 
-gh ado2gh wait-for-migration --migration-id
-RM_kgDaACQxMjM5YzNkOC02MzFmLTRjM2EtODU2Yy02NDFmMWZiM2U2OTE
-
---github-pat $GH_PAT
+``gh ado2gh wait-for-migration --migration-id RM_kgDaACQxMjM5YzNkOC02MzFmLTRjM2EtODU2Yy02NDFmMWZiM2U2OTE --github-pat $GH_PAT``
 
 ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image57.png)
@@ -478,3 +473,4 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
