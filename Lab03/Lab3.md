@@ -1,5 +1,4 @@
-Lab 3 – Monitoring GitHub Repository Activity and Security Using Audit
-Logs & Insights
+# Lab 3 – Monitoring GitHub Repository Activity and Security Using Audit Logs & Insights
 
 ### Objective
 
@@ -29,7 +28,7 @@ Before starting, ensure:
 1.  Switch back to GitHub and replace devopstogtihub with your GitHub
     org name and run it (eg : gh api orgs/devopstogtihub/audit-log)
 
-gh api orgs/\<YOUR_GITHUB_GEC_ORGNAME\>/audit-log
++++gh api orgs/<YOUR_GITHUB_GEC_ORGNAME>/audit-log+++
 
 ![A screen shot of a computer screen AI-generated content may be
 incorrect.](./media/image1.png)
@@ -37,8 +36,7 @@ incorrect.](./media/image1.png)
 2.  You can use this link to checl logs in browser eg-
     [https://github.com/organizations/\<YOURGIHUBT_GEC_ORG\>/settings/audit-log](https://github.com/organizations/%3cYOURGIHUBT_GEC_ORG%3e/settings/audit-log)
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image2.png)
+ ![A screenshot of a computer AI-generated content may be > incorrect.](./media/image2.png)
 
 ### Task 2: Filter Audit Log for Specific Events
 
@@ -48,7 +46,7 @@ incorrect.](./media/image1.png)
 2.  Run below command ton refresh Auth for Enterprise Audit Access.enter
     y to stat authorization and copy the code and then press enter
 
-gh auth refresh -h github.com -s admin:enterprise
++++gh auth refresh -h github.com -s admin:enterprise+++
 
 ![](./media/image3.png)
 
@@ -72,15 +70,14 @@ incorrect.](./media/image7.png)
 
 6.  Run below command to check view Enterprise-Wide Audit Log
 
-gh api enterprises/YOUR-ENTERPRISE-account/audit-log
++++gh api enterprises/YOUR-ENTERPRISE-account/audit-log+++
 
 ![A screen shot of a computer screen AI-generated content may be
 incorrect.](./media/image8.png)
 
 7.  Run below command using filter
 
-gh api enterprises/YOUR-ENTERPRISE-SLUG/audit-log --jq '.\[\] |
-select(.action=="repo.create")'
++++gh api enterprises/YOUR-ENTERPRISE-SLUG/audit-log --jq '.[] | select(.action=="repo.create")'+++
 
 ![A black background with colorful text AI-generated content may be
 incorrect.](./media/image9.png)
@@ -165,3 +162,4 @@ By completing this lab, you:
 
 - Strengthened your GitHub observability, transparency, and compliance
   skills
+
