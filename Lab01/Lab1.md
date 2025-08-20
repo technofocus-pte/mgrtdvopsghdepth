@@ -40,7 +40,7 @@ Ensure the following before you start:
 
 ![](./media/image1.png)
 
-2.  Click on **Start your free trial.**
+2. Open a new tab and go to +++https://github.com/enterprise/trial+++. Click on **Start your free trial.**
 
 ![](./media/image2.png)
 
@@ -473,5 +473,6 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
