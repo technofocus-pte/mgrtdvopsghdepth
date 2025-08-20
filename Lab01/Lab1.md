@@ -78,9 +78,9 @@ incorrect.](./media/image4.png)
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image8.png)
 
-![](./media/image9.png)
+7. Click on **People** tab to check the license 
 
-7.  Click on 0 roles link under Membership column as shown in below  image.
+![](./media/image9.png)
 
 ![](./media/image10.png)
 
@@ -468,6 +468,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
