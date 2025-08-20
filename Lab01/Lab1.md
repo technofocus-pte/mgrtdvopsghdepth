@@ -86,9 +86,9 @@ incorrect.](./media/image8.png)
 
 ### Task 2 – Install and Authenticate GitHub CLI
 
-1.  Open Powershell as administrator.
+1.  From Start menu ,search for +++Powershell++ and run Powershell as administrator.
 
-+++winget install --id GitHub.cli+++
+``winget install --id GitHub.cli``
 
 ![](./media/image11.png)
 
@@ -102,8 +102,7 @@ may be incorrect.](./media/image12.png)
 
  +++C:\Program Files\GitHub CLI+++
 
-4.  Press **Win + S** and search for **Environment Variables** and
-    select **Edit the system environment variables**
+4.  in Start menu search for +++Environment Variables+++ and select **Edit the system environment variables**
 
 ![](./media/image13.png)
 
@@ -139,13 +138,19 @@ incorrect.](./media/image17.png)
 
     2.  Select **HTTPS**
 
-    3.  Authenticate via browser
+    3.  Authenticate git wiht your GitHub credentials :Yes
+    4.  Login with a browser
+    5.  Copy the generated code and press enter to device login in a browser
+    6.  Sign in with your GitHub credntials.
+       
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image18.png)
 
 ![A computer screen shot of a black screen AI-generated content may be
 incorrect.](./media/image19.png)
+
+10. Enter the copied code and then click on **Continue** button
 
 ![](./media/image20.png)
 
@@ -168,9 +173,7 @@ be incorrect.](./media/image23.png)
 ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image24.png)
 
-13. Verify GEC Org Admin Permissions. If you can list org repos, you’re
-    properly authenticated and ready.Replace ORG-NAME with your
-    organization name and then run it.
+13. Verify GEC Org Admin Permissions. If you can list org repos, you’re properly authenticated and ready.Replace ORG-NAME with your organization name and then run it. ( eg : GitHub organization name is -devopstogtihubXXXX-XXXX is unique number)
 
   +++gh repo list ORG-NAME+++
 
@@ -202,17 +205,20 @@ incorrect.](./media/image28.png)
 
 ### Task 4 : Create an Azure DevOps personal access token
 
-1.  Create an Azure DevOps personal access token (PAT). Open a new tab
-    in your browser and navigate to - +++https://portal.azure.com/+++ and
-    sign in with assigned account.
+1.  Create an Azure DevOps personal access token (PAT). Open a new tab in your browser and navigate to - +++https://portal.azure.com/+++ and sign in with your cloud slice account.
 
-2.  Search for **Azure DevOps** and select **Azure DevOps
-    organizations**.
+   •	Username: +++@lab.CloudPortalCredential(User1).Username+++  
+   
+    •	Password: +++@lab.CloudPortalCredential(User1).Password+++
+
+2. Cancel "Welcome to Microsoft Azure" window
+   
+3. Enter  +++Azure DevOps+++ in the search bar and select **Azure DevOps organizations**.
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image29.png)
 
-3.  Click on **My Azure DevOps Organization** hyper link.
+3.  Click on **My Azure DevOps Organizations** hyper link.
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image30.png)
@@ -227,15 +233,13 @@ incorrect.](./media/image31.png)
 ![A screenshot of a computer error AI-generated content may be
 incorrect.](./media/image32.png)
 
-6.  Enter the organization name as : +++tffabrikamXXX+++ (should be
-    unique, replace XXX with number)enter the characters shown in your
+6.  Enter the organization name as : +++tffabrikam@lab.LabInstance.Id+++ enter the characters shown in your
     screen and then click on **Continue**.
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image33.png)
 
-7.  In the top right corner of the screen, click **User settings**.
-    Click **Personal access tokens**.
+7.  In the top right corner of the screen, click **User settings**. Click **Personal access tokens**.
 
 ![](./media/image34.png)
 
@@ -290,8 +294,7 @@ incorrect.](./media/image37.png)
 
 ### Task 5 : Push Repo in Azure DevOps
 
-1.  **Open GitBash from Desktop and run below command to navigate to the
-    project repo.**
+1.  **Open GitBash from Desktop and run below command to navigate to the project repo.**
 
 +++cd “C:\LabFiles\azure-search-openai-demo”+++
 
@@ -313,9 +316,7 @@ incorrect.](./media/image39.png)
 
 ![](./media/image40.png)
 
-4.  Under section **Initialize main branch with a README or gitignore**
-    , select **Add a README** check box and **Python** from **Add a
-    .gitignore ** drop down and then click on **Initialize.**
+4.  Under section **Initialize main branch with a README or gitignore** , select **Add a README** check box and **Python** from **Add a .gitignore ** drop down and then click on **Initialize.**
 
 ![](./media/image41.png)
 
@@ -330,13 +331,11 @@ incorrect.](./media/image42.png)
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image43.png)
 
-6.  **Run below command to push local folder to Azure Devops .(Replace
-    https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj
-    with your org link )**
+6.  **Run below command to push local folder to Azure Devops .(Replace https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj with your org link )**
 
  +++git remote add origin https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj+++
 
- **https://dev.azure.com/newdevorg123/newdev_proj/\_git/dev-github-proj**
+ **https://dev.azure.com/newdevorg123/newdev_proj/_git/dev-github-proj**
 
 > ![A screen shot of a computer code AI-generated content may be
 > incorrect.](./media/image44.png)
@@ -345,8 +344,7 @@ incorrect.](./media/image43.png)
 
  +++git pull origin main --allow-unrelated-histories+++
 
-8.  **Run below command to push the repo to Devops . it prompts you to
-    sign in . sign in with your Devops account.**
+8.  **Run below command to push the repo to Devops . it prompts you to sign in . sign in with your Devops account.**
 
  +++git push -u origin --all+++
 
@@ -359,16 +357,11 @@ incorrect.](./media/image46.png)
 ![A computer screen shot of a computer code AI-generated content may be
 incorrect.](./media/image47.png)
 
-**Note : If you already have repo in Devops then follow steps to pull
-and resolve conflict – 1. Pull from DevOps with unrelated history:**
-**git pull origin main --allow-unrelated-histories Step 2 : Resolve
-conflicts in files like .gitignore, README.md. Step 3 : Stage the
-resolved files - git add .**
+**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
 
 +++git commit -m "Resolved merge conflicts"+++
 
-9.  **Go back to Azure Devops project and check Repos-\> Files .You
-    should see your repo here .**
+9.  **Go back to Azure Devops project and check Repos-\> Files .You should see your repo here .**
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image48.png)
@@ -383,15 +376,14 @@ incorrect.](./media/image48.png)
 
 ![](./media/image50.png)
 
-3.  **Click on Personal Access Tokens-\>Tokens(classic)-\> Generate new
+3.  **Click on Personal Access Tokens->Tokens(classic)-> Generate new
     token(Classic)**
 
 ![](./media/image51.png)
 
-4.  **Enter the token name -** **githubtoken-test and keep all default
-    values .**
+4.  **Enter the token name -** **githubtoken-test and keep all default values .**
 
-5.  **Click on Generate token -\> Generate token.**
+5.  **Click on Generate token -> Generate token.**
 
 ![](./media/image52.png)
 
@@ -433,20 +425,19 @@ incorrect.](./media/image55.png)
     your org url and run the command and devopstogithub-org- your GitHub
     **org name**
 
-``gh ado2gh migrate-repo --ado-org dev2gthubmigr --ado-team-project dev-github-proj --ado-repo dev-github-proj --github-org devopstogtihub
---github-repo dev-github-proj-migrated-trial --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only``
+``gh ado2gh migrate-repo --ado-org dev2gthubmigr --ado-team-project dev-github-proj --ado-repo dev-github-proj --github-org devopstogtihub --github-repo dev-github-proj-migrated-trial --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only``
 
 ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image56.png)
 
->gh ado2gh wait-for-migration --migration-id RM_xxxxxx --github-pat $GH_PAT
+``gh ado2gh wait-for-migration --migration-id RM_xxxxxx --github-pat $GH_PAT``
 
 ``gh ado2gh wait-for-migration --migration-id RM_kgDaACQxMjM5YzNkOC02MzFmLTRjM2EtODU2Yy02NDFmMWZiM2U2OTE --github-pat $GH_PAT``
 
 ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image57.png)
 
-6.  Switch back to Github GEC -\> organization and you should see repo
+6.  Switch back to Github GEC -> organization and you should see repo
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image58.png)
@@ -468,6 +459,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
