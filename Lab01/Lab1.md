@@ -50,15 +50,13 @@ Ensure the following before you start:
 
 4.  Enter below values and then click on **Create enterprise.**
 
-    1.  Enterprise name : **tfdevops-migr**
+    1.  Enterprise name : +++tfdevops-migrXXXX+++ (replace XXXX with unique number)
 
-    2.  Enterprise URL slug : +++tfdevops-migr+++
+    2.  Industry : education (you can select as per your requirement)
 
-    3.  Industry : education (you can select as per your requirement)
+    4.  Number of employees :0-50
 
-    4.  Number of employees 
-
-    5.  Etner Contact information
+    5.  Enter Contact information : Your user name as Admin name and your GitHub account email id as Admin work email
 
     6.  Verify account
 
@@ -73,9 +71,7 @@ incorrect.](./media/image4.png)
 
 ![](./media/image6.png)
 
-6.  Etner **Organization account name :** **devopstogtihub or
-    acme-devops-migration** and click on **Create organization and
-    continue** button.
+6.  Enter **Organization account name :** +++devopstogtihubXXXX+++ (replace XXXX with unique number ) and click on **Create organization and continue** button.
 
 ![](./media/image7.png)
 
@@ -84,8 +80,7 @@ incorrect.](./media/image8.png)
 
 ![](./media/image9.png)
 
-7.  Click on 0 roles link under Membership column as shown in below
-    image.
+7.  Click on 0 roles link under Membership column as shown in below  image.
 
 ![](./media/image10.png)
 
@@ -473,6 +468,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
