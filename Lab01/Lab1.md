@@ -23,7 +23,7 @@ Ensure the following before you start:
 
 - Azure DevOps project and repo access
 
-- GitHub CLI installed (https://cli.github.com)
+- GitHub CLI installed +++https://cli.github.com+++
 
 - GitHub Enterprise Importer CLI (gh-gei) installed
 
@@ -473,4 +473,5 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
