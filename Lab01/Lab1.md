@@ -335,7 +335,7 @@ incorrect.](./media/image43.png)
 
 6.  **Run below command to push local folder to Azure Devops .(Replace https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj with your org link )**
 
- +++git remote add origin https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj+++
+ +++git remote set-url origin https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj+++
 
  **https://dev.azure.com/newdevorg123/newdev_proj/_git/dev-github-proj**
 
@@ -461,6 +461,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
