@@ -173,7 +173,7 @@ be incorrect.](./media/image23.png)
 ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image24.png)
 
-13. Verify GEC Org Admin Permissions. If you can list org repos, you’re properly authenticated and ready.Replace ORG-NAME with your organization name and then run it. ( eg : GitHub organization name is -devopstogtihubXXXX-XXXX is unique number)
+13. Verify GEC Org Admin Permissions. If you can list org repos, you’re properly authenticated and ready.Replace ORG-NAME with your organization name and then run it. ( eg : GitHub organization name is - +++devopstogtihubXXXX+++-XXXX is unique number)
 
   +++gh repo list ORG-NAME+++
 
@@ -189,19 +189,13 @@ incorrect.](./media/image25.png)
 ![A screen shot of a computer
 AI-generated content may be incorrect.](./media/image26.png)
 
-2.  Confirm installation:
+2.  Run below command to verify installation:
 
  +++gh gei -h+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image27.png)
 
-3.  Verify installation:
-
-+++gh gei --help+++
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image28.png)
 
 ### Task 4 : Create an Azure DevOps personal access token
 
@@ -301,7 +295,14 @@ incorrect.](./media/image37.png)
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image38.png)
 
-2.  **Run below commands to push the repo.**
+2.	Replace you@example.com with your GitHub account and Your Name to be replaced with your Github account username in the below commands and run them.
+   
++++git config --global user.email "you@example.com"+++
++++git config --global user.name "Your Name"+++
+
+<img width="1528" height="564" alt="image" src="https://github.com/user-attachments/assets/628fdb93-913a-4a2e-ae21-9cd47b11e38c" />
+
+2.  Run below commands to push the repo.
 
 +++git init+++
 
@@ -459,6 +460,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
