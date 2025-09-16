@@ -20,55 +20,52 @@ To do this, you:
 1.  Open Powershell as administrator from tool bar and run below command
     to install GitHub Cli
 
-winget install --id GitHub.cli
+  +++winget install --id GitHub.cli+++
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image1.png)
 
-![A computer screen shot of a blue screen AI-generated content may be
+  ![A computer screen shot of a blue screen AI-generated content may be
 incorrect.](./media/image2.png)
 
 2.  Close the PowerShell window.
 
-3.  By default, GitHub CLI is installed in below location. Add GitHub
-    CLI to system PATH
+3.  By default, GitHub CLI is installed in below location. Add GitHubCLI to system PATH
 
-> C:\Program Files\GitHub CLI
+  +++C:\Program Files\GitHub CLI+++
 
 4.  Press **Win + S** and search for **Environment Variables** and
     select **Edit the system environment variables**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image3.png)
 
 5.  In the **System Properties** window, click **Environment
     Variables**.
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image4.png)
 
 6.  Under **System variables**, find and select **Path**, then
     click **Edit**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image5.png)
 
-7.  Click **New** and **add** GitHub CLI path and then click
-    **OK-\>OK-\>OK**.
+7.  Click **New** and **add** GitHub CLI path and then click  **OK-\>OK-\>OK**.
 
-> C:\Program Files\GitHub CLI
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image6.png)
+  +++C:\Program Files\GitHub CLI+++
+
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image6.png)
 
 8.  Restart the PowerShell and run below command login.(Use your
     personal GitHub account used for day1 labs )
 
-gh --version
+  +++gh --version+++
 
-gh auth login
+  ++++gh auth login+++
 
-![A computer screen with white text AI-generated content may be
+  ![A computer screen with white text AI-generated content may be
 incorrect.](./media/image7.png)
 
 9.  Follow the interactive prompts:
@@ -79,65 +76,65 @@ incorrect.](./media/image7.png)
 
     3.  Authenticate via browser
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image8.png)
 
-![A computer screen shot of a black screen AI-generated content may be
+  ![A computer screen shot of a black screen AI-generated content may be
 incorrect.](./media/image9.png)
 
-![A screenshot of a device AI-generated content may be
+  ![A screenshot of a device AI-generated content may be
 incorrect.](./media/image10.png)
 
 10. Click on **Authorize github** button.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image11.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image12.png)
 
 11. Switch back to PowerShell window.
 
-![A computer screen shot of a computer program AI-generated content may
+  ![A computer screen shot of a computer program AI-generated content may
 be incorrect.](./media/image13.png)
 
 12. After login, confirm by running:
 
-gh auth status
+  +++gh auth status+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image14.png)
 
 13. Verify GEC Org Admin Permissions. If you can list org repos, you’re
     properly authenticated and ready.Replace ORG-NAME with your
     organization name and then run it.
 
-> gh repo list ORG-NAME
+  +++gh repo list ORG-NAME+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image15.png)
 
 ### Task 2 – Install the GEI (GitHub Enterprise Importer) Extension
 
 1.  Run below command to install GitHub Enterprise importer extension.
 
-gh extension install github/gh-gei
+  +++gh extension install github/gh-gei+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image16.png)
 
 2.  Confirm installation:
 
-> gh gei -h
+  +++gh gei -h+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image17.png)
 
 3.  Verify installation:
 
-gh gei --help
+  +++gh gei --help+++
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image18.png)
 
 ### Task 3 : Create an Azure DevOps personal access token
@@ -146,59 +143,59 @@ incorrect.](./media/image18.png)
     in your browser and navigate to - <https://portal.azure.com/> and
     sign in with assigned account.
 
-![A screenshot of a sign in AI-generated content may be
+  ![A screenshot of a sign in AI-generated content may be
 incorrect.](./media/image19.png)
 
-![A screenshot of a computer error AI-generated content may be
+  ![A screenshot of a computer error AI-generated content may be
 incorrect.](./media/image20.png)
 
 2.  **Cancel** the Welcome window.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image21.png)
 
-3.  Search for **Azure DevOps** and select **Azure DevOps
+3.  Search for +++Azure DevOps+++ and select **Azure DevOps
     organizations**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image22.png)
 
 4.  Click on **My Azure DevOps Organization** hyper link.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image23.png)
 
 5.  Keep the default values and then click on **Continue** button.
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image24.png)
 
 6.  Click on the existing organization link as shown in below image.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image25.png)
 
 7.  In the top right corner of the screen, click **User settings**.
     Click **Personal access tokens**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image26.png)
 
 8.  Select **+ New Token**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image27.png)
 
-9.  Enter the name as : **devopstoken** and select Full access scope and
+9.  Enter the name as : +++devopstoken+++ and select Full access scope and
     then click on **Create**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image28.png)
 
 10. Copy the generated API token and save it in a safe location. For
     your security, it won't be shown again.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image29.png)
 
 ### Task 4 : Create Repos in ADO
@@ -206,28 +203,28 @@ incorrect.](./media/image29.png)
 1.  Switch back to DevOps Organization page and click on the existing
     project.
 
-![](./media/image30.png)
+  ![](./media/image30.png)
 
 2.  Hover on **Repos** from left navigation menu and select **Files**.
 
-![](./media/image31.png)
+  ![](./media/image31.png)
 
 3.  Click on the project drop down form top navigation menu and select
     **New repository**.
 
-![](./media/image32.png)
+  ![](./media/image32.png)
 
 4.  Enter the Repository name as **lab09-tailspin-spacegame-unit-test**.
     Unselect “Add a README” checkbox and then click on **Create**.
 
-![](./media/image33.png)
+  ![](./media/image33.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image34.png)
 
 5.  Copy the HTTPS url to use in next exercise 2
 
-![](./media/image35.png)
+  ![](./media/image35.png)
 
 ### Task 4 : Create GitHub personal access token (You can re-use the same PAT created in Day 1 else follow this task to create new PAT)
 
@@ -235,54 +232,52 @@ incorrect.](./media/image34.png)
 
 2.  Click on profile from right top corner and select **Settings**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image36.png)
 
 3.  Click on **Developer settings** from left navigation menu.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image37.png)
 
 4.  Expand Persnal access tokens -\> Tokens(Classic). Click on Generate
     new token -\> Generate new token (classic)
 
-> ![](./media/image38.png)
+  ![](./media/image38.png)
 
 5.  Enter Note as : **githubtoken** and select all the scope items.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image39.png)
 
 6.  Click on **Generate token**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image40.png)
 
 7.  Copy and save the token in a note pad to use in upcoming tasks.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image41.png)
 
 ### Task 5 : Fetch the branch from GitHub
 
 1.  Open Visual Studio Code, go to the terminal window.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image42.png)
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image42.png)
 
 2.  Click on File-\> Open Folder
 
-> ![](./media/image43.png)
+  ![](./media/image43.png)
 
 3.  Navigate to the path “C:\Labfiles\Lab09” and select the
     mslearn-tailspin-spacegame-web" folder
 
-![](./media/image44.png)
+  ![](./media/image44.png)
 
 4.  Open new terminal and select Bash.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image45.png)
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image45.png)
 
 5.  A *remote* is a Git repository where team members collaborate (like
     a repository on GitHub). Here you list your remotes and add a remote
@@ -291,9 +286,9 @@ incorrect.](./media/image41.png)
 
 6.  Run the following command to list your remotes:
 
-git remote -v
+  +++git remote -v+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image46.png)
 
 7.  Origin specifies your repository on GitHub. When you fork code from
@@ -303,12 +298,11 @@ incorrect.](./media/image46.png)
 8.  Run the following command to create a remote named *upstream* that
     points to the Microsoft repository:
 
-> git remote add upstream
-> https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web.git
->
-> git remote -v
+  +++git remote add upstream https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web.git+++
 
-![A screenshot of a computer program AI-generated content may be
+  +++git remote -v+++
+
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image47.png)
 
 ## Exercise 2 - Add unit tests to your application
@@ -343,55 +337,53 @@ Here's the process to follow:
     to be replaced with your Github account username in the below
     commands and run them.**
 
-**git config --global user.email "you@example.com"**
+  ++++git config --global user.email "you@example.com"+++
 
-**git config --global user.name "Your Name"**
+  +++git config --global user.name "Your Name"+++
 
-![A computer screen with text AI-generated content may be
+  ![A computer screen with text AI-generated content may be
 incorrect.](./media/image48.png)
 
 2.  **Run below commands to push the repo.**
 
-git init
+  +++git init+++
 
-git add .
+  +++git add .+++
 
-git commit -m "Initial commit for migration lab"
+  +++git commit -m "Initial commit for migration lab"+++
 
-![A computer screen with text on it AI-generated content may be
+  ![A computer screen with text on it AI-generated content may be
 incorrect.](./media/image49.png)
 
 3.  **Switch back to GitBash and run below command to sign into Azure.
     Select Work or school account option and click on Continue.**
 
-**az login**
+  +++az login+++
 
-![A computer screen with a white box AI-generated content may be
+  ![A computer screen with a white box AI-generated content may be
 incorrect.](./media/image50.png)
 
 4.  **Sign in with your cloud slice accounts.**
 
-- Username: <+++@lab.CloudPortalCredential>(User1).Username+++
+  - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-- Password: +++@lab.CloudPortalCredential(User1).Password+++
+  - Password: +++@lab.CloudPortalCredential(User1).Password+++
 
-> ![A screenshot of a computer screen AI-generated content may be
-> incorrect.](./media/image51.png)
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image52.png)
+  ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image51.png)
+
+  ![A screenshot of a computer AI-generated content may be  incorrect.](./media/image52.png)
 
 5.  **Click on Yes,all apps button and then click on Done.**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image53.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image54.png)
 
 6.  **Select your subscription and then press enter.**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image55.png)
 
 7.  **Run below command to push local folder to Azure Devops .(Replace**
@@ -399,61 +391,56 @@ incorrect.](./media/image55.png)
     **with the https link you copied in previous step -Azure DevOps
     repos**
 
-> git remote set-url origin \< Devops Repo Https url **\>**
->
-> ![A screen shot of a computer code AI-generated content may be
-> incorrect.](./media/image56.png)
+  +++git remote set-url origin <Devops Repo Https url>+++
+
+  ![A screen shot of a computer code AI-generated content may be incorrect.](./media/image56.png)
 
 8.  Run below command to fetch all remote branchs. Sign in with your
     cloud slice account when prompts
 
-> git fetch --all
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image57.png)
->
-> ![A screenshot of a computer program AI-generated content may be
-> incorrect.](./media/image58.png)
+  +++git fetch --all+++
+
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image57.png)
+
+  ![A screenshot of a computer program AI-generated content may be incorrect.](./media/image58.png)
 
 9.  Run below code to create local tracking branches for each remote
     branch
 
-> for branch in $(git branch -r | grep -v '\\\>'); do
->
-> git branch --track ${branch#origin/} $branch
->
-> done
+  ```
+for branch in $(git branch -r | grep -v '\->'); do
+  git branch --track ${branch#origin/} $branch
+done
+```
 
-![A computer screen shot of a program AI-generated content may be
+  ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image59.png)
 
 10. Run below command to pull all branches to update them locally
 
-> git pull --all
+  +++git pull --all+++
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image60.png)
 
 11. **Run below command to push the repo to Devops . if it prompts to
     sign in ,sign in with your DevOps account.**
 
-> git push -u origin --all
+  +++git push -u origin --all+++
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image61.png)
 
-**Note : If you already have repo in Devops then follow steps to pull
+>**Note : If you already have repo in Devops then follow steps to pull
 and resolve conflict – 1. Pull from DevOps with unrelated history:**
 **git pull origin main --allow-unrelated-histories Step 2 : Resolve
 conflicts in files like .gitignore, README.md. Step 3 : Stage the
-resolved files - git add .**
+resolved files - git add .**  **git commit -m "Resolved merge conflicts"**
 
-**git commit -m "Resolved merge conflicts"**
+12. **Go back to Azure Devops project and check** Repos-\> Files.You
+    should see your repo here .
 
-12. **Go back to Azure Devops project and check** Repos-\> Files **.You
-    should see your repo here .**
-
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image62.png)
 
 ### Task 2 : Migrate Azure DevOps Repo to GitHub Enterprise Cloud
@@ -462,88 +449,81 @@ incorrect.](./media/image62.png)
     environment varaibles. Make sure to update variables with your
     values and then run them.
 
-export AZURE_DEVOPS_PAT="YOUR_AZDO_PAT"
+  +++export AZURE_DEVOPS_PAT="YOUR_AZDO_PAT"+++
 
-export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"
+  +++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
 
-export ADO_ORG=" your-ado-org" \# eg - ADOCourseOrg04
+  +++export ADO_ORG="your-ado-org"+++ # eg - ADOCourseOrg04
 
-export GEC_ORG="your-githubEC-org" \# e.g. devopstogtihub1234
+  +++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
 
-export ADO_PROJECT="your-existing ADO_Projectname" \# eg
-dev-github-proj-XXXXXXXX
++++export ADO_PROJECT="your-existing ADO_Projectname"+++ # eg-dev-github-proj-XXXXXXXX
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image63.png)
 
 2.  Run below commands to verify GitHub login status. If not logged in
     then run 2^(nd) command gh auth login and follow the process to
     loginto GitHub.
 
-gh auth status
+  +++gh auth status+++
 
-gh auth login
+  +++gh auth login+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image64.png)
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image65.png)
 
-![A screenshot of a device registration AI-generated content may be
+  ![A screenshot of a device registration AI-generated content may be
 incorrect.](./media/image66.png)
 
-![A screenshot of a device AI-generated content may be
+  ![A screenshot of a device AI-generated content may be
 incorrect.](./media/image67.png)
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image68.png)
 
-![A computer screen shot of a program AI-generated content may be
+  ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image69.png)
 
 3.  Run below command to grant migrator role to your account.(replace
     your-github-username with your username)
 
-gh gei grant-migrator-role --github-org $GEC_ORG --actor
-\<your-github-username\> --actor-type USER
+  +++gh gei grant-migrator-role --github-org $GEC_ORG --actor <your-github-username> --actor-type USER+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image70.png)
 
-eg :gh gei grant-migrator-role --github-org devopstogtihub1234 --actor
-chintharlamanjula --actor-type USER
+>eg :gh gei grant-migrator-role --github-org devopstogtihub1234 --actor chintharlamanjula --actor-type USER
 
 4.  Run below command to install GitHub cli extensions
 
-> gh extension install github/gh-ado2gh
+  +++gh extension install github/gh-ado2gh+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image71.png)
 
 5.  Run below dry-run command to migrate repos to GEC**  
     (Note: We have used repo -** **tailspin-spacegame-web-deploy . You
     can check this in your ADO-\>Org-\> Project-\> Repo )**
 
-gh ado2gh migrate-repo --ado-org 
-$ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo lab09-tailspin-spacegame-unit-test
---github-org $GEC_ORG
---github-repo lab09-tailspin-spacegame-unit-test --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only
+  +++gh ado2gh migrate-repo --ado-org  $ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo lab09-tailspin-spacegame-unit-test --github-org $GEC_ORG --github-repo lab09-tailspin-spacegame-unit-test --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image72.png)
 
-1.  Copy repository migration and update below command with migration id
+6. Copy repository migration and update below command with migration id
     and run.
 
-gh ado2gh wait-for-migration --migration-id \<MIGRATION_ID\>
---github-pat $GH_PAT
+  +++gh ado2gh wait-for-migration  --migration-id <MIGRATION_ID> --github-pat $GH_PAT+++
 
-![](./media/image73.png)
+  ![](./media/image73.png)
 
-2.  Switch back to Github GEC -\> organization and you should see repo
+7. Switch back to Github GEC -\> organization and you should see repo
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image74.png)
 
 ### Task 4 : Create pipeline to use GEC repo
@@ -551,22 +531,22 @@ incorrect.](./media/image74.png)
 1.  Click on **Pipelines** from left navigation menu and then select
     Pipeline.Click on **Create Pipeline**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image75.png)
 
 2.  Select **Azure Repo git** tile
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image76.png)
 
 3.  Select the **Lab09-tailspin-spacegame-iunit-test** repo.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image77.png)
 
 4.  Click on **Run** drop down and select **Save**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image78.png)
 
 ###  Task 1 : Create a service connection for ARM and GitHub
@@ -576,68 +556,68 @@ access your Azure subscription. Azure Pipelines uses this service
 connection to deploy the website to App Service. You created a similar
 service connection in the previous labs.
 
-** Important:**Make sure that you're signed in to both the Azure portal
+**Important:** Make sure that you're signed in to both the Azure portal
 and Azure DevOps under the same Microsoft account.
 
 1.  In Azure DevOps, go to your **exisitng** project.From the lower-left
     corner of the page, select **Project settings**.
 
-![](./media/image79.png)
+  ![](./media/image79.png)
 
 2.  Click on **Service connections** under **Pipelines** and then click
     on **New Service connection** button.
 
-![](./media/image80.png)
+  ![](./media/image80.png)
 
 3.  Select **GitHub** and then click **Next**.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image81.png)
 
 4.  Select **AzurePipelines** from **OAuth Configuration** drop down and
     then click on **Authorize** button.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image82.png)
 
 5.  Sign into GitHub .Keep the default service name, then click on
     **Save** .
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image83.png)
 
 6.  Select the Pipelines from left navigation menu and select the
     pipeline to **Edit**.
 
-![](./media/image84.png)
+  ![](./media/image84.png)
 
 7.  Select **unit-tests** branch and then click next to **Run** button
     and select **Triggers**.
 
-![](./media/image85.png)
+  ![](./media/image85.png)
 
 8.  Click on TAML tab without making any changes to triggers
 
-![](./media/image86.png)
+  ![](./media/image86.png)
 
 9.  Select **YAML** tab and select **Get sources-\>GitHub** and then
     click on **Repository**
 
-![](./media/image87.png)
+  ![](./media/image87.png)
 
-10. Select the repo – Lab09-**tailspin-spacegame-unit-test** and then
+10. Select the repo – **Lab09-tailspin-spacegame-unit-test** and then
     click on **Select** button.
 
-![](./media/image88.png)
+  ![](./media/image88.png)
 
 11. Keep all the default values and then click on **Save & queue-\>
     Save**.
 
-![](./media/image89.png)
+  ![](./media/image89.png)
 
 12. Enter some comment and click on Save to save the build pipeline.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image90.png)
 
 ### Task 2 : Add and Run unit tests
@@ -651,41 +631,40 @@ the previous modules and an Azure Pipelines configuration to start with.
 1.  We had already added unit-test branch in Exercise .lets run below
     command to switch to unit-tests branch
 
-git checkout unit-tests
+  +++git checkout unit-tests+++
 
-![A computer screen shot of a computer code AI-generated content may be
+  ![A computer screen shot of a computer code AI-generated content may be
 incorrect.](./media/image91.png)
 
-6.  The format of this command enables you to get starter code from the
+2.  The format of this command enables you to get starter code from the
     Microsoft GitHub repository, known as upstream. Shortly, you'll push
     this branch to your GitHub repository, known as origin.
 
-7.  As an optional step, open the *azure-pipelines.yml* file in Visual
+3.  As an optional step, open the *azure-pipelines.yml* file in Visual
     Studio Code and familiarize yourself with the initial configuration.
 
-8.  Run below command to Add NuGet.org as a Source and verify
+4.  Run below command to Add NuGet.org as a Source and verify
 
-dotnet nuget add source [https://api.nuget.org/v3/index.json -n
-nuget.org](https://api.nuget.org/v3/index.json%20-n%20nuget.org)
+  +++dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org+++
 
-dotnet nuget list source
+  +++dotnet nuget list source+++
 
 1.  Run dotnet build to build each project in the solution.
 
-dotnet build --configuration Release
+  +++dotnet build --configuration Release+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image92.png)
 
 2.  Run the following dotnet test command to run the unit tests:
 
-dotnet test --configuration Release --no-build
+  +++dotnet test --configuration Release --no-build+++
 
 The --no-build flag specifies not to build the project before running
 it. You don't need to build the project because you built it in the
 previous step.
 
-![A screen shot of a computer program AI-generated content may be
+  ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image93.png)
 
 3.  Notice that there were five total tests. Although we defined just
@@ -696,8 +675,7 @@ incorrect.](./media/image93.png)
 4.  Run the tests a second time. This time, provide the --logger option
     to write the results to a log file.
 
-dotnet test Tailspin.SpaceGame.Web.Tests --configuration Release
---no-build --logger trx
+  +++dotnet test Tailspin.SpaceGame.Web.Tests --configuration Release --no-build --logger trx+++
 
 You see from the output that a TRX file is created in
 the **TestResults** directory.
@@ -706,13 +684,13 @@ A TRX file is an XML document that contains the results of a test run.
 It's a popular format for test results because Visual Studio and other
 tools can help you visualize the results.
 
-![A computer screen with text on it AI-generated content may be
+  ![A computer screen with text on it AI-generated content may be
 incorrect.](./media/image94.png)
 
 Later, you'll see how Azure Pipelines can help you visualize and track
 your test results as they run through the pipeline.
 
-** Note:**TRX files are not meant to be included in source control.
+>**Note:**TRX files are not meant to be included in source control.
 A *.gitignore* file allows you to specify which temporary and other
 files you want Git to ignore. The project's *.gitignore* file is already
 set up to ignore anything in the *TestResults* directory.
@@ -731,189 +709,142 @@ collect the results.
 
 1.  In Visual Studio Code, replace the code in
      *azure-pipelines.yml* with below code and save the file
-
-trigger:
-
-branches:
-
-include:
-
-\- '\*'
+  ```
+  trigger:
+  branches:
+    include:
+      - '*'
 
 pool:
-
-vmImage: 'windows-latest' \# Microsoft-hosted agent
+  vmImage: 'windows-latest'  # Microsoft-hosted agent
 
 variables:
-
-buildConfiguration: 'Release'
-
-wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-
-dotnetSdkVersion: '8.x'
+  buildConfiguration: 'Release'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+  dotnetSdkVersion: '8.x'
 
 steps:
+  - task: UseNode@1
+    displayName: 'Use Node.js 18.20.2'
+    inputs:
+      version: '18.20.2'  # Updated to latest valid version
 
-\- task: UseNode@1
+  - task: UseDotNet@2
+    displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+    inputs:
+      version: '$(dotnetSdkVersion)'
 
-displayName: 'Use Node.js 18.20.2'
+  - task: Npm@1
+    displayName: 'Run npm install'
+    inputs:
+      verbose: false
 
-inputs:
+  - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
+    displayName: 'Compile Sass assets'
 
-version: '18.20.2' \# Updated to latest valid version
+  - script: 'npx gulp'
+    displayName: 'Run gulp tasks'
 
-\- task: UseDotNet@2
+  - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
+    displayName: 'Write build info'
+    workingDirectory: $(wwwrootDir)
 
-displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore project dependencies'
+    inputs:
+      command: 'restore'
+      projects: '**/*.csproj'
 
-inputs:
+  - task: DotNetCoreCLI@2
+    displayName: 'Build the project - $(buildConfiguration)'
+    inputs:
+      command: 'build'
+      arguments: '--no-restore --configuration $(buildConfiguration)'
+      projects: '**/*.csproj'
 
-version: '$(dotnetSdkVersion)'
+  - task: DotNetCoreCLI@2
+    displayName: 'Run unit tests - $(buildConfiguration)'
+    inputs:
+      command: 'test'
+      arguments: '--no-build --configuration $(buildConfiguration)'
+      publishTestResults: true
+      projects: '**/*.Tests.csproj'
 
-\- task: Npm@1
+  - task: DotNetCoreCLI@2
+    displayName: 'Publish the project - $(buildConfiguration)'
+    inputs:
+      command: 'publish'
+      projects: '**/*.csproj'
+      publishWebProjects: false
+      arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+      zipAfterPublish: true
 
-displayName: 'Run npm install'
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    condition: succeeded()
+  ```
 
-inputs:
 
-verbose: false
-
-\- script: './node_modules/.bin/node-sass $(wwwrootDir) --output
-$(wwwrootDir)'
-
-displayName: 'Compile Sass assets'
-
-\- script: 'npx gulp'
-
-displayName: 'Run gulp tasks'
-
-\- script: 'echo "$(Build.DefinitionName), $(Build.BuildId),
-$(Build.BuildNumber)" \> buildinfo.txt'
-
-displayName: 'Write build info'
-
-workingDirectory: $(wwwrootDir)
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Restore project dependencies'
-
-inputs:
-
-command: 'restore'
-
-projects: '\*\*/\*.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Build the project - $(buildConfiguration)'
-
-inputs:
-
-command: 'build'
-
-arguments: '--no-restore --configuration $(buildConfiguration)'
-
-projects: '\*\*/\*.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Run unit tests - $(buildConfiguration)'
-
-inputs:
-
-command: 'test'
-
-arguments: '--no-build --configuration $(buildConfiguration)'
-
-publishTestResults: true
-
-projects: '\*\*/\*.Tests.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Publish the project - $(buildConfiguration)'
-
-inputs:
-
-command: 'publish'
-
-projects: '\*\*/\*.csproj'
-
-publishWebProjects: false
-
-arguments: '--no-build --configuration $(buildConfiguration) --output
-$(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
-
-zipAfterPublish: true
-
-\- task: PublishBuildArtifacts@1
-
-displayName: 'Publish Artifact: drop'
-
-condition: succeeded()
-
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image95.png)
 
 2.  In the integrated terminal, add *azure-pipelines.yml* to the index,
     commit the changes, and push the branch up to GitHub.
 
-git add azure-pipelines.yml
+  +++git add azure-pipelines.yml+++
 
-git commit -m "Run and publish unit tests"
+  +++git commit -m "Run and publish unit tests"+++
 
-git push origin unit-tests
+  +++git push origin unit-tests+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image96.png)
 
 6.  Switch back to Azure Pipelines, Click on running pipeline.
 
-![](./media/image97.png)
+  ![](./media/image97.png)
 
 7.  Click on the running job.
 
-![](./media/image98.png)
+  ![](./media/image98.png)
 
-8.  Click on **View** button next to warning message “  
-    **This pipeline needs permission to access a resource before this
+8.  Click on **View** button next to warning message “**This pipeline needs permission to access a resource before this
     run can continue**”
 
-![](./media/image99.png)
+  ![](./media/image99.png)
 
 9.  Click on **Permit** and permit access for the job to run.
 
-![](./media/image100.png)
+  ![](./media/image100.png)
 
 10. Click on Job,You see that the **Run unit tests - Release** task runs
     the unit tests just as you did manually from the command line.
 
-![](./media/image101.png)
+  ![](./media/image101.png)
 
 11. Navigate back to the pipeline summary.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image102.png)
 
-![](./media/image103.png)
+  ![](./media/image103.png)
 
 12. Move to the **Tests** tab.You see a summary of the test run. All
     five tests have passed.
 
-![](./media/image104.png)
+  ![](./media/image104.png)
 
 13. In Azure DevOps, select **Test Plans**, and then select **Runs**.You
     see the most recent test runs, including the one you just ran.
 
-![](./media/image105.png)
+  ![](./media/image105.png)
 
 14. Double-click the most recent test run.You see a summary of the
     results.
 
-![](./media/image106.png)
+  ![](./media/image106.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image107.png)
 
 ## Exercise 3 - Add a testing widget to your dashboard
@@ -926,32 +857,32 @@ your test runs over time.
 1.  In your Azure DevOps project, select **Overview**, and then
     select **Dashboards**.
 
-![](./media/image108.png)
+  ![](./media/image108.png)
 
-** Note:**If you ran the template to create the Azure DevOps project,
+  >**Note:**If you ran the template to create the Azure DevOps project,
 you won't see the dashboard widgets you set up in previous modules.
 
 2.  Select **Add a widget**.
 
-![](./media/image109.png)
+  ![](./media/image109.png)
 
 3.  In the **Add Widget** pane, search for **Test Results
     Trend**.Select **Test Results Trend** and then click on **Add**.
 
-![](./media/image110.png)
+  ![](./media/image110.png)
 
 4.  Select the **Gear** icon to configure the widget.
 
-![](./media/image111.png)
+  ![](./media/image111.png)
 
 5.  Under Build pipeline, select your pipeline.Keep the other default
     settings.Select **Save**.
 
-> ![](./media/image112.png)
+  ![](./media/image112.png)
 
 6.  Select **Done Editing**.
 
-![](./media/image113.png)
+  ![](./media/image113.png)
 
 ## Exercise 4 - Perform code coverage testing
 
@@ -972,52 +903,49 @@ verify the process.
 2.  Run the following dotnet new command to create a local tool manifest
     file. The command creates a file named *.config/dotnet-tools.json*.
 
-dotnet new tool-manifest
+  +++dotnet new tool-manifest+++
 
-![A screen shot of a computer code AI-generated content may be
+  ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image114.png)
 
 3.  Run the following dotnet tool install command to install
     ReportGenerator. This command installs the latest version
     of ReportGenerator and adds an entry to the tool manifest file.
 
-dotnet tool install dotnet-reportgenerator-globaltool
+  +++dotnet tool install dotnet-reportgenerator-globaltool+++
 
-![](./media/image115.png)
+  ![](./media/image115.png)
 
-4.  Run the following dotnet add package command to add
-    the coverlet.msbuild package to
+4.  Run the following dotnet add package command to add the coverlet.msbuild package to
     the *Tailspin.SpaceGame.Web.Tests* project:
 
-dotnet add Tailspin.SpaceGame.Web.Tests package coverlet.msbuild
+  +++dotnet add Tailspin.SpaceGame.Web.Tests package coverlet.msbuild+++
 
-![A screen shot of a computer error AI-generated content may be
+  ![A screen shot of a computer error AI-generated content may be
 incorrect.](./media/image116.png)
 
 5.  Run the following dotnet test command to run your unit tests and
     collect code coverage:
 
-** Note:**If you're using the PowerShell terminal in Visual Studio, the
+  >**Note:**If you're using the PowerShell terminal in Visual Studio, the
 line continuation character is a backtick (**\`**), so use that
 character in place of the backslash character (**\\**) for multi-line
 commands.
 
-dotnet test --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/Coverage/
+  +++dotnet test --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/Coverage/+++
 
-dotnet test
-Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj
---collect:"XPlat Code Coverage"
+  +++dotnet test Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj --collect:"XPlat Code Coverage"+++
 
-![A black screen with white text AI-generated content may be
+  ![A black screen with white text AI-generated content may be
 incorrect.](./media/image117.png)
 
 6.  Run the following dotnet tool run command to use ReportGenerator to
     convert the Cobertura file to HTML.Many HTML files will appear in
     the *CodeCoverage* folder at the root of the project.
 
-> dotnet tool run reportgenerator -reports:./Tailspin.SpaceGame.Web.Tests/TestResults/Coverage/coverage.cobertura.xml -targetdir:./CodeCoverage -reporttypes:HtmlInline_AzurePipelines
+  +++dotnet tool run reportgenerator -reports:./Tailspin.SpaceGame.Web.Tests/TestResults/Coverage/coverage.cobertura.xml -targetdir:./CodeCoverage -reporttypes:HtmlInline_AzurePipelines
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image118.png)
 
 7.  In Visual Studio Code, expand the *CodeCoverage* folder,
@@ -1025,42 +953,42 @@ incorrect.](./media/image118.png)
     Explorer** (**Reveal in Finder** on macOS or **Open Containing
     Folder** on Linux).
 
-![](./media/image119.png)
+  ![](./media/image119.png)
 
 8.  In Windows Explorer (Finder on macOS),
     double-click ***index.htm*** to open it in a web browser.
 
-![](./media/image120.png)
+  ![](./media/image120.png)
 
 9.  You'll see the coverage report summary.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image121.png)
 
 10. Scroll to the bottom of the page to see a coverage breakdown by
     class type.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image122.png)
 
 ### Task 2 : Configure pipeline to include code-coverage branch
 
 1.  Select pipeline and click on Edit.
 
-![](./media/image123.png)
+  ![](./media/image123.png)
 
 2.  Select **code-coverage** branch ,select **Triggers** from run.
 
-![](./media/image124.png)
+  ![](./media/image124.png)
 
 3.  Select CI-repo and include code-coverage branch under Branch filters
     as show in below image.
 
-![](./media/image125.png)
+  ![](./media/image125.png)
 
 4.  Enter comment and then save.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image126.png)
 
 ### Task 3 : Create a branch
@@ -1077,234 +1005,170 @@ create this branch from the main branch.
 2.  In the terminal, run the following git checkout command to create a
     branch named code-coverage:
 
-git checkout -B code-coverage
+  +++git checkout -B code-coverage+++
 
-![A computer screen shot of a program AI-generated content may be
+  ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image127.png)
 
 3.  Replace  *azure-pipelines.yml* with below code
 
-trigger:
-
-\- '\*'
+  ```
+  trigger:
+  - '*'
 
 pool:
-
-vmImage: 'windows-latest' \# Microsoft-hosted agent
+  vmImage: 'windows-latest'  # Microsoft-hosted agent
 
 variables:
-
-buildConfiguration: 'Release'
-
-wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-
-dotnetSdkVersion: '8.x'
+  buildConfiguration: 'Release'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+  dotnetSdkVersion: '8.x'
 
 steps:
-
-\- task: UseNode@1
-
-displayName: 'Use Node.js 18.20.2'
-
-inputs:
-
-version: '18.20.2'
-
-\- task: UseDotNet@2
-
-displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-
-inputs:
-
-version: '$(dotnetSdkVersion)'
-
-\- task: Npm@1
-
-displayName: 'Run npm install'
-
-inputs:
-
-verbose: false
-
-\- script: './node_modules/.bin/node-sass $(wwwrootDir) --output
-$(wwwrootDir)'
-
-displayName: 'Compile Sass assets'
-
-\- script: 'npx gulp'
-
-displayName: 'Run gulp tasks'
-
-\- script: 'echo "$(Build.DefinitionName), $(Build.BuildId),
-$(Build.BuildNumber)" \> buildinfo.txt'
-
-displayName: 'Write build info'
-
-workingDirectory: $(wwwrootDir)
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Restore project dependencies'
-
-inputs:
-
-command: 'restore'
-
-projects: '\*\*/\*.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Build the project - $(buildConfiguration)'
-
-inputs:
-
-command: 'build'
-
-arguments: '--no-restore --configuration $(buildConfiguration)'
-
-projects: '\*\*/\*.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Install .NET tools from local manifest'
-
-inputs:
-
-command: custom
-
-custom: tool
-
-arguments: 'restore'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Run unit tests - $(buildConfiguration)'
-
-inputs:
-
-command: 'test'
-
-arguments: '--no-build --configuration $(buildConfiguration)
-/p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
-/p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
-
-publishTestResults: true
-
-projects: '\*\*/\*.Tests.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Create code coverage report'
-
-inputs:
-
-command: custom
-
-custom: tool
-
-arguments: 'run reportgenerator
--reports:$(Build.SourcesDirectory)/\*\*/coverage.cobertura.xml
--targetdir:$(Build.SourcesDirectory)/CodeCoverage
--reporttypes:HtmlInline_AzurePipelines'
-
-\- task: PublishCodeCoverageResults@1
-
-displayName: 'Publish code coverage report'
-
-inputs:
-
-codeCoverageTool: 'cobertura'
-
-summaryFileLocation:
-'$(Build.SourcesDirectory)/\*\*/coverage.cobertura.xml'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Publish the project - $(buildConfiguration)'
-
-inputs:
-
-command: 'publish'
-
-projects: '\*\*/\*.csproj'
-
-publishWebProjects: false
-
-arguments: '--no-build --configuration $(buildConfiguration) --output
-$(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
-
-zipAfterPublish: true
-
-\- task: PublishBuildArtifacts@1
-
-displayName: 'Publish Artifact: drop'
-
-condition: succeeded()
-
-![A screenshot of a computer program AI-generated content may be
+  - task: UseNode@1
+    displayName: 'Use Node.js 18.20.2'
+    inputs:
+      version: '18.20.2'
+
+  - task: UseDotNet@2
+    displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+    inputs:
+      version: '$(dotnetSdkVersion)'
+
+  - task: Npm@1
+    displayName: 'Run npm install'
+    inputs:
+      verbose: false
+
+  - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
+    displayName: 'Compile Sass assets'
+
+  - script: 'npx gulp'
+    displayName: 'Run gulp tasks'
+
+  - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
+    displayName: 'Write build info'
+    workingDirectory: $(wwwrootDir)
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore project dependencies'
+    inputs:
+      command: 'restore'
+      projects: '**/*.csproj'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build the project - $(buildConfiguration)'
+    inputs:
+      command: 'build'
+      arguments: '--no-restore --configuration $(buildConfiguration)'
+      projects: '**/*.csproj'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Install .NET tools from local manifest'
+    inputs:
+      command: custom
+      custom: tool
+      arguments: 'restore'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Run unit tests - $(buildConfiguration)'
+    inputs:
+      command: 'test'
+      arguments: '--no-build --configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
+      publishTestResults: true
+      projects: '**/*.Tests.csproj'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Create code coverage report'
+    inputs:
+      command: custom
+      custom: tool
+      arguments: 'run reportgenerator -reports:$(Build.SourcesDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage -reporttypes:HtmlInline_AzurePipelines'
+
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish code coverage report'
+    inputs:
+      codeCoverageTool: 'cobertura'
+      summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Publish the project - $(buildConfiguration)'
+    inputs:
+      command: 'publish'
+      projects: '**/*.csproj'
+      publishWebProjects: false
+      arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+      zipAfterPublish: true
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    condition: succeeded()
+```
+
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image128.png)
 
 4.  Add and commit the *Tailspin.SpaceGame.Web.Tests.csproj* file, which
     now contains a reference to the coverlet.msbuild package:
 
-git add Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj
+  +++git add Tailspin.SpaceGame.Web.Tests/Tailspin.SpaceGame.Web.Tests.csproj+++
 
-git commit -m "Add coverlet.msbuild package"
+  +++git commit -m "Add coverlet.msbuild package"+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image129.png)
 
 5.  Add and commit the tool manifest file, *dotnet-tools.json*:
 
-git add .config/dotnet-tools.json
+  +++git add .config/dotnet-tools.json+++
 
-git commit -m "Add code coverage"
+  +++git commit -m "Add code coverage"+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image130.png)
 
 6.  Add and commit *azure-pipelines.yml*, which contains your updated
     build configuration:
 
-git add azure-pipelines.yml
+  +++git add azure-pipelines.yml+++
 
-git commit -m "Add code coverage"
+  +++git commit -m "Add code coverage"+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image131.png)
 
 7.  Push the code-coverage branch to GitHub.
 
-git push origin code-coverage
+  +++git push origin code-coverage+++
 
-![A computer screen shot of text AI-generated content may be
+  ![A computer screen shot of text AI-generated content may be
 incorrect.](./media/image132.png)
 
-8.  In Azure Pipelines, trace the build through each of the steps.\\
+8.  In Azure Pipelines, trace the build through each of the steps.
 
-> ![](./media/image133.png)
+  ![](./media/image133.png)
 
 9.  Click on running pipeline
 
-> ![](./media/image134.png)
+  ![](./media/image134.png)
 
 10. Click on the running job.
 
-![](./media/image135.png)
+  +++![](./media/image135.png)+++
 
 11. Wait for the job to complete successfully and then click back arrow
     to navigate to summary page.
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image136.png)
 
-![](./media/image137.png)
+  ![](./media/image137.png)
 
 12. When the build finishes, go back to the Summary page and select
     the **Code Coverage** tab.You view the same results that you did
     when you ran the tests locally.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image138.png)
 
 ### Task 3 : Add the dashboard widget
@@ -1315,61 +1179,52 @@ time.
 
 Here, you'll add a second widget that summarizes code coverage.
 
-1.  In a new browser tab, go
-    to [marketplace.visualstudio.com](https://marketplace.visualstudio.com/).On
+1.  In a new browser tab, go to +++https://marketplace.visualstudio.com/+++.On
     the **Azure DevOps** tab, search for **code coverage**.
 
 2.  Select **Code Coverage Widgets** (published by Shane Davis).
 
-![](./media/image139.png)
+  ![](./media/image139.png)
 
 3.  Select **Get it free**.
 
-![](./media/image140.png)
+  ![](./media/image140.png)
 
 4.  In the drop-down list, select your Azure DevOps
     organization.Select **Install**.
 
-![](./media/image141.png)
+  ![](./media/image141.png)
 
-![](./media/image142.png)
+  ![](./media/image142.png)
 
 5.  Go back to Azure DevOps.Go
     to **Overview** \> **Dashboards**.Select **Edit**.
 
-![](./media/image143.png)
+  ![](./media/image143.png)
 
 6.  Search for **Code Coverage**, and then select **Code Coverage**.
     Select it and then click on **Add**.
 
-![](./media/image144.png)
+  ![](./media/image144.png)
 
 7.  Select the **Gear** icon to configure the widget.
 
-![](./media/image145.png)
+  ![](./media/image145.png)
 
 8.  Keep all the default settings, except for:
 
-    - Width: Enter **2**
+  - Width: Enter 2
+  - Build definition: Select your pipeline
+  - Coverage measurement: select Lines
+  - Select **Save**.
 
-    &nbsp;
 
-    - Build definition: Select your pipeline
-
-    &nbsp;
-
-    - Coverage measurement: select **Lines**
-
-    &nbsp;
-
-    - Select **Save**.
-
-![](./media/image146.png)
+  ![](./media/image146.png)
 
 9.  Select **Done Editing**.The widget shows the percentage of code your
     unit tests cover.
 
-![](./media/image147.png)
+  ![](./media/image147.png)
 
 ## Exercise 6 - Clean up your Azure DevOps environment
 
@@ -1393,7 +1248,7 @@ To delete the project:
 2.  Select **Project settings** in the lower-left corner of the Azure
     Devops page.
 
-![](./media/image148.png)
+  ![](./media/image148.png)
 
 3.  In the **Project details** area, scroll down, and then
     select **Delete**.
@@ -1401,4 +1256,5 @@ To delete the project:
 4.  In the window that appears, enter the project name, and then
     select **Delete** a second time.
 
-> ![](./media/image149.png)
+  ![](./media/image149.png)
+
