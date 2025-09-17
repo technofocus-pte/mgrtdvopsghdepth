@@ -457,7 +457,7 @@ incorrect.](./media/image62.png)
 
   +++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
 
-+++export ADO_PROJECT="your-existing ADO_Projectname"+++ # eg-dev-github-proj-XXXXXXXX
+  +++export ADO_PROJECT="your-existing ADO_Projectname"+++ # eg-dev-github-proj-XXXXXXXX
 
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image63.png)
@@ -496,7 +496,7 @@ incorrect.](./media/image69.png)
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image70.png)
 
->eg :gh gei grant-migrator-role --github-org devopstogtihub1234 --actor chintharlamanjula --actor-type USER
+  >eg :gh gei grant-migrator-role --github-org devopstogtihub1234 --actor chintharlamanjula --actor-type USER
 
 4.  Run below command to install GitHub cli extensions
 
@@ -526,7 +526,7 @@ incorrect.](./media/image72.png)
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image74.png)
 
-### Task 4 : Create pipeline to use GEC repo
+### Task 3 : Create pipeline to use GEC repo
 
 1.  Click on **Pipelines** from left navigation menu and then select
     Pipeline.Click on **Create Pipeline**.
@@ -549,7 +549,7 @@ incorrect.](./media/image77.png)
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image78.png)
 
-###  Task 1 : Create a service connection for ARM and GitHub
+###  Task 4 : Create a service connection for ARM and GitHub
 
 Here, you create a service connection that enables Azure Pipelines to
 access your Azure subscription. Azure Pipelines uses this service
@@ -620,7 +620,7 @@ incorrect.](./media/image83.png)
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image90.png)
 
-### Task 2 : Add and Run unit tests
+### Task 5 : Add and Run unit tests
 
 Here, you'll fetch the unit-tests branch from GitHub and check out, or
 switch to, that branch.
@@ -660,9 +660,7 @@ incorrect.](./media/image92.png)
 
   +++dotnet test --configuration Release --no-build+++
 
-The --no-build flag specifies not to build the project before running
-it. You don't need to build the project because you built it in the
-previous step.
+  The --no-build flag specifies not to build the project before running it. You don't need to build the project because you built it in the previous step.
 
   ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image93.png)
@@ -677,23 +675,16 @@ incorrect.](./media/image93.png)
 
   +++dotnet test Tailspin.SpaceGame.Web.Tests --configuration Release --no-build --logger trx+++
 
-You see from the output that a TRX file is created in
-the **TestResults** directory.
+  You see from the output that a TRX file is created in the **TestResults** directory.
 
-A TRX file is an XML document that contains the results of a test run.
-It's a popular format for test results because Visual Studio and other
-tools can help you visualize the results.
+  A TRX file is an XML document that contains the results of a test run.It's a popular format for test results because Visual Studio and other tools can help you visualize the results.
 
   ![A computer screen with text on it AI-generated content may be
 incorrect.](./media/image94.png)
 
-Later, you'll see how Azure Pipelines can help you visualize and track
-your test results as they run through the pipeline.
+  Later, you'll see how Azure Pipelines can help you visualize and track your test results as they run through the pipeline.
 
->**Note:**TRX files are not meant to be included in source control.
-A *.gitignore* file allows you to specify which temporary and other
-files you want Git to ignore. The project's *.gitignore* file is already
-set up to ignore anything in the *TestResults* directory.
+  >**Note:**TRX files are not meant to be included in source control.A *.gitignore* file allows you to specify which temporary and other files you want Git to ignore. The project's *.gitignore* file is already set up to ignore anything in the *TestResults* directory.
 
 5.  As an optional step, in Visual Studio Code, open
     the *DocumentDBRepository_GetItemsAsyncShould.cs* file from
@@ -702,9 +693,9 @@ set up to ignore anything in the *TestResults* directory.
     you might find the test code useful because it resembles code you
     might see in other unit test frameworks.
 
-**Add tasks to your pipeline configuration**
+  **Add tasks to your pipeline configuration**
 
-Here, you'll configure the build pipeline to run your unit tests and
+  Here, you'll configure the build pipeline to run your unit tests and
 collect the results.
 
 1.  In Visual Studio Code, replace the code in
@@ -1257,4 +1248,5 @@ To delete the project:
     select **Delete** a second time.
 
   ![](./media/image149.png)
+
 
