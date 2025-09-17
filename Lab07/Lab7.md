@@ -306,40 +306,35 @@ incorrect.](./media/image37.png)
 
 5.  Run below dry-run command to migrate repos to GEC and copy migration id **(Note: We have used repo -** **tailspin-spacegame-web-deploy . You can check this in your ADO-\>Org-\> Project-\> Repo )**
 
-+++gh ado2gh migrate-repo --ado-org 
-$ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo **Lab07**-**tailspin-spacegame-web-deploy**
---github-org $GEC_ORG
---github-repo **Lab07**-**tailspin-spacegame-web-deploy**  --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
+  +++gh ado2gh migrate-repo --ado-org  $ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo Lab07-tailspin-spacegame-web-deploy --github-org $GEC_ORG --github-repo Lab07-tailspin-spacegame-web-deploy  --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
 
-![](./media/image38.png)
+  ![](./media/image38.png)
 
-1.  Copy repository migration and update below command with migration id
+6.  Copy repository migration and update below command with migration id
     and run.
 
-+++gh ado2gh wait-for-migration --migration-id \<MIGRATION_ID\>
---github-pat $GH_PAT+++
+  +++gh ado2gh wait-for-migration  --migration-id <MIGRATION_ID> --github-pat $GH_PAT+++
 
-![](./media/image39.png)
+  ![](./media/image39.png)
 
-2.  Switch back to GitHub browser tab, click profile and select **Your
-    enterprises**.
+7.  Switch back to GitHub browser tab, click profile and select **Your enterprises**.
 
-![](./media/image40.png)
+  ![](./media/image40.png)
 
-3.  Click on your enterprise account.
+8.  Click on your enterprise account.
 
-![](./media/image41.png)
+  ![](./media/image41.png)
 
-4.  Click on **Organizations** tab and then select the organization you
+9.  Click on **Organizations** tab and then select the organization you
     have created.
 
 ![](./media/image42.png)
 
-5.  Click on **Repositories** tab and you should see migrated repo
+10.  Click on **Repositories** tab and you should see migrated repo
 
 ![](./media/image43.png)
 
-# \## Exercise 2 : Create the Azure App Service environments
+## Exercise 2 : Create the Azure App Service environments
 
 Here, you create the environments that define the pipeline stages. You
 create one App Service instance for each stage: ***Dev*, *Test*,
@@ -357,97 +352,89 @@ Shell. This browser-based shell experience is hosted in the cloud. In
 Cloud Shell, the Azure CLI is configured for use with your Azure
 subscription.
 
-## \### Task 1 : Create the App Service instances
+## Task 1 : Create the App Service instances
 
 Here, you create the App Service instances for the three stages you
 deploy to: *Dev*, *Test*, and *Staging*. Here's a brief overview of the
 process you follow:
 
-1.  Go to the Azure portal-+++https://portal.azure.com+++  and sign in.
+1.  Go to the Azure portal- +++https://portal.azure.com+++  and sign in.
     From the menu, select **Cloud Shell**. When prompted, select
     the **Bash** experience.
 
-![](./media/image44.png)
+  ![](./media/image44.png)
 
 2.  Select No storage account needed radio button and select your
     subscription and then click on **Apply**.
 
-![](./media/image45.png)
+  ![](./media/image45.png)
 
 3.  Run below command to get existing resource group and set it as
     default.
 
-+++az group list --output table+++
+  +++az group list --output table+++
 
-+++az config set defaults.group=\<YourResourceGroupName\>+++
+  +++az config set defaults.group=<YourResourceGroupName>+++
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image46.png)
 
 4.  Run below command to get location of your resource group and then
     run az configure to set your default resource group region.
     Replace \<REGION\> with the region of your resource group.
 
-+++az configure --defaults location=centralindia+++
+  +++az configure --defaults location=centralindia+++
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image47.png)
 
 5.  From the Cloud Shell, generate a random number that makes your web
     app's domain name unique.
 
-+++webappsuffix=$RANDOM+++
+  +++webappsuffix=$RANDOM+++
 
-+++export RESOURCE_GROUP=ResourceGroup1+++
+  +++export RESOURCE_GROUP=ResourceGroup1+++
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image48.png)
 
 6.  Run below command to register Microsoft.web service provider.
 
-> +++az provider register --namespace Microsoft.Web+++
+  +++az provider register --namespace Microsoft.Web+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image49.png)
 
 7.  To create the App Service plan named *tailspin-space-game-asp*, run
     the following az appservice plan create command.
 
-+++az appservice plan create --name tailspin-space-game --resource-group
-$RESOURCE_GROUP --sku B1 --is-linux+++
+  +++az appservice plan create --name tailspin-space-game --resource-group $RESOURCE_GROUP --sku B1 --is-linux+++
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image50.png)
 
-** \>Important:**If the B1 SKU isn't available in your Azure
-subscription, **select a different plan**, such as S1 (Standard).
+>Important:**If the B1 SKU isn't available in your Azure subscription, **select a different plan**, such as S1 (Standard).
 
 8.  To create the three App Service instances, one for each environment
     (*Dev*, *Test*, and *Staging*), run the following az webapp
     create commands.
 
-+++az webapp create --name tailspin-space-game-web-dev-$webappsuffix
---resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime
-"DOTNETCORE|8.0"+++
+  +++az webapp create --name tailspin-space-game-web-dev-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image51.png)
 
-+++az webapp create --name tailspin-space-game-web-test-$webappsuffix
---resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime
-"DOTNETCORE|8.0"+++
+  +++az webapp create --name tailspin-space-game-web-test-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image52.png)
 
-+++az webapp create --name tailspin-space-game-web-staging-$webappsuffix
---resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime
-"DOTNETCORE|8.0"+++
+  +++az webapp create --name tailspin-space-game-web-staging-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
 
-![A screen shot of a computer program AI-generated content may be
+  ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image53.png)
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image54.png)
 
 For learning purposes, you apply the same App Service plan, B1 Basic, to
@@ -468,36 +455,33 @@ your site.
 9.  To list each App Service instance's host name and state, run the
     following az webapp list command.
 
-+++az webapp list --resource-group $RESOURCE_GROUP --query
-"\[\].{hostName: defaultHostName, state: state}" --output table+++
+  +++az webapp list --resource-group $RESOURCE_GROUP --query "[].{hostName: defaultHostName, state: state}" --output table++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image55.png)
 
-10. Go back to the Azure portal tab and click on **Resource groups**
-    tile.
+10. Go back to the Azure portal tab and click on **Resource groups**  tile.
 
-![](./media/image56.png)
+  ![](./media/image56.png)
 
 11. Click on resource group name
 
-![](./media/image57.png)
+  ![](./media/image57.png)
 
-12. Click on **Dev** app service name (
-    **tailspin-space-game-web-dev-XXXX**).
+12. Click on **Dev** app service name +++tailspin-space-game-web-dev-XXXX+++ replace XXXX with unique number .
 
-![](./media/image58.png)
+  ![](./media/image58.png)
 
-12\. Click on default domain link.
+13. Click on default domain link.
 
-![](./media/image59.png)
+  ![](./media/image59.png)
 
 13. Default home page appears.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image60.png)
 
-## \### Task 2 : Create pipeline variables in Azure Pipelines
+### Task 2 : Create pipeline variables in Azure Pipelines
 
 In Create a release pipeline with Azure Pipelines, you added a variable
 to your pipeline that stores the name of your web app in App Service.
@@ -513,20 +497,20 @@ configuration.
 
 1.  In Azure DevOps, go back to your  project.
 
-![](./media/image61.png)
+  ![](./media/image61.png)
 
 2.  Select **Pipelines -\>** **Library** from left navigation menu.
 
-![](./media/image62.png)
+  ![](./media/image62.png)
 
 3.  Select **+ Variable group**.
 
-![](./media/image63.png)
+  ![](./media/image63.png)
 
 4.  Under **Properties**, enter +++**Release+++** for the variable group
     name. Under **Variables**, select **+ Add**.
 
-![](./media/image64.png)
+  ![](./media/image64.png)
 
 5.  For the name of your variable, enter +++***WebAppNameDev+++***. For
     the value, enter the name of the App Service instance that
@@ -535,13 +519,17 @@ configuration.
     and you can also get from Azure portal-\> Resource group-\> App
     service name for dev,test and staging)
 
-![](./media/image65.png)
+  ![](./media/image65.png)
 
 6.  Repeat the previous two steps twice more to create variables for
     your *Test* and *Staging* environments. Replace XXXX with your app
     number and **Save**.
 
-[TABLE]
+  |||
+  |--|--|
+  |Variable name|Value|
+  |+++WebAppNameTest+++|+++tailspin-space-game-web-test-XXXX+++|
+  |+++WebAppNameStaging+++|+++tailspin-space-game-web-staging-XXXX+++|
 
 ![](./media/image66.png)
 
@@ -700,7 +688,7 @@ https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
 
 ![](./media/image97.png)
 
-# \## Exercise 3 - Promote to the Dev stage
+## Exercise 3 - Promote to the Dev stage
 
 The team has a plan and is ready to begin implementing their release
 pipeline. Your Azure DevOps project is set up, and your Azure App
@@ -1036,7 +1024,7 @@ incorrect.](./media/image111.png)
 
 ![](./media/image114.png)
 
-# \## Exercise 4 - Promote to the Test stage
+## Exercise 4 - Promote to the Test stage
 
 Your release pipeline still has two stages, but they're now different
 than before. The stages are *Build* and *Dev*. Every change you push to
@@ -2015,5 +2003,6 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
 
