@@ -386,11 +386,7 @@ incorrect.](./media/image54.png)
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image57.png)
 
->**Note : If you already have repo in Devops then follow steps to pull
-and resolve conflict – 1. Pull from DevOps with unrelated history:**
-**git pull origin main --allow-unrelated-histories Step 2 : Resolve
-conflicts in files like .gitignore, README.md. Step 3 : Stage the
-resolved files - git add .**
+  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
 
   +++git commit -m "Resolved merge conflicts"+++
 
@@ -529,6 +525,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
