@@ -55,286 +55,256 @@ the *Space Game* website.
 1.  Switch back to your **Azure DevOps** tab, click on the existing
     project name.
 
-![](./media/image1.png)
+  ![](./media/image1.png)
 
 2.  Hover on **Boards** from left navigation menu and select **Boards**
 
-![](./media/image2.png)
+  ![](./media/image2.png)
 
 3.  Click on **New Item** under **To Do** column as shown in the below
     image.
 
-![](./media/image3.png)
+  ![](./media/image3.png)
 
 4.  Select **Backlog Items** and then click on **New item.**
 
-![](./media/image4.png)
+  ![](./media/image4.png)
 
 5.  Create the items below. Enter the item name and then click on **Add to top**.
 
 
-+++Stabilize the build server+++
+  +++Stabilize the build server+++
 
-+++Create a Git-based workflow+++
+  +++Create a Git-based workflow+++
 
-+++Create unit tests+++
+  +++Create unit tests+++
 
-+++Check code for vulnerabilities+++
+  +++Check code for vulnerabilities+++
 
-+++Move model data to its own package+++
+  +++Move model data to its own package+++
 
-+++Investigate hosted vs private build servers+++
+  +++Investigate hosted vs private build servers+++
 
 
- ![](./media/image5.png)
+   ![](./media/image5.png)
 
- ![](./media/image6.png) ![A screenshot of a computer AI-generated
+   ![](./media/image6.png) ![A screenshot of a computer AI-generated
  content may be incorrect.](./media/image7.png)
 
 6.  In the Create a multistage pipeline card, select the **Stabilize the
     build server**. Then, assign the work item to yourself. Move the
     work item from the **To Do** column to the **Done** column.
 
-![](./media/image8.png)
+  ![](./media/image8.png)
 
 7.  In the Create a multistage pipeline card, select the **Create a
     Git-based workflow**. Then, assign the work item to yourself. Move
     the work item from the **New** column to the **Committed** column.
 
-![](./media/image9.png)
+  ![](./media/image9.png)
 
-![](./media/image10.png)
+  ![](./media/image10.png)
 
-## \### Task 2: Fetch the branch from GitHub
+## 2: Fetch the branch from GitHub
 
 1.  In Visual Studio Code, Click on **File-\> Open Folder**
 
-2.  Navigate to C:\Labfiles\Lab07 and open
-    **mslearn-tailspin-spacegame-web-deploy --**
-    **https://github.com/manjula2025/mslearn-tailspin-spacegame-web-deploy.git**
+2.  Navigate to C:\Labfiles\Lab07 and open **mslearn-tailspin-spacegame-web-deploy --**  **https://github.com/manjula2025/mslearn-tailspin-spacegame-web-deploy.git**
 
-3.  Click on **Terminal -\> New Terminal- \> GitBash**
+3.  Click on **Terminal -> New Terminal- > GitBash**
 
-> ![](./media/image11.png)
+ ![](./media/image11.png)
 
 4.  Open **Terminal** and run below command to go the folder
 
-+++cd mslearn-tailspin-spacegame-web-deploy+++
+  +++cd mslearn-tailspin-spacegame-web-deploy+++
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image12.png)
 
-5.  A *remote* is a Git repository where team members collaborate (like
-    a repository on GitHub). Here you list your remotes and add a remote
-    that points to Microsoft's copy of the repository so that you can
-    get the latest sample code.
+5.  A *remote* is a Git repository where team members collaborate (like a repository on GitHub). Here you list your remotes and add a remote that points to Microsoft's copy of the repository so that you can get the latest sample code.
 
 6.  Run the following command to list your remotes:
 
-+++git remote -v+++
+  +++git remote -v+++
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image13.png)
 
 7.  Origin specifies your repository on GitHub. When you fork code from
     another repository, the original remote (the one you forked from) is
     commonly named upstream.
 
-8.  Run the following command to create a remote named *upstream* that
-    points to the Microsoft repository:
+8.  Run the following command to create a remote named *upstream* that points to the Microsoft repository:
 
-> +++git remote add upstream
-> <https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git>+++
->
-> +++git remote -v+++
+  +++git remote add upstream https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git+++
 
-![](./media/image14.png)
+   +++git remote -v+++
+
+  ![](./media/image14.png)
 
 9.  To fetch a branch named release from the Microsoft repository, and
     to switch to that branch, run the following git commands.
 
-+++git fetch upstream release+++
+    +++git fetch upstream release+++
 
-+++git checkout -B release upstream/release+++
+    +++git checkout -B release upstream/release+++
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image15.png)
 
-## \### Task 3 : Create Repos in ADO
+### Task 3 : Create Repos in ADO
 
 1.  Switch back to DevOps Organization page and click on the existing
     project.
 
-![](./media/image16.png)
+  ![](./media/image16.png)
 
 2.  Hover on **Repos** from left navigation menu and select **Files**.
 
-![](./media/image17.png)
+  ![](./media/image17.png)
 
 3.  Click on the project drop down form top navigation menu and select
     **New repository**.
 
-![](./media/image18.png)
+  ![](./media/image18.png)
 
-4.  Enter the Repository name as
-    +++**Lab07**-**tailspin-spacegame-web-deploy+++**. **Unselect** “Add
-    a README” checkbox and then click on **Create**.
+4.  Enter the Repository name as  +++Lab07-tailspin-spacegame-web-deploy+++. **Unselect** “Add a README” checkbox and then click on **Create**.
 
-![](./media/image19.png)
+  ![](./media/image19.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image20.png)
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image20.png)
 
 5.  Copy the HTTPS url to use in next exercise 2
 
-![](./media/image21.png)
+  ![](./media/image21.png)
 
-## \### Task 4 : Push Repo in Azure DevOps
+### Task 4 : Push Repo in Azure DevOps
 
 1.  Replace you@example.com with your GitHub account and Your Name to be
     replaced with your GitHub account username in the below commands and
     run them.
 
-**+++git config --global user.email "<you@example.com>"+++**
+  +++git config --global user.email "you@example.com"+++
 
-**+++git config --global user.name "Your Name"+++**
+  +++git config --global user.name "Your Name"+++
 
-![](./media/image22.png)
+  ![](./media/image22.png)
 
 2.  **Run below commands to push the repo.**
 
-+++git init+++
+  +++git init+++
 
-+++git add .+++
+  +++git add .+++
 
-+++git commit -m "Initial commit for migration lab"+++
+  +++git commit -m "Initial commit for migration lab"+++
 
-![A computer screen shot of a program AI-generated content may be
+  ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image23.png)
 
 3.  Run below command to sign into Azure. Select Work or school account
     option and click on Continue.
 
-**az login**
+  +++az login+++
 
-![A screenshot of a computer screen AI-generated content may be
+  ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image24.png)
 
 4.  **Sign in with your cloud slice accounts.**
 
-- Username: <+++@lab.CloudPortalCredential>(User1).Username+++
+  - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-- Password: +++@lab.CloudPortalCredential(User1).Password+++
+  - Password: +++@lab.CloudPortalCredential(User1).Password+++
 
-> ![A screenshot of a computer screen AI-generated content may be
-> incorrect.](./media/image25.png)
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image26.png)
+  ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image25.png)
+
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image26.png)
 
 5.  Click on **Yes,all apps** button and then click on **Done.**
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image27.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image28.png)
 
 6.  Select your subscription and then press enter.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image29.png)
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image30.png)
 
-7.  **Run below command to push local folder to Azure Devops .(Replace**
-    https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/\_git/azure-search-openai-migrated
-    **with the https link you copied in previous step -Azure DevOps
+7.  **Run below command to push local folder to Azure Devops .(Replace **https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/_git/azure-search-openai-migrated **with the https link you copied in previous step -Azure DevOps
     repos**
 
-> +++git remote set-url origin \< Devops Repo Https url **\>+++**
->
-> ![A screen shot of a computer program AI-generated content may be
-> incorrect.](./media/image31.png)
+  +++git remote set-url origin <Devops Repo Https url>+++
 
-8.  Run below command to push the repo to Devops . if it prompts to sign
-    in ,sign in with your DevOps account.
+  ![A screen shot of a computer program AI-generated content may be  incorrect.](./media/image31.png)
 
-> +++git push -u origin --all++++
+8.  Run below command to push the repo to Devops . if it prompts to sign in ,sign in with your DevOps account.
 
-![A screen shot of a computer program AI-generated content may be
+  +++git push -u origin --all++++
+
+  ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image32.png)
 
-> **\>Note : If you already have repo in Devops then follow steps to
-> pull and resolve conflict – 1. Pull from DevOps with unrelated
-> history:** **git pull origin main --allow-unrelated-histories Step 2 :
-> Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage
-> the resolved files - git add .**
->
-> **\>\>git commit -m "Resolved merge conflicts"**
+>**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated
+history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**>git commit -m "Resolved merge conflicts"**
 
-9.  Go back to Azure Devops project and check Repos-\> Files .You should
-    see your repo here .
+9.  Go back to Azure Devops project and check Repos-> Files .You should see your repo here .
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image33.png)
+  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image33.png)
 
-## \### Task 5 : Migrate Azure DevOps Repo to GitHub Enterprise Cloud
+### Task 5 : Migrate Azure DevOps Repo to GitHub Enterprise Cloud
 
 1.  Switch back to Visual Studio and run below commands to set
     environment varaibles. Make sure to update variables with your
     values and then run them.
 
-+++export AZURE_DEVOPS_PAT="YOUR_AZDO_PAT"+++
+  +++export AZURE_DEVOPS_PAT="YOUR_AZDO_PAT"+++
 
-+++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
+  +++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
 
-+++export ADO_ORG=<https://dev.azure.com/your-ado-org>+++ \# or simply
-"your-ado-org" if you prefer
+  +++export ADO_ORG=https://dev.azure.com/your-ado-org+++ # or simply "your-ado-org" if you prefer
 
-+++export GEC_ORG="your-githubEC-org"+++ \# e.g. devopstogtihub1234
+  +++export GEC_ORG="your-githubEC-org"+++ \# e.g. devopstogtihub1234
 
-+++export ADO_PROJECT=" **dev-github-proj-XXXXX**"++++ \#ADO project –
-replace XXXXX with your project number
+  +++export ADO_PROJECT=" **dev-github-proj-XXXXX**"+++ #ADO project – replace XXXXX with your project number
 
-![A screenshot of a computer program AI-generated content may be
+  ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image34.png)
 
 2.  Run below commands to verify GitHub login status. If not logged in
     then run 2^(nd) command gh auth login and follow the process to
     loginto GitHub.
 
-+++gh auth status+++
+  +++gh auth status+++
 
-+++gh auth login+++
+  +++gh auth login+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image35.png)
 
 3.  Run below command to install GitHub Enterprise importer extension.
 
-+++gh extension install github/gh-ado2gh+++
+  +++gh extension install github/gh-ado2gh+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image36.png)
 
 4.  Run below command to grant migrator role to your account.(replace
     your-github-username with your username)
 
-+++gh gei grant-migrator-role --github-org $GEC_ORG --actor
-\<your-github-username\> --actor-type USER+++
+  +++gh gei grant-migrator-role --github-org $GEC_ORG --actor <your-github-username> --actor-type USER+++
 
-![A screen shot of a computer AI-generated content may be
+  ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image37.png)
 
-\>eg :gh gei grant-migrator-role --github-org devopstogtihub --actor
-chintharlamanjula --actor-type USER
+>eg :gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
 
-5.  Run below dry-run command to migrate repos to GEC and copy migration
-    id **  
-    (Note: We have used repo -** **tailspin-spacegame-web-deploy . You
-    can check this in your ADO-\>Org-\> Project-\> Repo )**
+5.  Run below dry-run command to migrate repos to GEC and copy migration id **(Note: We have used repo -** **tailspin-spacegame-web-deploy . You can check this in your ADO-\>Org-\> Project-\> Repo )**
 
 +++gh ado2gh migrate-repo --ado-org 
 $ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo **Lab07**-**tailspin-spacegame-web-deploy**
@@ -2045,4 +2015,5 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
