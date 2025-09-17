@@ -1,6 +1,6 @@
-# \# Lab 11 - Secure your repository's supply chain
+# Lab 11 - Secure your repository's supply chain
 
-## \## Exercise 1: Review and add dependencies using dependency graph
+## Exercise 1: Review and add dependencies using dependency graph
 
 **What's the big deal about securing your repository's supply chain?**:
 With the accelerated use of open source, most projects depend on
@@ -35,23 +35,23 @@ are submitted for the repository using the dependency submission API
 
 - Dependents, the repositories and packages that depend on it
 
-### \### Task 1: Verify that dependency graph is enabled
+### Task 1: Verify that dependency graph is enabled
 
 Dependency graph is enabled by default for all new public repositories.
 
-1.  Open a browser and navigate to -
-    +++<https://github.com/skills/secure-repository-supply-chain.git>+++.
+1.  Open a browser and navigate to - +++https://github.com/skills/secure-repository-supply-chain.git+++.
     Sign in with your GitHub account.
 
 2.  Click on **COPY EXERCISE** .
 
-![](./media/image1.png)
+  ![](./media/image1.png)
 
 3.  Keep default values and then click on **Create repository.**
 
-![](./media/image2.png)
+  ![](./media/image2.png)
 
 4.  Navigate to the **Settings** tab.Click **Advanced
     Security**.Verify **Dependency Graph** is **Enabled**
 
-![](./media/image3.png)
+  ![](./media/image3.png)
+
