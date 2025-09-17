@@ -1,4 +1,4 @@
-# Lab 01 - Simulate a Repository Migration from Azure DevOps to GitHub Enterprise Cloud using GitHub CLI and GEI
+# Lab 02 - Simulate a Repository Migration from Azure DevOps to GitHub Enterprise Cloud using GitHub CLI and GEI
 
 In this lab, you will learn how to **simulate and validate the
 migration** of a source code repository from **Azure DevOps (ADO)** to
@@ -441,9 +441,9 @@ incorrect.](./media/image64.png)
 
   +++export AZURE_DEVOPS_PAT=youradopat+++
 
-+++export ADO_ORG=" your-ado-org"+++ # eg - ADOCourseOrg04
+  +++export ADO_ORG=" your-ado-org"+++ # eg - ADOCourseOrg04
 
-+++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
+  +++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
 
   +++export ADO_PROJECT="your-existing ADO_Projectname"+++ # eg
 dev-github-proj-XXXXXXXX
@@ -463,7 +463,7 @@ incorrect.](./media/image66.png)
 
 3.  Run below command to Install the ado2gh CLI Extension
 
-  +++gh extension install github/gh-ado2gh+++
+   +++gh extension install github/gh-ado2gh+++
 
   ![A computer screen with green text AI-generated content may be
 incorrect.](./media/image67.png)
@@ -478,8 +478,7 @@ incorrect.](./media/image67.png)
     (Note: You can check repo in your ADO-\>Org-\> Project-\> Repo )**
     and note down Migration id to a notepad
 
-  +++gh ado2gh migrate-repo --ado-org $ADO_ORG --ado-team-project $ADO_PROJECT  --ado-repo dev-github-proj --github-org $GEC_ORG
---github-repo dev-github-proj-migrated-trial --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
+    +++gh ado2gh migrate-repo --ado-org $ADO_ORG --ado-team-project $ADO_PROJECT  --ado-repo dev-github-proj --github-org $GEC_ORG --github-repo dev-github-proj-migrated-trial --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
 
   ![A computer code on a black background AI-generated content may be
 incorrect.](./media/image68.png)
@@ -530,4 +529,5 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
