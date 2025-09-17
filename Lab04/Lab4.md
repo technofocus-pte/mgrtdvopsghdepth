@@ -1,5 +1,4 @@
-# Lab 04 - Simulate Dry Run Migration of Multiple Repositories from ADO to
-GEC
+# Lab 04 - Simulate Dry Run Migration of Multiple Repositories from ADO to GEC
 
 ## Objective
 
@@ -294,4 +293,5 @@ In this lab, you learnt:
 
 6.  **Validate that each migration has been queued**, and optionally
     monitor results via gh ado2gh wait-for-migration and logs.
+
 
