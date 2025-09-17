@@ -109,7 +109,7 @@ the *Space Game* website.
 
 1.  In Visual Studio Code, Click on **File-\> Open Folder**
 
-2.  Navigate to C:\Labfiles\Lab07 and open **mslearn-tailspin-spacegame-web-deploy --**  **https://github.com/manjula2025/mslearn-tailspin-spacegame-web-deploy.git**
+2.  Navigate to **C:\Labfiles\Lab07** and open **mslearn-tailspin-spacegame-web-deploy**  
 
 3.  Click on **Terminal -> New Terminal- > GitBash**
 
@@ -1611,6 +1611,7 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
 
 
