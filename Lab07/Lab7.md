@@ -1,4 +1,4 @@
-# \# Lab 07 - Enable GitHub Collaboration and Code Review Workflows with Azure Pipelines
+# Lab 07 - Enable GitHub Collaboration and Code Review Workflows with Azure Pipelines
 
 Objectives  
 By the end of this lab, you will:
@@ -24,7 +24,7 @@ We will not push changes directly to main from the pipeline — this
 reinforces review culture and simulates real-world governance where
 branch policies protect production code.
 
-# \## Exercise 1 - Set up your Azure DevOps environment
+## Exercise 1 - Set up your Azure DevOps environment
 
 In this section, you'll ensure that your Microsoft Azure DevOps
 organization is set up to complete the rest of this module.
@@ -32,7 +32,7 @@ organization is set up to complete the rest of this module.
 The modules in this learning path form a progression, in which you
 follow the Tailspin web team through its DevOps journey.
 
-## \### Task 1 : Move the work item to Doing
+### Task 1 : Move the work item to Doing
 
 Here, you assign a work item to yourself on Azure Boards. You also move
 the work item to the Doing state. In practice, you and your team would
@@ -70,25 +70,26 @@ the *Space Game* website.
 
 ![](./media/image4.png)
 
-5.  Create the items below. Enter the item name and then click on **Add
-    to top**.
+5.  Create the items below. Enter the item name and then click on **Add to top**.
 
-> **+++Stabilize the build server+++**
->
-> **+++Create a Git-based workflow+++**
->
-> **+++Create unit tests+++**
->
-> **+++Check code for vulnerabilities+++**
->
-> **+++Move model data to its own package+++**
->
-> **+++Investigate hosted vs private build servers+++**
->
-> ![](./media/image5.png)
->
-> ![](./media/image6.png) ![A screenshot of a computer AI-generated
-> content may be incorrect.](./media/image7.png)
+
++++Stabilize the build server+++
+
++++Create a Git-based workflow+++
+
++++Create unit tests+++
+
++++Check code for vulnerabilities+++
+
++++Move model data to its own package+++
+
++++Investigate hosted vs private build servers+++
+
+
+ ![](./media/image5.png)
+
+ ![](./media/image6.png) ![A screenshot of a computer AI-generated
+ content may be incorrect.](./media/image7.png)
 
 6.  In the Create a multistage pipeline card, select the **Stabilize the
     build server**. Then, assign the work item to yourself. Move the
@@ -2044,3 +2045,4 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
