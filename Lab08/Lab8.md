@@ -146,12 +146,12 @@ incorrect.](./media/image18.png)
   ![A computer screen with text and numbers AI-generated content may be
 incorrect.](./media/image19.png)
 
-7.  **Run below command to push local folder to Azure Devops .(Replace**
+7.  **Run below command to push local folder to Azure Devops .(Replace Devops-Repo-Https-url**
     https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/\_git/azure-search-openai-migrated
     **with the https link you copied in previous step -Azure DevOps
     repos**
 
-  +++git remote set-url origin <Devops Repo Https url>+++
+  +++git remote set-url origin Devops-Repo-Https-url+++
 
   ![A computer screen with text AI-generated content may be incorrect.](./media/image20.png)
 
@@ -167,12 +167,11 @@ incorrect.](./media/image19.png)
 9.  Run below code to create local tracking branches for each remote
     branch
 
-  ```
-  for branch in $(git branch -r | grep -v '\->'); do
-  git branch --track ${branch#origin/} $branch
-  done
-  ```
-
+    ```
+    for branch in $(git branch -r | grep -v '\->'); do
+    git branch --track ${branch#origin/} $branch
+    done
+    ```
 
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image23.png)
@@ -184,23 +183,16 @@ incorrect.](./media/image23.png)
   ![A computer screen with white and purple text AI-generated content may
 be incorrect.](./media/image24.png)
 
-11. **Run below command to push the repo to Devops . if it prompts to
-    sign in ,sign in with your DevOps account.**
+11. Run below command to push the repo to Devops . if it prompts to sign in ,sign in with your DevOps account.
 
   +++git push -u origin --all+++
 
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image25.png)
 
->**Note : If you already have repo in Devops then follow steps to pull
-and resolve conflict – 1. Pull from DevOps with unrelated history:**
-**git pull origin main --allow-unrelated-histories Step 2 : Resolve
-conflicts in files like .gitignore, README.md. Step 3 : Stage the
-resolved files - git add . step 4 : git commit -m "Resolved merge
-conflicts"**
+  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add . step 4 : git commit -m "Resolved merge conflicts"**
 
-12. **Go back to Azure DevOps project and check Repos-\> Files .You
-    should see your repo here.**
+12. **Go back to Azure DevOps project and check Repos-\> Files .You  should see your repo here.**
 
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image26.png)
@@ -284,13 +276,9 @@ incorrect.](./media/image35.png)
   ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image36.png)
 
-  >eg :gh gei grant-migrator-role --github-org devopstogtihub --actor
-chintharlamanjula --actor-type USER
+    >eg :gh gei grant-migrator-role --github-org devopstogtihub --actor user --actor-type USER
 
-5.  Run below dry-run command to migrate repos to GEC and copy migration
-    id**  
-    (Note: We have used repo -** **tailspin-spacegame-web-deploy . You
-    can check this in your ADO-\>Org-\> Project-\> Repo )**
+5.  Run below dry-run command to migrate repos to GEC and copy migration id**    (Note: We have used repo -** **tailspin-spacegame-web-deploy . You can check this in your ADO-\>Org-\> Project-\> Repo )**
 
   +++gh ado2gh migrate-repo --ado-org  $ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo Lab08-tailspin-spacegame-web --github-org $GEC_ORG --github-repo Lab08-tailspin-spacegame-web  --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
 
@@ -619,10 +607,7 @@ incorrect.](./media/image71.png)
 
 10. Click on the running build.
 
->Note : if permission require then click on **View** next to the warning message “
-**This pipeline needs permission to access a resource before this run
-can continue”c**lick on **Permit -\> Permit** to grant permission to run
-build.
+  >Note : if permission require then click on **View** next to the warning message “**This pipeline needs permission to access a resource before this run can continue”c**lick on **Permit -\> Permit** to grant permission to run build.
 
 11. Wait for them to be completed.
 
@@ -654,14 +639,14 @@ incorrect.](./media/image75.png)
 
     - To complete your pull request, select **Create pull request**.
 
-  ![](./media/image77.png)
+    ![](./media/image77.png)
 
-  >Note : Scroll down and if any conflict ,resolve them
+    >Note : Scroll down and if any conflict ,resolve them
 
 5.  Switch back to GEC repo-\> pull request and click on **Merge pull
     request**
 
-  ![](./media/image78.png)
+    ![](./media/image78.png)
 
 6.  Keep the default comment and click on **Confirm merge.**
 
@@ -996,19 +981,19 @@ fix to the typing error that Mara made earlier.
 
 3.  Under **Branch name pattern**, enter +++**master+++**.
 
-- Select the **Require a pull request before merging** check box.
+  - Select the **Require a pull request before merging** check box.
 
-- Select the **Require approvals** check box.
+  - Select the **Require approvals** check box.
 
-- Keep the **Required approving reviews** value at **1**.
+  - Keep the **Required approving reviews** value at **1**.
 
-  ![](./media/image113.png)
+    ![](./media/image113.png)
 
 4.  Select **Create**.Sign with your account details if it prompts.
 
-  ![](./media/image114.png)
+    ![](./media/image114.png)
 
-  ![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image115.png)
 
 ### Summary :
@@ -1048,5 +1033,6 @@ By the end of the lab, the repository was fully operational on GitHub
 Enterprise Cloud with CI/CD pipelines intact, build status visibility
 enabled, and collaboration rules in place, simulating a real-world
 migration and DevOps workflow.
+
 
 
