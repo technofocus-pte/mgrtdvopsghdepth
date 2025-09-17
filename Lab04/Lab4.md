@@ -22,7 +22,7 @@ actual transfers.
 2.  Update below commands with your GitHub account name and email id and
     then run them.
 
-    +++git config --global user.email "<you@example.com>"+++
+    +++git config --global user.email "you@example.com"+++
 
     +++git config --global user.name "Your Name"+++
 
@@ -126,11 +126,11 @@ incorrect.](./media/image9.png)
 
     +++cd repo1+++
 
-    +++git remote add origin https://dev.azure.com/$ADO_ORG/$ADO_PROJECT/_git/repo1
+    +++git remote add origin https://dev.azure.com/$ADO_ORG/$ADO_PROJECT/_git/repo1+++
 
     +++git commit -m "Initial commit for migration lab"+++
 
-    +++cd ..++++
+    +++cd ..+++
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image18.png)
@@ -222,7 +222,7 @@ incorrect.](./media/image28.png)
 4.  Create another file with the name **dryrun-multi.sh** . Each
     migration will be queued in dry-run mode
 
-    +++vi dryrun-multi.sh**+++**
+    +++vi dryrun-multi.sh+++
 
     ![A computer screen with white text AI-generated content may be
 incorrect.](./media/image29.png)
@@ -293,5 +293,6 @@ In this lab, you learnt:
 
 6.  **Validate that each migration has been queued**, and optionally
     monitor results via gh ado2gh wait-for-migration and logs.
+
 
 
