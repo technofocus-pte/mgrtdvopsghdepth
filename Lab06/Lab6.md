@@ -86,8 +86,7 @@ incorrect.](./media/image3.png)
 ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image4.png)
 
-6.  Under **System variables**, find and select **Path**, then
-    click **Edit**.
+6.  Under **System variables**, find and select **Path**, then click **Edit**.
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image5.png)
@@ -151,7 +150,7 @@ incorrect.](./media/image14.png)
     properly authenticated and ready.Replace ORG-NAME with your
     organization name and then run it.
 
-> +++gh repo list ORG-NAME+++
+    +++gh repo list ORG-NAME+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image15.png)
@@ -167,7 +166,7 @@ incorrect.](./media/image16.png)
 
 2.  Confirm installation:
 
-> +++gh gei -h+++
++++gh gei -h+++
 
 ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image17.png)
@@ -182,8 +181,7 @@ incorrect.](./media/image18.png)
 ## Task 3 : Create an Azure DevOps personal access token
 
 1.  Create an **Azure DevOps personal access token (PAT).** Open a new
-    tab in your browser and navigate to -
-    +++https://portal.azure.com/+++ and sign in with assigned account.
+    tab in your browser and navigate to -  +++https://portal.azure.com/+++ and sign in with assigned account.
 
 ![A screenshot of a sign in AI-generated content may be
 incorrect.](./media/image19.png)
@@ -340,10 +338,9 @@ incorrect.](./media/image45.png)
 7.  Run the following command to create a remote named *upstream* that
     points to the Microsoft repository:
 
-> +++git remote add upstream
-> https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git+++
->
-> +++git remote -v+++
++++git remote add upstream https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git+++
+
++++git remote -v+++
 
 ![A screen shot of a computer screen AI-generated content may be
 incorrect.](./media/image46.png)
@@ -352,9 +349,9 @@ incorrect.](./media/image46.png)
     the *release-pipeline* branch from the MicrosoftDocs repository, and
     check out a new branch *upstream/release-pipeline*.
 
-> +++git fetch upstream release-pipeline
->
-> git checkout -b release-pipeline upstream/release-pipeline
+ +++git fetch upstream release-pipeline
+
+ +++git checkout -b release-pipeline upstream/release-pipeline+++
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image47.png)
@@ -393,18 +390,15 @@ incorrect.](./media/image50.png)
 
 4.  **Sign in with your cloud slice accounts.**
 
-- Username: <+++@lab.CloudPortalCredential>(User1).Username+++
+- Username: +++@lab.CloudPortalCredential(User1).Username+++
 
 - Password: +++@lab.CloudPortalCredential(User1).Password+++
 
-> ![A screenshot of a computer screen AI-generated content may be
-> incorrect.](./media/image51.png)
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image52.png)
+ ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image51.png)
 
-![A screen shot of a computer program AI-generated content may be
-incorrect.](./media/image53.png)
+![A screenshot of a computer AI-generated content may be incorrect.](./media/image52.png)
+
+![A screen shot of a computer program AI-generated content may be incorrect.](./media/image53.png)
 
 5.  Click on **Yes,all apps** button and then click on **Done**.
 
@@ -427,26 +421,25 @@ incorrect.](./media/image57.png)
     **with the https link you copied in previous step -Azure DevOps
     repos**
 
-> +++git remote set-url origin \< Devops Repo Https url **\>+++**
->
-> ![A screen shot of a computer AI-generated content may be
-> incorrect.](./media/image58.png)
+ +++git remote set-url origin \< Devops Repo Https url\>+++
+
+ ![A screen shot of a computer AI-generated content may be incorrect.](./media/image58.png)
 
 8.  Run below command to push the repo to **DevOps** . if it prompts to
     sign in, sign in with your **DevOps** account.
 
-> +++git push -u origin –all+++
+ +++git push -u origin –all+++
 
 ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image59.png)
 
-**\>Note : If you already have repo in Devops then follow steps to pull
+**>Note : If you already have repo in Devops then follow steps to pull
 and resolve conflict – 1. Pull from DevOps with unrelated history:**
 **git pull origin main --allow-unrelated-histories Step 2 : Resolve
 conflicts in files like .gitignore, README.md. Step 3 : Stage the
 resolved files - git add .**
 
-**\>git commit -m "Resolved merge conflicts"**
++++git commit -m "Resolved merge conflicts"+++
 
 9.  Go back to Azure DevOps project and check **Repos-\> Files**. You
     should see your repo here .
@@ -500,18 +493,16 @@ incorrect.](./media/image66.png)
 3.  Run below command to grant migrator role to your account. (replace
     your-GitHub-username with your username)
 
-+++gh gei grant-migrator-role --github-org $GEC_ORG --actor
-\<your-github-username\> --actor-type USER+++
++++gh gei grant-migrator-role --github-org $GEC_ORG --actor <your-github-username> --actor-type USER+++
 
 ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image67.png)
 
-\>eg :gh gei grant-migrator-role --github-org devopstogtihub1234 --actor
-chintharlamanjula --actor-type USER
+>eg :gh gei grant-migrator-role --github-org devopstogtihub1234 --actor chintharlamanjula --actor-type USER
 
 4.  Run below command to install GitHub cli extensions
 
-> +++gh extension install github/gh-ado2gh+++
++++gh extension install github/gh-ado2gh+++
 
 ![A black screen with yellow text AI-generated content may be
 incorrect.](./media/image68.png)
@@ -531,8 +522,7 @@ incorrect.](./media/image69.png)
 1.  Copy repository migration and update below command with migration id
     and run.
 
-+++gh ado2gh wait-for-migration --migration-id \<MIGRATION_ID\>
---github-pat $GH_PAT+++
++++gh ado2gh wait-for-migration --migration-id <MIGRATION_ID> --github-pat $GH_PAT+++
 
 ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image70.png)
@@ -588,13 +578,12 @@ incorrect.](./media/image80.png)
 2.  Click on **Applications** from left navigation menu under
     Integrations.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image81.png)
+ ![A screenshot of a computer AI-generated content may be  incorrect.](./media/image81.png)
 
 3.  Click on **Authorized OAuth Apps tab** and then click on **Azure
     Pipelines (OAuth)**
 
-> ![](./media/image82.png)
+ ![](./media/image82.png)
 
 4.  Scroll down and under the Organization access section, Click on
     Grant button next to your GEC organization.
@@ -1749,3 +1738,4 @@ This was done to mirror real-world governance where:
 We will practice this **end-to-end PR approval and merge process** in
 **Lab 8**, including automation options for scenarios where governance
 rules allow it.
+
