@@ -1,6 +1,7 @@
 # Lab 07 - Enable GitHub Collaboration and Code Review Workflows with Azure Pipelines
 
-Objectives  
+**Objectives** 
+
 By the end of this lab, you will:
 
 - Enable GitHub branch protections to require Pull Request reviews
@@ -139,7 +140,7 @@ incorrect.](./media/image13.png)
 
   +++git remote add upstream https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git+++
 
-   +++git remote -v+++
+  +++git remote -v+++
 
   ![](./media/image14.png)
 
@@ -250,7 +251,7 @@ incorrect.](./media/image30.png)
   ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image32.png)
 
->**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated
+  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated
 history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**>git commit -m "Resolved merge conflicts"**
 
 9.  Go back to Azure Devops project and check Repos-> Files .You should see your repo here .
@@ -302,7 +303,7 @@ incorrect.](./media/image36.png)
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image37.png)
 
->eg :gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
+  >eg :gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
 
 5.  Run below dry-run command to migrate repos to GEC and copy migration id **(Note: We have used repo -** **tailspin-spacegame-web-deploy . You can check this in your ADO-\>Org-\> Project-\> Repo )**
 
@@ -1611,6 +1612,7 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
 
 
