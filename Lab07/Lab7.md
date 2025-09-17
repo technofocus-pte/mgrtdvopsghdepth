@@ -269,7 +269,7 @@ history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve c
 
   +++export ADO_ORG=https://dev.azure.com/your-ado-org+++ # or simply "your-ado-org" if you prefer
 
-  +++export GEC_ORG="your-githubEC-org"+++ \# e.g. devopstogtihub1234
+  +++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
 
   +++export ADO_PROJECT=" **dev-github-proj-XXXXX**"+++ #ADO project – replace XXXXX with your project number
 
@@ -499,7 +499,7 @@ configuration.
 
   ![](./media/image61.png)
 
-2.  Select **Pipelines -\>** **Library** from left navigation menu.
+2.  Select **Pipelines ->** **Library** from left navigation menu.
 
   ![](./media/image62.png)
 
@@ -546,15 +546,14 @@ configuration.
 
 ![](./media/image69.png)
 
-## \### Task 3 : Create a service connection for ARM and GitHub
+## Task 3 : Create a service connection for ARM and GitHub
 
 Here, you create a service connection that enables Azure Pipelines to
 access your Azure subscription. Azure Pipelines uses this service
 connection to deploy the website to App Service. You created a similar
 service connection in the previous labs.
 
-** Important:**Make sure that you're signed in to both the Azure portal
-and Azure DevOps under the same Microsoft account.
+** Important:**Make sure that you're signed in to both the Azure portal and Azure DevOps under the same Microsoft account.
 
 1.  From the lower-left corner of the page, select **Project settings**.
 
@@ -572,121 +571,122 @@ and Azure DevOps under the same Microsoft account.
 4.  Fill in these fields. Then, select **Grant access permission to all
     pipelines** check box and then click on **Save**.
 
-[TABLE]
+  - Scope level : **Subscription**
+  - Subscription : Your Azure subscription
+  - Resource Group : **ResourceGroup1**
+  
+  ![](./media/image73.png)
 
-> ![](./media/image73.png)
->
-> ![](./media/image74.png)
+  ![](./media/image74.png)
 
 5.  Click on **Service connections** from left navigation menu again.
 
-![](./media/image75.png)
+  ![](./media/image75.png)
 
 6.  Click on the **New Service connection** button.
 
-![](./media/image76.png)
+  ![](./media/image76.png)
 
 7.  Select **GitHub** and then click **Next**.
 
-![](./media/image77.png)
+  ![](./media/image77.png)
 
 8.  Select **AzurePipelines** from **OAuth Configuration** drop down and
     then click on **Authorize** button.
 
-![](./media/image78.png)
+  ![](./media/image78.png)
 
 9.  Keep the default service name, select **Grant access permission to
     all pipelines** security check box and then click on **Save** .
 
-![](./media/image79.png)
+  ![](./media/image79.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image80.png)
 
 10. Click on project name from top navigation menu.
 
-![](./media/image81.png)
+  ![](./media/image81.png)
 
-## \### Task 4 : Create and Configure pipeline to use GEC repo
+## Task 4 : Create and Configure pipeline to use GEC repo
 
 1.  Click on **Pipelines** from left navigation menu and then select
     Pipeline.
 
-![](./media/image82.png)
+  ![](./media/image82.png)
 
 2.  Click on **Create Pipeline**.
 
-![](./media/image83.png)
+  ![](./media/image83.png)
 
 3.  Select **Azure Repo git** tile
 
-![](./media/image84.png)
+  ![](./media/image84.png)
 
 4.  Select the **Lab07-** **tailspin-spacegame-web-deploy** repo.
 
-![](./media/image85.png)
+  ![](./media/image85.png)
 
 5.  Select **ASP.NET**
 
-![](./media/image86.png)
+  ![](./media/image86.png)
 
 6.  Click on **Save and run** drop down and select **Save**.
 
-![](./media/image87.png)
+  ![](./media/image87.png)
 
 7.  Keep the default commit message and then click on **Save**.
 
-![](./media/image88.png)
+  ![](./media/image88.png)
 
 8.  Select the **Pipelines** from the left navigation menu and select
     the pipeline to **Edit**.
 
-![](./media/image89.png)
+  ![](./media/image89.png)
 
 9.  Select **release** branch and then click next to **Run** button and
     select **Triggers**.
 
-![](./media/image90.png)
+  ![](./media/image90.png)
 
 10. Configure CI settings under **Triggers** tab, **select Override the
     YAML continuous integration trigger from here** checkbox and then
     include **release** branch
 
-![](./media/image91.png)
+  ![](./media/image91.png)
 
 11. Select **YAML** tab and select **Get sources-\>GitHub** and then
     click on **Repository**
 
-![](./media/image92.png)
+  ![](./media/image92.png)
 
 12. Select the repo
     (**devopstogithubXXXX/Lab07-migrate-multistagerepos**) which was
     migrated in above tasks and then click on **Select** button.
 
-![](./media/image93.png)
+  ![](./media/image93.png)
 
 13. Click on **Pipeline** under YAML
 
-![](./media/image94.png)
+  ![](./media/image94.png)
 
 14. Select **Azure Pipeline** under **Default agent pool for YAML** drop
     down and then click on **Save & queue-\> Save**.
 
-![](./media/image95.png)
+  ![](./media/image95.png)
 
 15. Enter some comments and click on **Save** to save the build
     pipeline.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image96.png)
 
-19\. Switch back to GitHub browser tab and navigate to the Lab07 repo
-and click on Code-\> copy Https url to use in next task
+16. Switch back to GitHub browser tab and navigate to the Lab07 repo
+and click on Code-> copy Https url to use in next task
 
-\>\>eg-
-https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
+>eg- https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
 
-![](./media/image97.png)
+  ![](./media/image97.png)
 
 ## Exercise 3 - Promote to the Dev stage
 
@@ -704,7 +704,7 @@ The *Dev* stage resembles the deployment stage that you made in
 the Create a release pipeline in Azure Pipelines module. There, you used
 a CI trigger to start the build process. Here you do the same.
 
-## \### Task 1 : Promote changes to the Dev stage
+### Task 1 : Promote changes to the Dev stage
 
 Here, you modify your pipeline configuration to promote the build to
 the *Dev* stage.
@@ -712,317 +712,216 @@ the *Dev* stage.
 1.  In Visual Studio Code, replace **azure-pipelines.yml** code with
     below code and save the file
 
-> \`\`\`
->
-> trigger:
->
-> branches:
->
-> include:
->
-> \- '\*'
->
-> pr:
->
-> branches:
->
-> include:
->
-> \- '\*'
->
-> variables:
->
-> buildConfiguration: 'Release'
->
-> releaseBranchName: 'release'
->
-> dotnetSdkVersion: '8.x'
->
-> wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
->
-> stages:
->
-> \- stage: 'Build'
->
-> displayName: 'Build the web application'
->
-> jobs:
->
-> \- job: 'Build'
->
-> displayName: 'Build job'
->
-> pool:
->
-> vmImage: 'windows-latest' \# Microsoft-hosted agent
->
-> steps:
->
-> \- task: UseNode@1
->
-> displayName: 'Use Node.js 18.20.8'
->
-> inputs:
->
-> version: '18.20.8'
->
-> \- task: UseDotNet@2
->
-> displayName: 'Use .NET SDK $(dotnetSdkVersion)'
->
-> inputs:
->
-> packageType: sdk
->
-> version: '$(dotnetSdkVersion)'
->
-> \- task: Npm@1
->
-> displayName: 'Run npm install'
->
-> inputs:
->
-> command: 'install'
->
-> verbose: false
->
-> \- powershell: |
->
-> $scssPath = "$(wwwrootDir)/scss"
->
-> if (Test-Path $scssPath) {
->
-> Write-Host "SCSS directory found. Compiling..."
->
-> npx sass $scssPath:$(wwwrootDir)/css
->
-> } else {
->
-> Write-Host "SCSS directory not found. Skipping Sass compilation."
->
-> }
->
-> displayName: 'Compile Sass assets'
->
-> \- script: 'npx gulp'
->
-> displayName: 'Run gulp tasks'
->
-> workingDirectory: Tailspin.SpaceGame.Web
->
-> \- script: |
->
-> echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)"
-> \> buildinfo.txt
->
-> displayName: 'Write build info'
->
-> workingDirectory: $(wwwrootDir)
->
-> \- task: DotNetCoreCLI@2
->
-> displayName: 'Restore project dependencies'
->
-> inputs:
->
-> command: 'restore'
->
-> projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
->
-> \- task: DotNetCoreCLI@2
->
-> displayName: 'Build the project - $(buildConfiguration)'
->
-> inputs:
->
-> command: 'build'
->
-> arguments: '--no-restore --configuration $(buildConfiguration)'
->
-> projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
->
-> \- task: DotNetCoreCLI@2
->
-> displayName: 'Publish the project - $(buildConfiguration)'
->
-> inputs:
->
-> command: 'publish'
->
-> projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
->
-> publishWebProjects: true
->
-> arguments: '--no-build --configuration $(buildConfiguration) --output
-> $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
->
-> zipAfterPublish: true
->
-> \- task: PublishBuildArtifacts@1
->
-> displayName: 'Publish Artifact: drop'
->
-> inputs:
->
-> pathToPublish: '$(Build.ArtifactStagingDirectory)'
->
-> artifactName: 'drop'
->
-> publishLocation: 'Container'
->
-> \- stage: 'Dev'
->
-> displayName: 'Deploy to the dev environment'
->
-> dependsOn: Build
->
-> condition: |
->
-> and(
->
-> succeeded(),
->
-> eq(variables\['Build.SourceBranchName'\],
-> variables\['releaseBranchName'\])
->
-> )
->
-> jobs:
->
-> \- deployment: Deploy
->
-> pool:
->
-> vmImage: 'windows-latest' \# Microsoft-hosted agent
->
-> environment: dev
->
-> variables:
->
-> \- group: Release
->
-> strategy:
->
-> runOnce:
->
-> deploy:
->
-> steps:
->
-> \- download: current
->
-> artifact: drop
->
-> \- task: AzureWebApp@1
->
-> displayName: 'Azure App Service Deploy: website'
->
-> inputs:
->
-> azureSubscription: 'Resource Manager - Tailspin - Space Game'
->
-> appName: '$(WebAppNameDev)'
->
-> package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/\*.zip'
->
-> \`\`\`
+  ```
+  trigger:
+  branches:
+    include:
+      - '*'
+pr:
+  branches:
+    include:
+      - '*'
 
-![](./media/image98.png)
+variables:
+  buildConfiguration: 'Release'
+  releaseBranchName: 'release'
+  dotnetSdkVersion: '8.x'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
 
-**\>Note:**In practice, you might deploy from some other branch, such
-as main. You can include logic that allows changes to be promoted to
+stages:
+- stage: 'Build'
+  displayName: 'Build the web application'
+  jobs:
+  - job: 'Build'
+    displayName: 'Build job'
+    pool:
+      vmImage: 'windows-latest'  #  Microsoft-hosted agent
+    steps:
+    - task: UseNode@1
+      displayName: 'Use Node.js 18.20.8'
+      inputs:
+        version: '18.20.8'
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+      inputs:
+        packageType: sdk
+        version: '$(dotnetSdkVersion)'
+
+    - task: Npm@1
+      displayName: 'Run npm install'
+      inputs:
+        command: 'install'
+        verbose: false
+
+    - powershell: |
+        $scssPath = "$(wwwrootDir)/scss"
+        if (Test-Path $scssPath) {
+          Write-Host "SCSS directory found. Compiling..."
+          npx sass $scssPath:$(wwwrootDir)/css
+        } else {
+          Write-Host "SCSS directory not found. Skipping Sass compilation."
+        }
+      displayName: 'Compile Sass assets'
+
+    - script: 'npx gulp'
+      displayName: 'Run gulp tasks'
+      workingDirectory: Tailspin.SpaceGame.Web
+
+    - script: |
+        echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
+      displayName: 'Write build info'
+      workingDirectory: $(wwwrootDir)
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore project dependencies'
+      inputs:
+        command: 'restore'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build the project - $(buildConfiguration)'
+      inputs:
+        command: 'build'
+        arguments: '--no-restore --configuration $(buildConfiguration)'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish the project - $(buildConfiguration)'
+      inputs:
+        command: 'publish'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+        publishWebProjects: true
+        arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+        zipAfterPublish: true
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: drop'
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+        artifactName: 'drop'
+        publishLocation: 'Container'
+
+- stage: 'Dev'
+  displayName: 'Deploy to the dev environment'
+  dependsOn: Build
+  condition: |
+    and(
+      succeeded(),
+      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+    )
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: 'windows-latest'  #  Microsoft-hosted agent
+    environment: dev
+    variables:
+      - group: Release
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+          - task: AzureWebApp@1
+            displayName: 'Azure App Service Deploy: website'
+            inputs:
+              azureSubscription: 'Resource Manager - Tailspin - Space Game'
+              appName: '$(WebAppNameDev)'
+              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+  ```
+
+  ![](./media/image98.png)
+
+>Note:In practice, you might deploy from some other branch, such as main. You can include logic that allows changes to be promoted to
 the *Dev* stage from multiple branches, such as release and main.
 
-2.  Run below commands to change origin so it points to your **GEC
-    repo** (the one you migrated to).
+2.  Run below commands to change origin so it points to your **GEC repo** (the one you migrated to).
 
-> \# Remove the old origin
->
-> +++git remote remove origin+++
->
-> \# Add your GEC repo as the new origin .Replace your-GEC-org with your
-> org name – eg devopstogtihub1234
->
-> +++git remote add origin
-> [https://github.com/\<your-GEC-org\>/lab07-migrate-repos.git](https://github.com/%3cyour-GEC-org%3e/lab07-migrate-repos.git)+++
->
-> \# Verify remotes
->
-> ++git remote -v+++
->
-> ![](./media/image99.png)
+  # Remove the old origin
+  +++git remote remove origin+++
+  
+  # Add your GEC repo as the new origin .Replace your-GEC-org with your org name – eg devopstogtihub1234
+  
+  +++git remote add origin https://github.com/<your-GEC-org>/lab07-migrate-repos.git+++
+
+  # Verify remotes
+  
+  +++git remote -v+++
+
+ ![](./media/image99.png)
 
 3.  From the integrated terminal, add ***azure-pipelines.yml*** to the
     index. Commit the change, and push it up to GitHub.
 
-+++git add azure-pipelines.yml+++
+  +++git add azure-pipelines.yml+++
 
-+++git commit -m "Deploy to the Dev stage"+++
+  +++git commit -m "Deploy to the Dev stage"+++
 
-+++git push origin release+++
+  +++git push origin release+++
 
-![A computer screen shot of a program AI-generated content may be
+  ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image100.png)
 
 4.  Switch back Azure DevOps project and click on **Pipeline** form left
     navigation menu and then click on the running pipeline.
 
-![](./media/image101.png)
+  ![](./media/image101.png)
 
 5.  Click on the running build
 
-![](./media/image102.png)
+  ![](./media/image102.png)
 
 6.  Click on **View** button next to warning message **“This pipeline
     needs permission to access a resource before this run can continue
     to Build the web application**”
 
-![](./media/image103.png)
+  ![](./media/image103.png)
 
 7.  Review the permission and permit access by clicking on **Permit**
     button.
 
-![](./media/image104.png)
+  ![](./media/image104.png)
 
 8.  Wait for the Build to complete.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image105.png)
 
-![](./media/image106.png)
+  ![](./media/image106.png)
 
 9.  Now click on **View** again next to the warning message “  
     **This pipeline needs permission to access 2 resources before this
     run can continue to Deploy to the dev environment”**
 
-![](./media/image107.png)
+  ![](./media/image107.png)
 
 10. Provide permission to both dev and release
 
-![](./media/image108.png)
+  ![](./media/image108.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image109.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image110.png)
 
 11. Wait for the deployment to be completed.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image111.png)
 
-![](./media/image112.png)
+  ![](./media/image112.png)
 
 12. Switch back to Azure App service tab and click on Dynamic URL of Dev
     app.
 
-![](./media/image113.png)
+  ![](./media/image113.png)
 
 13. You see that the *Space Game* website is deployed to App Service,
     and is running.
 
-![](./media/image114.png)
+  ![](./media/image114.png)
 
 ## Exercise 4 - Promote to the Test stage
 
@@ -1048,7 +947,7 @@ For learning purposes, we’ll define the schedule but also allow the
 build to go directly from Dev to Test without waiting for 3 A.M. This
 lets you complete the lab without delay.
 
-## \### Task 1 : Promote changes to the Test stage
+### Task 1 : Promote changes to the Test stage
 
 Here, you modify your pipeline configuration to deploy the build to
 the *Test* stage.
@@ -1056,357 +955,227 @@ the *Test* stage.
 1.  In Visual Studio Code, replace the code **azure-pipelines.yml** with
     below code and save the file
 
-\`\`\`
-
-trigger:
-
-branches:
-
-include:
-
-\- '\*'
+  ```
+  trigger:
+  branches:
+    include:
+      - '*'
 
 pr:
-
-branches:
-
-include:
-
-\- '\*'
+  branches:
+    include:
+      - '*'
 
 schedules:
-
-\- cron: '0 3 \* \* \*'
-
-displayName: 'Deploy every day at 3 A.M.'
-
-branches:
-
-include:
-
-\- release
-
-always: false
+- cron: '0 3 * * *'
+  displayName: 'Deploy every day at 3 A.M.'
+  branches:
+    include:
+      - release
+  always: false
 
 variables:
-
-buildConfiguration: 'Release'
-
-releaseBranchName: 'release'
-
-dotnetSdkVersion: '8.x'
-
-wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+  buildConfiguration: 'Release'
+  releaseBranchName: 'release'
+  dotnetSdkVersion: '8.x'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
 
 stages:
-
-\- stage: 'Build'
-
-displayName: 'Build the web application'
-
-jobs:
-
-\- job: 'Build'
-
-displayName: 'Build job'
-
-pool:
-
-vmImage: 'windows-latest'
-
-steps:
-
-\- task: UseNode@1
-
-displayName: 'Use Node.js 18.20.8'
-
-inputs:
-
-version: '18.20.8'
-
-\- task: UseDotNet@2
-
-displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-
-inputs:
-
-packageType: sdk
-
-version: '$(dotnetSdkVersion)'
-
-\- task: Npm@1
-
-displayName: 'Run npm install'
-
-inputs:
-
-command: 'install'
-
-verbose: false
-
-\- powershell: |
-
-$scssPath = "$(wwwrootDir)/scss"
-
-if (Test-Path $scssPath) {
-
-Write-Host "SCSS directory found. Compiling..."
-
-npx sass $scssPath:$(wwwrootDir)/css
-
-} else {
-
-Write-Host "SCSS directory not found. Skipping Sass compilation."
-
-}
-
-displayName: 'Compile Sass assets'
-
-\- script: 'npx gulp'
-
-displayName: 'Run gulp tasks'
-
-workingDirectory: Tailspin.SpaceGame.Web
-
-\- script: |
-
-echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)"
-\> buildinfo.txt
-
-displayName: 'Write build info'
-
-workingDirectory: $(wwwrootDir)
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Restore project dependencies'
-
-inputs:
-
-command: 'restore'
-
-projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Build the project - $(buildConfiguration)'
-
-inputs:
-
-command: 'build'
-
-arguments: '--no-restore --configuration $(buildConfiguration)'
-
-projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
-\- task: DotNetCoreCLI@2
-
-displayName: 'Publish the project - $(buildConfiguration)'
-
-inputs:
-
-command: 'publish'
-
-projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
-publishWebProjects: true
-
-arguments: '--no-build --configuration $(buildConfiguration) --output
-$(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
-
-zipAfterPublish: true
-
-\- task: PublishBuildArtifacts@1
-
-displayName: 'Publish Artifact: drop'
-
-inputs:
-
-pathToPublish: '$(Build.ArtifactStagingDirectory)'
-
-artifactName: 'drop'
-
-publishLocation: 'Container'
-
-\- stage: 'Dev'
-
-displayName: 'Deploy to the dev environment'
-
-dependsOn: Build
-
-condition: |
-
-and(
-
-succeeded(),
-
-eq(variables\['Build.SourceBranchName'\],
-variables\['releaseBranchName'\])
-
-)
-
-jobs:
-
-\- deployment: Deploy
-
-pool:
-
-vmImage: 'windows-latest'
-
-environment: dev
-
-variables:
-
-\- group: Release
-
-strategy:
-
-runOnce:
-
-deploy:
-
-steps:
-
-\- download: current
-
-artifact: drop
-
-\- task: AzureWebApp@1
-
-displayName: 'Azure App Service Deploy: website'
-
-inputs:
-
-azureSubscription: 'Resource Manager - Tailspin - Space Game'
-
-appName: '$(WebAppNameDev)'
-
-package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/\*.zip'
-
-\- stage: 'Test'
-
-displayName: 'Deploy to the test environment'
-
-dependsOn: Dev
-
-condition: |
-
-or(
-
-eq(variables\['Build.Reason'\], 'Schedule'),
-
-succeeded()
-
-)
-
-jobs:
-
-\- deployment: Deploy
-
-pool:
-
-vmImage: 'windows-latest'
-
-environment: test
-
-variables:
-
-\- group: Release
-
-strategy:
-
-runOnce:
-
-deploy:
-
-steps:
-
-\- download: current
-
-artifact: drop
-
-\- task: AzureWebApp@1
-
-displayName: 'Azure App Service Deploy: website'
-
-inputs:
-
-azureSubscription: 'Resource Manager - Tailspin - Space Game'
-
-appName: '$(WebAppNameTest)'
-
-package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/\*.zip'
-
-\`\`\`
-
-![](./media/image115.png)
-
-2.  From the integrated terminal to the index,
-    add ***azure-pipelines.yml***. Then, commit the change, and push it
+- stage: 'Build'
+  displayName: 'Build the web application'
+  jobs:
+  - job: 'Build'
+    displayName: 'Build job'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: UseNode@1
+      displayName: 'Use Node.js 18.20.8'
+      inputs:
+        version: '18.20.8'
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+      inputs:
+        packageType: sdk
+        version: '$(dotnetSdkVersion)'
+
+    - task: Npm@1
+      displayName: 'Run npm install'
+      inputs:
+        command: 'install'
+        verbose: false
+
+    - powershell: |
+        $scssPath = "$(wwwrootDir)/scss"
+        if (Test-Path $scssPath) {
+          Write-Host "SCSS directory found. Compiling..."
+          npx sass $scssPath:$(wwwrootDir)/css
+        } else {
+          Write-Host "SCSS directory not found. Skipping Sass compilation."
+        }
+      displayName: 'Compile Sass assets'
+
+    - script: 'npx gulp'
+      displayName: 'Run gulp tasks'
+      workingDirectory: Tailspin.SpaceGame.Web
+
+    - script: |
+        echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
+      displayName: 'Write build info'
+      workingDirectory: $(wwwrootDir)
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore project dependencies'
+      inputs:
+        command: 'restore'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build the project - $(buildConfiguration)'
+      inputs:
+        command: 'build'
+        arguments: '--no-restore --configuration $(buildConfiguration)'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish the project - $(buildConfiguration)'
+      inputs:
+        command: 'publish'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+        publishWebProjects: true
+        arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+        zipAfterPublish: true
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: drop'
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+        artifactName: 'drop'
+        publishLocation: 'Container'
+
+- stage: 'Dev'
+  displayName: 'Deploy to the dev environment'
+  dependsOn: Build
+  condition: |
+    and(
+      succeeded(),
+      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+    )
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: 'windows-latest'
+    environment: dev
+    variables:
+      - group: Release
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+          - task: AzureWebApp@1
+            displayName: 'Azure App Service Deploy: website'
+            inputs:
+              azureSubscription: 'Resource Manager - Tailspin - Space Game'
+              appName: '$(WebAppNameDev)'
+              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+
+- stage: 'Test'
+  displayName: 'Deploy to the test environment'
+  dependsOn: Dev
+  condition: |
+    or(
+      eq(variables['Build.Reason'], 'Schedule'),
+      succeeded()
+    )
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: 'windows-latest'
+    environment: test
+    variables:
+      - group: Release
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+          - task: AzureWebApp@1
+            displayName: 'Azure App Service Deploy: website'
+            inputs:
+              azureSubscription: 'Resource Manager - Tailspin - Space Game'
+              appName: '$(WebAppNameTest)'
+              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+  ```
+  ![](./media/image115.png)
+
+2.  From the integrated terminal to the index, add ***azure-pipelines.yml***. Then, commit the change, and push it
     up to GitHub.
 
-+++git add azure-pipelines.yml+++
+  +++git add azure-pipelines.yml+++
 
-+++git commit -m "Deploy to the Test stage"+++
+  +++git commit -m "Deploy to the Test stage"+++
 
-+++git push origin release+++
+  +++git push origin release+++
 
-> ![A screenshot of a computer program AI-generated content may be
-> incorrect.](./media/image116.png)
+  ![A screenshot of a computer program AI-generated content may be  incorrect.](./media/image116.png)
 
 3.  Switch back to **Azure Devops-\> Project-\>Pipelines** and click on
     Pipeline name-**mslearn-tailspin-spacegame-deploy**
 
-![](./media/image117.png)
+  ![](./media/image117.png)
 
 4.  Click on **Deploy to Test Stage running** job
 
-![](./media/image118.png)
+  ![](./media/image118.png)
 
 5.  Wait for the deployment to dev stage complete
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image119.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image120.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image121.png)
 
 6.  Click on View next to the warning message **“This pipeline needs
     permission to access a resource before this run can continue to
     Deploy to the test environment”**
 
-![](./media/image122.png)
+  ![](./media/image122.png)
 
 7.  Click on **Permit-\>Permit** to permit access to deploy to test
     environment.
 
-![](./media/image123.png)
+  ![](./media/image123.png)
 
 8.  Wait for the deployment to be completed
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image124.png)
 
-![](./media/image125.png)
+  ![](./media/image125.png)
 
 9.  Switch back to Azure portal-\>Resource group and click on Azure Test
     app service name.
 
-![](./media/image126.png)
+  ![](./media/image126.png)
 
 10. Click on Default domain
 
-![](./media/image127.png)
+  ![](./media/image127.png)
 
 11. App is up and running.
 
-![A screenshot of a game AI-generated content may be
+  ![A screenshot of a game AI-generated content may be
 incorrect.](./media/image128.png)
 
-# \## Exercise 5 : Promote to Staging
+## Exercise 5 : Promote to Staging
 
 Your release pipeline now has three stages: *Build*, *Dev*, and *Test*.
 You and the Tailspin team have one more stage to implement: *Staging*.
@@ -1419,7 +1188,7 @@ In this part, you'll:
 - Define the *Staging* stage, which runs only after an approver verifies
   the results of the *Test* stage.
 
-## \### Task 1 : Update approvals in the staging environment
+### Task 1 : Update approvals in the staging environment
 
 Here, you create an environment in Azure Pipelines for *Staging*. For
 learning purposes, you assign yourself as the approver. In practice, you
@@ -1459,22 +1228,22 @@ one stage to the next. Here, you specify those approvals.
 1.  Switch back to Azure DevOps tab, click on **Environments** and then
     select **staging** environment**.**
 
-![](./media/image129.png)
+  ![](./media/image129.png)
 
 2.  Select **Approvals and checks** tab and then select **Approvals**
     check.
 
-![](./media/image130.png)
+  ![](./media/image130.png)
 
 3.  Under **Approvers**, select cloud slice account.
     Under **Instructions to approvers**, enter ***Approve this change
     when it's ready for staging*** and then click on **Create**.
 
-> ![](./media/image131.png)
->
-> ![](./media/image132.png)
+  ![](./media/image131.png)
 
-## \### Task 2 : Promote changes to Staging
+  ![](./media/image132.png)
+
+### Task 2 : Promote changes to Staging
 
 Here you modify your pipeline configuration to deploy the build to
 the *Staging* stage.
@@ -1482,324 +1251,163 @@ the *Staging* stage.
 1.  Switch back to Visual Studio Code, replace the
      *azure-pipelines.yml* code with below code.
 
-> \`\`\`
->
-> trigger:
->
-> branches:
->
-> include:
->
-> \- '\*'
->
-> pr:
->
-> branches:
->
-> include:
->
-> \- '\*'
->
-> schedules:
->
-> \- cron: '0 3 \* \* \*'
->
-> displayName: 'Deploy every day at 3 A.M.'
->
-> branches:
->
-> include:
->
-> \- release
->
-> always: false
->
-> variables:
->
-> buildConfiguration: 'Release'
->
-> releaseBranchName: 'release'
->
-> dotnetSdkVersion: '8.x'
->
-> wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
->
-> stages:
->
-> \- stage: 'Build'
->
-> displayName: 'Build the web application'
->
-> jobs:
->
-> \- job: 'Build'
->
-> displayName: 'Build job'
->
-> pool:
->
-> vmImage: 'windows-latest'
->
-> steps:
->
-> \- task: UseNode@1
->
-> displayName: 'Use Node.js 18.20.8'
->
-> inputs:
->
-> version: '18.20.8'
->
-> \- task: UseDotNet@2
->
-> displayName: 'Use .NET SDK $(dotnetSdkVersion)'
->
-> inputs:
->
-> packageType: sdk
->
-> version: '$(dotnetSdkVersion)'
->
-> \- task: Npm@1
->
-> displayName: 'Run npm install'
->
-> inputs:
->
-> command: 'install'
->
-> verbose: false
->
-> \- powershell: |
->
-> $scssPath = "$(wwwrootDir)/scss"
->
-> if (Test-Path $scssPath) {
->
-> Write-Host "SCSS directory found. Compiling..."
->
-> npx sass $scssPath:$(wwwrootDir)/css
->
-> } else {
->
-> Write-Host "SCSS directory not found. Skipping Sass compilation."
->
-> }
->
-> displayName: 'Compile Sass assets'
->
-> \- script: 'npx gulp'
->
-> displayName: 'Run gulp tasks'
->
-> workingDirectory: Tailspin.SpaceGame.Web
->
-> \- script: |
->
-> echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)"
-> \> buildinfo.txt
->
-> displayName: 'Write build info'
->
-> workingDirectory: $(wwwrootDir)
->
-> \- task: DotNetCoreCLI@2
->
-> displayName: 'Restore project dependencies'
->
-> inputs:
->
-> command: 'restore'
->
-> projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
->
-> \- task: DotNetCoreCLI@2
->
-> displayName: 'Build the project - $(buildConfiguration)'
->
-> inputs:
->
-> command: 'build'
->
-> arguments: '--no-restore --configuration $(buildConfiguration)'
->
-> projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
->
-> \- task: DotNetCoreCLI@2
->
-> displayName: 'Publish the project - $(buildConfiguration)'
->
-> inputs:
->
-> command: 'publish'
->
-> projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
->
-> publishWebProjects: true
->
-> arguments: '--no-build --configuration $(buildConfiguration) --output
-> $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
->
-> zipAfterPublish: true
->
-> \- task: PublishBuildArtifacts@1
->
-> displayName: 'Publish Artifact: drop'
->
-> inputs:
->
-> pathToPublish: '$(Build.ArtifactStagingDirectory)'
->
-> artifactName: 'drop'
->
-> publishLocation: 'Container'
->
-> \- stage: 'Dev'
->
-> displayName: 'Deploy to the dev environment'
->
-> dependsOn: Build
->
-> condition: |
->
-> and(
->
-> succeeded(),
->
-> eq(variables\['Build.SourceBranchName'\],
-> variables\['releaseBranchName'\])
->
-> )
->
-> jobs:
->
-> \- deployment: Deploy
->
-> pool:
->
-> vmImage: 'windows-latest'
->
-> environment: dev
->
-> variables:
->
-> \- group: Release
->
-> strategy:
->
-> runOnce:
->
-> deploy:
->
-> steps:
->
-> \- download: current
->
-> artifact: drop
->
-> \- task: AzureWebApp@1
->
-> displayName: 'Azure App Service Deploy: website'
->
-> inputs:
->
-> azureSubscription: 'Resource Manager - Tailspin - Space Game'
->
-> appName: '$(WebAppNameDev)'
->
-> package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/\*.zip'
->
-> \- stage: 'Test'
->
-> displayName: 'Deploy to the test environment'
->
-> dependsOn: Dev
->
-> jobs:
->
-> \- deployment: Deploy
->
-> pool:
->
-> vmImage: 'windows-latest'
->
-> environment: test
->
-> variables:
->
-> \- group: Release
->
-> strategy:
->
-> runOnce:
->
-> deploy:
->
-> steps:
->
-> \- download: current
->
-> artifact: drop
->
-> \- task: AzureWebApp@1
->
-> displayName: 'Azure App Service Deploy: website'
->
-> inputs:
->
-> azureSubscription: 'Resource Manager - Tailspin - Space Game'
->
-> appName: '$(WebAppNameTest)'
->
-> package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/\*.zip'
->
-> \- stage: 'Staging'
->
-> displayName: 'Deploy to the staging environment'
->
-> dependsOn: Test
->
-> jobs:
->
-> \- deployment: Deploy
->
-> pool:
->
-> vmImage: 'windows-latest'
->
-> environment: staging
->
-> variables:
->
-> \- group: Release
->
-> strategy:
->
-> runOnce:
->
-> deploy:
->
-> steps:
->
-> \- download: current
->
-> artifact: drop
->
-> \- task: AzureWebApp@1
->
-> displayName: 'Azure App Service Deploy: website'
->
-> inputs:
->
-> azureSubscription: 'Resource Manager - Tailspin - Space Game'
->
-> appName: '$(WebAppNameStaging)'
->
-> package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/\*.zip'
->
-> \`\`\`
+  ```
+  trigger:
+  branches:
+    include:
+      - '*'
 
-![A screenshot of a computer AI-generated content may be
+pr:
+  branches:
+    include:
+      - '*'
+
+schedules:
+- cron: '0 3 * * *'
+  displayName: 'Deploy every day at 3 A.M.'
+  branches:
+    include:
+      - release
+  always: false
+
+variables:
+  buildConfiguration: 'Release'
+  releaseBranchName: 'release'
+  dotnetSdkVersion: '8.x'
+  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+
+stages:
+- stage: 'Build'
+  displayName: 'Build the web application'
+  jobs:
+  - job: 'Build'
+    displayName: 'Build job'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: UseNode@1
+      displayName: 'Use Node.js 18.20.8'
+      inputs:
+        version: '18.20.8'
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+      inputs:
+        packageType: sdk
+        version: '$(dotnetSdkVersion)'
+
+    - task: Npm@1
+      displayName: 'Run npm install'
+      inputs:
+        command: 'install'
+        verbose: false
+
+    - powershell: |
+        $scssPath = "$(wwwrootDir)/scss"
+        if (Test-Path $scssPath) {
+          Write-Host "SCSS directory found. Compiling..."
+          npx sass $scssPath:$(wwwrootDir)/css
+        } else {
+          Write-Host "SCSS directory not found. Skipping Sass compilation."
+        }
+      displayName: 'Compile Sass assets'
+
+    - script: 'npx gulp'
+      displayName: 'Run gulp tasks'
+      workingDirectory: Tailspin.SpaceGame.Web
+
+    - script: |
+        echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
+      displayName: 'Write build info'
+      workingDirectory: $(wwwrootDir)
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore project dependencies'
+      inputs:
+        command: 'restore'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build the project - $(buildConfiguration)'
+      inputs:
+        command: 'build'
+        arguments: '--no-restore --configuration $(buildConfiguration)'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish the project - $(buildConfiguration)'
+      inputs:
+        command: 'publish'
+        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+        publishWebProjects: true
+        arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+        zipAfterPublish: true
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: drop'
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+        artifactName: 'drop'
+        publishLocation: 'Container'
+
+- stage: 'Dev'
+  displayName: 'Deploy to the dev environment'
+  dependsOn: Build
+  condition: |
+    and(
+      succeeded(),
+      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+    )
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: 'windows-latest'
+    environment: dev
+    variables:
+      - group: Release
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+          - task: AzureWebApp@1
+            displayName: 'Azure App Service Deploy: website'
+            inputs:
+              azureSubscription: 'Resource Manager - Tailspin - Space Game'
+              appName: '$(WebAppNameDev)'
+              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+
+- stage: 'Test'
+  displayName: 'Deploy to the test environment'
+  dependsOn: Dev
+  condition: |
+    or(
+      eq(variables['Build.Reason'], 'Schedule'),
+      succeeded()
+    )
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: 'windows-latest'
+    environment: test
+    variables:
+      - group: Release
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: drop
+          - task: AzureWebApp@1
+            displayName: 'Azure App Service Deploy: website'
+            inputs:
+              azureSubscription: 'Resource Manager - Tailspin - Space Game'
+              appName: '$(WebAppNameTest)'
+              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+  ```
+
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image133.png)
 
 This code adds the *Staging* stage. The stage deploys to
@@ -1808,76 +1416,76 @@ the **staging** environment, which includes a release approval.
 2.  From the integrated terminal, add ***azure-pipelines.yml*** to the
     index. Next, commit the change and push it up to GitHub.
 
-**+++git add azure-pipelines.yml+++**
+  +++git add azure-pipelines.yml+++
 
-**+++git commit -m "Deploy to Staging"+++**
+  +++git commit -m "Deploy to Staging"+++
 
-**+++git push origin release+++**
+  +++git push origin release+++
 
-![](./media/image134.png)
+  ![](./media/image134.png)
 
 3.  Switch back to the Azure Pipeline and click on the running pipeline.
 
-![](./media/image135.png)
+  ![](./media/image135.png)
 
 4.  Click on the **Deploy to Staging** run.
 
-![](./media/image136.png)
+  ![](./media/image136.png)
 
 5.  Wait for the build, dev and test deployment to be completed.
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image137.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image138.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image139.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image140.png)
 
 6.  Click on **View** next to the warning message “  
     **This pipeline needs permission to access a resource before this
     run can continue to Deploy to the staging environment”**
 
-![](./media/image141.png)
+  ![](./media/image141.png)
 
-7.  Click on **Permit -\>Permit** to permit access to deploy to the
+7.  Click on **Permit ->Permit** to permit access to deploy to the
     staging environment.
 
-![](./media/image142.png)
+  ![](./media/image142.png)
 
 8.  Add a comment and then click on **Approve** button. In practice, to
     verify that they meet your requirements, you should inspect the
     changes.
 
-![](./media/image143.png)
+  ![](./media/image143.png)
 
 9.  Wait for the deployment to be completed.
 
-![](./media/image144.png)
+  ![](./media/image144.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image145.png)
 
 10. Switch back to **Azure portal- \> Resource group** and select
     **Staging Azure app service**
 
-![](./media/image146.png)
+  ![](./media/image146.png)
 
 11. Click on **Default domain**.
 
-![](./media/image147.png)
+  ![](./media/image147.png)
 
 12. You see that the *Space Game* website is deployed to App Service and
     is running.
 
-![A screenshot of a game AI-generated content may be
+  ![A screenshot of a game AI-generated content may be
 incorrect.](./media/image148.png)
 
-## \### Task 3 : Promote Staging changes to main in GEC
+### Task 3 : Promote Staging changes to main in GEC
 
 Now that your changes have passed manual approval and are successfully
 deployed to the Staging environment, it’s time to promote them to the
@@ -1886,67 +1494,67 @@ main branch in GitHub Enterprise Cloud (GEC).
 1.  Switch back to GitHub tab and click on profile and select **Your
     enterprises**
 
-![](./media/image149.png)
+  ![](./media/image149.png)
 
 2.  Click on Enterprise account name.
 
-![](./media/image150.png)
+  ![](./media/image150.png)
 
 3.  Click on Organizations tab and select your enterprise organization.
 
-![](./media/image151.png)
+  ![](./media/image151.png)
 
 4.  Click on repositories tab and then click on your
     **Lab07-migrate-multistagerepos** repository
 
-![](./media/image152.png)
+  ![](./media/image152.png)
 
 5.  In yellow banner ,click on **Compare & pull request** button next to
     **“release had recent pushes XX minutes ago”**
 
-![](./media/image153.png)
+  ![](./media/image153.png)
 
 6.  Add the pr title as +++**Promote post-Staging approval+++** and
     select base branch as “**main**” and source branch as “**release”.**
     Add a brief description (optional for lab) and then click **Create
     pull request**.
 
-> ![](./media/image154.png)
+  ![](./media/image154.png)
 
 7.  Scroll down and click on **Merge pull request.**
 
-![](./media/image155.png)
+  ![](./media/image155.png)
 
 8.  Keep the default commit message and then click on **Confirm merge**
     button.
 
-> ![](./media/image156.png)
->
-> ![](./media/image157.png)
+ ![](./media/image156.png)
 
-# \## Exercise 6 : Clean up your Azure DevOps environment
+ ![](./media/image157.png)
+
+## Exercise 6 : Clean up your Azure DevOps environment
 
 You're finished with the tasks for this module. In this unit, you clean
 up your Azure resources, move the work item to the **Done** state on
 Azure Boards, and clean up your Azure DevOps environment.
 
-## \### Task 1 : Clean up Azure resources
+### Task 1 : Clean up Azure resources
 
 1.  Go to the Azure portal, and click on **ResourceGroup1**
 
-![](./media/image158.png)
+  ![](./media/image158.png)
 
 2.  Select all resource and click on delete ( **DO NOT DELETE resource
     group**)
 
-> ![](./media/image159.png)
+ ![](./media/image159.png)
 
 3.  Enter delete in the text box and click on **Delete** and confirm
     deletion.
 
-![](./media/image160.png)
+  ![](./media/image160.png)
 
-## \### Task 2 : Move the work item to Done
+### Task 2 : Move the work item to Done
 
 Now, move the work item that you assigned to yourself earlier in this
 module. Move **Create a multistage pipeline** to the **Done** column.
@@ -1963,33 +1571,33 @@ completed, what went well, and what you can improve.
 1.  From Azure DevOps project, go to **Boards**, and from the menu,
     select **Boards**.
 
-![](./media/image161.png)
+  ![](./media/image161.png)
 
 2.  Move the **Create a multistage pipeline** work item, from
     the **Committed** column to the **Done** column.
 
-![](./media/image162.png)
+  ![](./media/image162.png)
 
-![A screenshot of a computer AI-generated content may be
+  ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image163.png)
 
-## \### Task 3 : Disable the pipeline or delete your project
+### Task 3 : Disable the pipeline or delete your project
 
 1.  In Azure Pipelines, go to your pipeline.
 
-![](./media/image164.png)
+  ![](./media/image164.png)
 
 2.  From the dropdown, select **Settings**.
 
-![](./media/image165.png)
+  ![](./media/image165.png)
 
 3.  Under **Processing of new run requests**, select **Disabled**, and
     then select **Save**.Now, your pipeline no longer processes build
     requests.
 
-![](./media/image166.png)
+  ![](./media/image166.png)
 
-## \## Summary
+## Summary
 
 This lab mirrored a typical enterprise GitHub workflow:
 
@@ -2003,6 +1611,7 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
 
 
