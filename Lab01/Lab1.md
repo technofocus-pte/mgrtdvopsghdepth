@@ -1,4 +1,4 @@
-# Lab 02 - Simulate a Repository Migration from Azure DevOps to GitHub Enterprise Cloud using GitHub CLI and GEI
+# Lab 01 - Simulate a Repository Migration from Azure DevOps to GitHub Enterprise Cloud using GitHub CLI and GEI
 
 In this lab, you will learn how to **simulate and validate the
 migration** of a source code repository from **Azure DevOps (ADO)** to
@@ -529,5 +529,6 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
