@@ -8,8 +8,7 @@ protection rules.
 
 ## Task 1. Create Issue Template File
 
-1.Swtich back to GitBash and run below commands to create the following
-directory and file structure in your local repo
+1. Swtich back to GitBash and run below commands to create the following directory and file structure in your local repo
 
     +++mkdir Lab05-IssueTemplateAndBranchRules+++
 
@@ -126,7 +125,7 @@ incorrect.](./media/image8.png)
   "restrictions": null
   }
  EOF
-
+    ```
 
     ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image9.png)
@@ -145,4 +144,5 @@ incorrect.](./media/image10.png)
 
 - You enforced Branch Protection Rules using the GitHub CLI with the
   REST API.
+
 
