@@ -791,7 +791,7 @@ incorrect.](./media/image91.png)
   ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image92.png)
 
-7. On a new browser tab, go to ++http://localhost:5000++ to see the
+7. On a new browser tab, go to +++http://localhost:5000+++ to see the
     running application.You can see that the home page contains the
     updated text.
 
@@ -1048,4 +1048,5 @@ By the end of the lab, the repository was fully operational on GitHub
 Enterprise Cloud with CI/CD pipelines intact, build status visibility
 enabled, and collaboration rules in place, simulating a real-world
 migration and DevOps workflow.
+
 
