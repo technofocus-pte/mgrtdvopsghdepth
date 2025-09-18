@@ -63,7 +63,7 @@ incorrect.](./media/image5.png)
 
   +++gh --version+++
 
-  ++++gh auth login+++
+  +++gh auth login+++
 
   ![A computer screen with white text AI-generated content may be
 incorrect.](./media/image7.png)
@@ -1248,5 +1248,6 @@ To delete the project:
     select **Delete** a second time.
 
   ![](./media/image149.png)
+
 
 
