@@ -266,7 +266,7 @@ incorrect.](./media/image33.png)
 9.  Enter the name as : +++**devopstoken+++** and select the following
     scopes and select **Full access** scopes and click on **Create**.
 
-![](./media/image37.png)
+    ![](./media/image37.png)
 
 10.  Copy the generated API token and save it in a safe location. For
     your security, it won't be shown again.
@@ -276,10 +276,10 @@ incorrect.](./media/image38.png)
 
 ## Task 5 : Push Repo in Azure DevOps
 
-1.  Open **GitBash** from Desktop and run below command to navigate to
+1.  Open **GitBash** from Taskbar and run below command to navigate to
     the project repo.
 
-  +++cd “C:\LabFiles\azure-search-openai-demo”+++
+  +++cd “C:\LabFiles\Lab01\azure-search-openai-demo”+++
 
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image39.png)
@@ -364,7 +364,7 @@ incorrect.](./media/image53.png)
 incorrect.](./media/image54.png)
 
 12. **Run below command to push local folder to Azure Devops .(Eg -**
-    <https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/_git/azure-search-openai-migrated).Repalce>
+    <https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/_git/azure-search-openai-migrated).Replace>
     \< Devops Https url **\> with the https link you copied in previous
     step -Azure DevOps repos**
 
@@ -386,9 +386,9 @@ incorrect.](./media/image54.png)
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image57.png)
 
-  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
+    >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
 
-  +++git commit -m "Resolved merge conflicts"+++
+    +++git commit -m "Resolved merge conflicts"+++
 
 15. Go back to Azure DevOps project and check Repos-\> Files .You should
     see your repo here .
@@ -525,6 +525,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
