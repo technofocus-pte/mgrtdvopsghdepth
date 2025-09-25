@@ -21,9 +21,9 @@ to set up metadata, permissions, security, and insights.
 
 1.  Switch back to GitBash and run it. This opens the repo in browser.
 
-  +++gh repo view $GEC_ORG dev-github-proj-migrated-trial --web+++
+    +++gh repo view $GEC_ORG dev-github-proj-migrated-trial --web+++
 
-  ![A black screen with white text AI-generated content may be
+    ![A black screen with white text AI-generated content may be
 incorrect.](./media/image1.png)
 
 2.  Click on **Settings** tab
@@ -60,15 +60,15 @@ incorrect.](./media/image4.png)
 
   ![](./media/image6.png)
 
->Note : Use relevant topics that reflect the project purpose (e.g.,
+    >Note : Use relevant topics that reflect the project purpose (e.g.,
 data-science, migrated-repo, azure, gei, etc.).
 
 3.  Run this command in Git Bash to open the repository in your browser.
     This will open the repo's **homepage on GitHub**
 
-  +++gh repo view $GEC_ORG dev-github-proj-migrated-trial --web+++
+    +++gh repo view $GEC_ORG dev-github-proj-migrated-trial --web+++
 
-  ![](./media/image7.png)
+   ![](./media/image7.png)
 
 4.  You should see the updated description and topics
 
@@ -85,18 +85,18 @@ data-science, migrated-repo, azure, gei, etc.).
     repo. Assigns them the **Write** permission (they can push changes,
     but not manage repo settings)
 
-+++gh api  -X PUT -H "Accept: application/vnd.github+json"  repos/$GEC_ORG /dev-github-proj-migrated-trial/collaborators/$GITHUB_USERNAME  -f permission=write+++
+    +++gh api  -X PUT -H "Accept: application/vnd.github+json"  repos/$GEC_ORG /dev-github-proj-migrated-trial/collaborators/$GITHUB_USERNAME  -f permission=write+++
 
-  ![A computer screen with green and blue text AI-generated content may be
+    ![A computer screen with green and blue text AI-generated content may be
 incorrect.](./media/image9.png)
 
-  ![A screen shot of a computer program AI-generated content may be
+    ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image10.png)
 
-  ![A screenshot of a computer program AI-generated content may be
+    ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image11.png)
 
-  ![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image12.png)
 
 3.  Ask your teammate , they got invitation and ask them to authenticate
@@ -137,10 +137,10 @@ incorrect.](./media/image14.png)
 
 5.  Scroll down and under **Branch rules**, select the following:
 
-- Require a pull request before merging- Automatically request Copilot
+    - Require a pull request before merging- Automatically request Copilot
   code review
 
-- Require linear history
+    - Require linear history
 
   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image20.png)
 
@@ -164,4 +164,5 @@ incorrect.](./media/image14.png)
 
 - Ensured the repository is ready for collaboration and compliant with
   common DevOps standards
+
 
