@@ -219,7 +219,7 @@ incorrect.](./media/image28.png)
 ## Task 4 : Create an Azure DevOps personal access token
 
 1.  Create an Azure DevOps personal access token (PAT). Open a new tab
-    in your browser and navigate to - +++https://portal.azure.com/++ and
+    in your browser and navigate to +++https://portal.azure.com+++ and
     Sign in with assigned account.
 
   - Username: +++@lab.CloudPortalCredential(User1).Username+++
@@ -525,6 +525,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
