@@ -924,7 +924,7 @@ your application to Azure App Service. You learn how to:
 4.  On the **Basics** tab, enter the following values. Select **Review +  create**.
 
     - Subscription : your subscription
-    - Resource Group : +++tailspin-space-game-web-XXXX+++ (XXXX can be unique number)
+    - Resource Group : **ResourceGroup1**
     - Publish : Code
     - Runtime stack : NET 8 (LTS)
     - Operating System :Linux
@@ -1437,5 +1437,6 @@ This was done to mirror real-world governance where:
 We will practice this **end-to-end PR approval and merge process** in
 **Lab 8**, including automation options for scenarios where governance
 rules allow it.
+
 
 
