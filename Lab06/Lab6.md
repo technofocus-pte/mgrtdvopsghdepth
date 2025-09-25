@@ -925,6 +925,7 @@ your application to Azure App Service. You learn how to:
 
     - Subscription : your subscription
     - Resource Group : **ResourceGroup1**
+    - Name : +++tailspin-webapp@lab.LabInstance.Id+++
     - Publish : Code
     - Runtime stack : NET 8 (LTS)
     - Operating System :Linux
@@ -1437,6 +1438,7 @@ This was done to mirror real-world governance where:
 We will practice this **end-to-end PR approval and merge process** in
 **Lab 8**, including automation options for scenarios where governance
 rules allow it.
+
 
 
 
