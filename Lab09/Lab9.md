@@ -140,7 +140,7 @@ incorrect.](./media/image18.png)
 ### Task 3 : Create an Azure DevOps personal access token
 
 1.  Create an Azure DevOps personal access token (PAT). Open a new tab
-    in your browser and navigate to - <https://portal.azure.com/> and
+    in your browser and navigate to  +++https://portal.azure.com+++ and
     sign in with assigned account.
 
   ![A screenshot of a sign in AI-generated content may be
@@ -337,7 +337,7 @@ Here's the process to follow:
     to be replaced with your Github account username in the below
     commands and run them.**
 
-  ++++git config --global user.email "you@example.com"+++
+  +++git config --global user.email "you@example.com"+++
 
   +++git config --global user.name "Your Name"+++
 
@@ -408,10 +408,10 @@ incorrect.](./media/image55.png)
     branch
 
   ```
-for branch in $(git branch -r | grep -v '\->'); do
+  for branch in $(git branch -r | grep -v '\->'); do
   git branch --track ${branch#origin/} $branch
-done
-```
+  done
+  ```
 
   ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image59.png)
@@ -431,7 +431,7 @@ incorrect.](./media/image60.png)
   ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image61.png)
 
->**Note : If you already have repo in Devops then follow steps to pull
+  >**Note : If you already have repo in Devops then follow steps to pull
 and resolve conflict – 1. Pull from DevOps with unrelated history:**
 **git pull origin main --allow-unrelated-histories Step 2 : Resolve
 conflicts in files like .gitignore, README.md. Step 3 : Stage the
@@ -700,59 +700,60 @@ collect the results.
 
 1.  In Visual Studio Code, replace the code in
      *azure-pipelines.yml* with below code and save the file
+ 
   ```
   trigger:
   branches:
     include:
       - '*'
-
-pool:
+  
+  pool:
   vmImage: 'windows-latest'  # Microsoft-hosted agent
-
-variables:
+  
+  variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '8.x'
-
-steps:
+  
+  steps:
   - task: UseNode@1
     displayName: 'Use Node.js 18.20.2'
     inputs:
       version: '18.20.2'  # Updated to latest valid version
-
+  
   - task: UseDotNet@2
     displayName: 'Use .NET SDK $(dotnetSdkVersion)'
     inputs:
       version: '$(dotnetSdkVersion)'
-
+  
   - task: Npm@1
     displayName: 'Run npm install'
     inputs:
       verbose: false
-
+  
   - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
     displayName: 'Compile Sass assets'
-
+  
   - script: 'npx gulp'
     displayName: 'Run gulp tasks'
-
+  
   - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
     displayName: 'Write build info'
     workingDirectory: $(wwwrootDir)
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Restore project dependencies'
     inputs:
       command: 'restore'
       projects: '**/*.csproj'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Build the project - $(buildConfiguration)'
     inputs:
       command: 'build'
       arguments: '--no-restore --configuration $(buildConfiguration)'
       projects: '**/*.csproj'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Run unit tests - $(buildConfiguration)'
     inputs:
@@ -760,7 +761,7 @@ steps:
       arguments: '--no-build --configuration $(buildConfiguration)'
       publishTestResults: true
       projects: '**/*.Tests.csproj'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Publish the project - $(buildConfiguration)'
     inputs:
@@ -769,7 +770,7 @@ steps:
       publishWebProjects: false
       arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
       zipAfterPublish: true
-
+  
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
     condition: succeeded()
@@ -934,7 +935,7 @@ incorrect.](./media/image117.png)
     convert the Cobertura file to HTML.Many HTML files will appear in
     the *CodeCoverage* folder at the root of the project.
 
-  +++dotnet tool run reportgenerator -reports:./Tailspin.SpaceGame.Web.Tests/TestResults/Coverage/coverage.cobertura.xml -targetdir:./CodeCoverage -reporttypes:HtmlInline_AzurePipelines
+  +++dotnet tool run reportgenerator -reports:./Tailspin.SpaceGame.Web.Tests/TestResults/Coverage/coverage.cobertura.xml -targetdir:./CodeCoverage -reporttypes:HtmlInline_AzurePipelines+++
 
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image118.png)
@@ -1006,61 +1007,61 @@ incorrect.](./media/image127.png)
   ```
   trigger:
   - '*'
-
-pool:
+  
+  pool:
   vmImage: 'windows-latest'  # Microsoft-hosted agent
-
-variables:
+  
+  variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '8.x'
-
-steps:
+  
+  steps:
   - task: UseNode@1
     displayName: 'Use Node.js 18.20.2'
     inputs:
       version: '18.20.2'
-
+  
   - task: UseDotNet@2
     displayName: 'Use .NET SDK $(dotnetSdkVersion)'
     inputs:
       version: '$(dotnetSdkVersion)'
-
+  
   - task: Npm@1
     displayName: 'Run npm install'
     inputs:
       verbose: false
-
+  
   - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
     displayName: 'Compile Sass assets'
-
+  
   - script: 'npx gulp'
     displayName: 'Run gulp tasks'
-
+  
   - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
     displayName: 'Write build info'
     workingDirectory: $(wwwrootDir)
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Restore project dependencies'
     inputs:
       command: 'restore'
       projects: '**/*.csproj'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Build the project - $(buildConfiguration)'
     inputs:
       command: 'build'
       arguments: '--no-restore --configuration $(buildConfiguration)'
       projects: '**/*.csproj'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Install .NET tools from local manifest'
     inputs:
       command: custom
       custom: tool
       arguments: 'restore'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Run unit tests - $(buildConfiguration)'
     inputs:
@@ -1068,20 +1069,20 @@ steps:
       arguments: '--no-build --configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
       publishTestResults: true
       projects: '**/*.Tests.csproj'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Create code coverage report'
     inputs:
       command: custom
       custom: tool
       arguments: 'run reportgenerator -reports:$(Build.SourcesDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage -reporttypes:HtmlInline_AzurePipelines'
-
+  
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage report'
     inputs:
       codeCoverageTool: 'cobertura'
       summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
-
+  
   - task: DotNetCoreCLI@2
     displayName: 'Publish the project - $(buildConfiguration)'
     inputs:
@@ -1090,11 +1091,11 @@ steps:
       publishWebProjects: false
       arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
       zipAfterPublish: true
-
+  
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
     condition: succeeded()
-```
+  ```
 
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image128.png)
@@ -1248,6 +1249,7 @@ To delete the project:
     select **Delete** a second time.
 
   ![](./media/image149.png)
+
 
 
 
