@@ -345,7 +345,7 @@ incorrect.](./media/image46.png)
     the *release-pipeline* branch from the MicrosoftDocs repository, and
     check out a new branch *upstream/release-pipeline*.
 
-     +++git fetch upstream release-pipeline
+     +++git fetch upstream release-pipeline+++
 
      +++git checkout -b release-pipeline upstream/release-pipeline+++
 
@@ -358,7 +358,7 @@ incorrect.](./media/image47.png)
     to be replaced with your Github account username in the below
     commands and run them.**
 
-    +++git config --global user.email "<you@example.com>"+++
+    +++git config --global user.email "you@example.com"+++
 
     +++git config --global user.name "Your Name"+++
 
@@ -429,7 +429,7 @@ incorrect.](./media/image57.png)
     ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image59.png)
 
-**>Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
+    **>Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
 
     +++git commit -m "Resolved merge conflicts"+++
 
@@ -631,29 +631,29 @@ builds artifact.
 
     ```
     trigger:
-- '*'
-pool:
-  vmImage: 'windows-latest'  # Microsoft-hosted agent
-variables:
-  buildConfiguration: 'Release'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '8.x'
-steps:
-- task: UseNode@1
-  displayName: 'Use Node.js 18.20.8'
-  inputs:
+    - '*'
+    pool:
+    vmImage: 'windows-latest'  # Microsoft-hosted agent
+    variables:
+    buildConfiguration: 'Release'
+    wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+    dotnetSdkVersion: '8.x'
+    steps:
+    - task: UseNode@1
+    displayName: 'Use Node.js 18.20.8'
+    inputs:
     version: '18.20.8'
-- task: UseDotNet@2
-  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-  inputs:
+    - task: UseDotNet@2
+    displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+    inputs:
     packageType: sdk
     version: '$(dotnetSdkVersion)'
-- task: Npm@1
-  displayName: 'Run npm install'
-  inputs:
+    - task: Npm@1
+    displayName: 'Run npm install'
+    inputs:
     command: 'install'
     verbose: false
-- powershell: |
+    - powershell: |
     $scssPath = "$(wwwrootDir)/scss"
     if (Test-Path $scssPath) {
       Write-Host "SCSS directory found. Compiling..."
@@ -661,40 +661,41 @@ steps:
     } else {
       Write-Host "SCSS directory not found. Skipping Sass compilation."
     }
-  displayName: 'Compile Sass assets'
-- script: 'npx gulp'
-  displayName: 'Run gulp tasks'
-  workingDirectory: Tailspin.SpaceGame.Web
-- script: |
+    displayName: 'Compile Sass assets'
+    - script: 'npx gulp'
+    displayName: 'Run gulp tasks'
+    workingDirectory: Tailspin.SpaceGame.Web
+    - script: |
     echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
-  displayName: 'Write build info'
-  workingDirectory: $(wwwrootDir)
-- task: DotNetCoreCLI@2
-  displayName: 'Restore project dependencies'
-  inputs:
+    displayName: 'Write build info'
+    workingDirectory: $(wwwrootDir)
+    - task: DotNetCoreCLI@2
+    displayName: 'Restore project dependencies'
+    inputs:
     command: 'restore'
     projects: '**/*.csproj'
-- task: DotNetCoreCLI@2
-  displayName: 'Build the project - $(buildConfiguration)'
-  inputs:
+    - task: DotNetCoreCLI@2
+    displayName: 'Build the project - $(buildConfiguration)'
+    inputs:
     command: 'build'
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
-- task: DotNetCoreCLI@2
-  displayName: 'Publish the project - $(buildConfiguration)'
-  inputs:
+    - task: DotNetCoreCLI@2
+    displayName: 'Publish the project - $(buildConfiguration)'
+    inputs:
     command: 'publish'
     projects: '**/*.csproj'
     publishWebProjects: false
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
-  inputs:
+    - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'drop'
     publishLocation: 'Container'
     ```
+    
     ![](./media/image91.png)
 
 3.  Click on **Save** now.
@@ -792,35 +793,35 @@ incorrect.](./media/image99.png)
 
     ```
     trigger:
-- '*'
-
-pool:
-  vmImage: 'windows-latest'
-
-variables:
-  buildConfiguration: 'Release'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '8.x'
-
-steps:
-- task: UseNode@1
-  displayName: 'Use Node.js 18.20.8'
-  inputs:
+    - '*'
+    
+    pool:
+    vmImage: 'windows-latest'
+    
+    variables:
+    buildConfiguration: 'Release'
+    wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+    dotnetSdkVersion: '8.x'
+    
+    steps:
+    - task: UseNode@1
+    displayName: 'Use Node.js 18.20.8'
+    inputs:
     version: '18.20.8'
-
-- task: UseDotNet@2
-  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-  inputs:
+    
+    - task: UseDotNet@2
+    displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+    inputs:
     packageType: sdk
     version: '$(dotnetSdkVersion)'
-
-- task: Npm@1
-  displayName: 'Run npm install'
-  inputs:
+    
+    - task: Npm@1
+    displayName: 'Run npm install'
+    inputs:
     command: 'install'
     verbose: false
-
-- powershell: |
+    
+    - powershell: |
     $scssPath = "$(wwwrootDir)/scss"
     if (Test-Path $scssPath) {
       Write-Host "SCSS directory found. Compiling..."
@@ -828,42 +829,42 @@ steps:
     } else {
       Write-Host "SCSS directory not found. Skipping Sass compilation."
     }
-  displayName: 'Compile Sass assets'
-
-- script: 'npx gulp'
-  displayName: 'Run gulp tasks'
-  workingDirectory: Tailspin.SpaceGame.Web
-
-- script: |
+    displayName: 'Compile Sass assets'
+    
+    - script: 'npx gulp'
+    displayName: 'Run gulp tasks'
+    workingDirectory: Tailspin.SpaceGame.Web
+    
+    - script: |
     echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
-  displayName: 'Write build info'
-  workingDirectory: $(wwwrootDir)
-
-- task: DotNetCoreCLI@2
-  displayName: 'Restore project dependencies'
-  inputs:
+    displayName: 'Write build info'
+    workingDirectory: $(wwwrootDir)
+    
+    - task: DotNetCoreCLI@2
+    displayName: 'Restore project dependencies'
+    inputs:
     command: 'restore'
     projects: '**/*.csproj'
-
-- task: DotNetCoreCLI@2
-  displayName: 'Build the project - $(buildConfiguration)'
-  inputs:
+    
+    - task: DotNetCoreCLI@2
+    displayName: 'Build the project - $(buildConfiguration)'
+    inputs:
     command: 'build'
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
-
-- task: DotNetCoreCLI@2
-  displayName: 'Publish the project - $(buildConfiguration)'
-  inputs:
+    
+    - task: DotNetCoreCLI@2
+    displayName: 'Publish the project - $(buildConfiguration)'
+    inputs:
     command: 'publish'
     projects: '**/*.csproj'
     publishWebProjects: false
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
-  inputs:
+    
+    - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'drop'
     publishLocation: 'Container'
@@ -1014,18 +1015,19 @@ into jobs, which are a series of steps that run sequentially as a unit.
 
 1.  Switch back to Visual Studio code and replace the code
      ***azure-pipelines.yml*** with below code **save**:
+    
     ```
     trigger:
-- release-pipeline
-variables:
-  buildConfiguration: 'Release'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '8.x'
-stages:
-- stage: Build
-  displayName: 'Build the web application'
-  jobs:
-  - job: BuildJob
+    - release-pipeline
+    variables:
+    buildConfiguration: 'Release'
+    wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+    dotnetSdkVersion: '8.x'
+    stages:
+    - stage: Build
+    displayName: 'Build the web application'
+    jobs:
+    - job: BuildJob
     displayName: 'Build job'
     pool:
       vmImage: 'windows-latest'  # Updated from 'Default' to working agent pool
@@ -1090,7 +1092,7 @@ stages:
 
     ![](./media/image132.png)
 
-2.  From the integrated terminal, run below command to fetch latest
+3.  From the integrated terminal, run below command to fetch latest
     updates from GEC.
 
     +++git fetch origin+++
@@ -1098,27 +1100,27 @@ stages:
     ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image133.png)
 
-3.  Run below command to merger remote changes into you local repo.
+4.  Run below command to merger remote changes into you local repo.
 
     +++git checkout release-pipeline+++
 
-4.  run below command to update origin to point to the migrated GEC repo
+5.  run below command to update origin to point to the migrated GEC repo
 
     +++git remote set-url origin https://github.com/$GEC_ORG/lab06-migrate-repos.git+++
 
     ![A screen shot of a computer code AI-generated content may be
 incorrect.](./media/image134.png)
 
-5.  Update with your GitHub username and email and then run the commands
+6.  Update with your GitHub username and email and then run the commands
 
-    +++git config --global user.email "<you@example.com>"+++
+    +++git config --global user.email "you@example.com"+++
 
     +++git config --global user.name "Your Name"+++
 
     ![A computer screen shot of a program AI-generated content may be
 incorrect.](./media/image135.png)
 
-6.  From the integrated terminal, run the following commands to stage,
+7.  From the integrated terminal, run the following commands to stage,
     commit, and then push your changes to your remote branch.
 
     +++git add azure-pipelines.yml+++
@@ -1130,23 +1132,23 @@ incorrect.](./media/image135.png)
     ![A computer screen with white text AI-generated content may be
 incorrect.](./media/image136.png)
 
-7.  In Azure Pipelines, navigate to your pipeline to view the
+8.  In Azure Pipelines, navigate to your pipeline to view the
     logs.Select the pipeline run.
 
     ![](./media/image137.png)
 
     ![](./media/image138.png)
 
-8.  Click on **Build job**.
+9.  Click on **Build job**.
 
     ![](./media/image139.png)
 
-9.  Wait for the build to complete successful.
+10.  Wait for the build to complete successful.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image140.png)
 
-10. After the build finishes, select the back button to return to the
+11. After the build finishes, select the back button to return to the
     summary page and check the status of your pipeline and published
     artifact.
 
@@ -1299,11 +1301,11 @@ stages:
     ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image147.png)
 
-Notice the highlighted section and how we're using
+    Notice the highlighted section and how we're using
 the download and AzureWebApp@1 tasks. The pipeline fetches
 the $(WebAppName) from the variable group we created earlier.
 
-Also notice how we're using environment to deploy to
+    Also notice how we're using environment to deploy to
 the **dev** environment.
 
 2.  From the integrated terminal, add *azure-pipelines.yml* to the
@@ -1354,7 +1356,7 @@ incorrect.](./media/image155.png)
     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image156.png)
 
-**\>Note:** In real-world scenarios, pipelines do not directly push
+    **\>Note:** In real-world scenarios, pipelines do not directly push
 changes to the main branch.Instead, developers push changes to a feature
 or release branch (e.g., release-pipeline).The next step is to create a
 Pull Request (PR) to merge these changes into main.This ensures that
@@ -1393,7 +1395,7 @@ DevOps environment.
 
 2.  Select existing resource group **ResourceGroup1.**
 
-> ![](./media/image160.png)
+    ![](./media/image160.png)
 
 3.  Select all the resource and then click on Delete (**Delete only
     resource and not the Resource group**) as shown in below image.
@@ -1438,6 +1440,7 @@ This was done to mirror real-world governance where:
 We will practice this **end-to-end PR approval and merge process** in
 **Lab 8**, including automation options for scenarios where governance
 rules allow it.
+
 
 
 
