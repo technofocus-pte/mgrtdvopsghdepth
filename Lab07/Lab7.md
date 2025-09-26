@@ -303,7 +303,7 @@ incorrect.](./media/image36.png)
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image37.png)
 
-  >eg :gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
+  eg :gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
 
 5.  Run below dry-run command to migrate repos to GEC and copy migration id **(Note: We have used repo -** **tailspin-spacegame-web-deploy . You can check this in your ADO-\>Org-\> Project-\> Repo )**
 
@@ -329,11 +329,11 @@ incorrect.](./media/image37.png)
 9.  Click on **Organizations** tab and then select the organization you
     have created.
 
-![](./media/image42.png)
+  ![](./media/image42.png)
 
 10.  Click on **Repositories** tab and you should see migrated repo
 
-![](./media/image43.png)
+  ![](./media/image43.png)
 
 ## Exercise 2 : Create the Azure App Service environments
 
@@ -414,7 +414,7 @@ incorrect.](./media/image49.png)
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image50.png)
 
->Important:**If the B1 SKU isn't available in your Azure subscription, **select a different plan**, such as S1 (Standard).
+  **Important:** If the B1 SKU isn't available in your Azure subscription, **select a different plan**, such as S1 (Standard).
 
 8.  To create the three App Service instances, one for each environment
     (*Dev*, *Test*, and *Staging*), run the following az webapp
@@ -438,20 +438,20 @@ incorrect.](./media/image53.png)
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image54.png)
 
-For learning purposes, you apply the same App Service plan, B1 Basic, to
-each App Service instance here. In practice, you'd assign a plan that
-matches your expected workload.
-
-For example, for the environments that map to
-the *Dev* and *Test* stages, B1 Basic might be appropriate because you
-want only your team to access the environments.
-
-For the *Staging* environment, you'd select a plan that matches your
-production environment. That plan would likely provide greater CPU,
-memory, and storage resources. Under the plan, you can run performance
-tests, like load tests, in an environment that resembles your production
-environment. You can run the tests without affecting live traffic to
-your site.
+  For learning purposes, you apply the same App Service plan, B1 Basic, to
+  each App Service instance here. In practice, you'd assign a plan that
+  matches your expected workload.
+  
+  For example, for the environments that map to
+  the *Dev* and *Test* stages, B1 Basic might be appropriate because you
+  want only your team to access the environments.
+  
+  For the *Staging* environment, you'd select a plan that matches your
+  production environment. That plan would likely provide greater CPU,
+  memory, and storage resources. Under the plan, you can run performance
+  tests, like load tests, in an environment that resembles your production
+  environment. You can run the tests without affecting live traffic to
+  your site.
 
 9.  To list each App Service instance's host name and state, run the
     following az webapp list command.
@@ -532,20 +532,20 @@ configuration.
   |+++WebAppNameTest+++|+++tailspin-space-game-web-test-XXXX+++|
   |+++WebAppNameStaging+++|+++tailspin-space-game-web-staging-XXXX+++|
 
-![](./media/image66.png)
+  ![](./media/image66.png)
 
 7.  Click on Environment from left navigation menu and click on **New
     environment**
 
-![](./media/image67.png)
+  ![](./media/image67.png)
 
 8.  Enter Name as +++**test+++** and then click on **Create**.
 
-![](./media/image68.png)
+  ![](./media/image68.png)
 
 9.  Repeat above step and create +++**staging+++** environment.
 
-![](./media/image69.png)
+  ![](./media/image69.png)
 
 ## Task 3 : Create a service connection for ARM and GitHub
 
@@ -558,16 +558,16 @@ service connection in the previous labs.
 
 1.  From the lower-left corner of the page, select **Project settings**.
 
-![](./media/image70.png)
+  ![](./media/image70.png)
 
 2.  Under **Pipelines**, select **Service connections**. Select **Create
     service connection**.
 
-![](./media/image71.png)
+  ![](./media/image71.png)
 
 3.  Select **Azure Resource Manager**, and then select **Next**.
 
-![](./media/image72.png)
+  ![](./media/image72.png)
 
 4.  Fill in these fields. Then, select **Grant access permission to all
     pipelines** check box and then click on **Save**.
@@ -685,7 +685,7 @@ incorrect.](./media/image96.png)
 16. Switch back to GitHub browser tab and navigate to the Lab07 repo
 and click on Code-> copy Https url to use in next task
 
->eg- https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
+  eg- https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
 
   ![](./media/image97.png)
 
@@ -718,19 +718,19 @@ the *Dev* stage.
   branches:
     include:
       - '*'
-pr:
+  pr:
   branches:
     include:
       - '*'
-
-variables:
+  
+  variables:
   buildConfiguration: 'Release'
   releaseBranchName: 'release'
   dotnetSdkVersion: '8.x'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-
-stages:
-- stage: 'Build'
+  
+  stages:
+  - stage: 'Build'
   displayName: 'Build the web application'
   jobs:
   - job: 'Build'
@@ -742,19 +742,19 @@ stages:
       displayName: 'Use Node.js 18.20.8'
       inputs:
         version: '18.20.8'
-
+  
     - task: UseDotNet@2
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
       inputs:
         packageType: sdk
         version: '$(dotnetSdkVersion)'
-
+  
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
         command: 'install'
         verbose: false
-
+  
     - powershell: |
         $scssPath = "$(wwwrootDir)/scss"
         if (Test-Path $scssPath) {
@@ -764,29 +764,29 @@ stages:
           Write-Host "SCSS directory not found. Skipping Sass compilation."
         }
       displayName: 'Compile Sass assets'
-
+  
     - script: 'npx gulp'
       displayName: 'Run gulp tasks'
       workingDirectory: Tailspin.SpaceGame.Web
-
+  
     - script: |
         echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
       displayName: 'Write build info'
       workingDirectory: $(wwwrootDir)
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
       inputs:
         command: 'restore'
         projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Build the project - $(buildConfiguration)'
       inputs:
         command: 'build'
         arguments: '--no-restore --configuration $(buildConfiguration)'
         projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Publish the project - $(buildConfiguration)'
       inputs:
@@ -795,15 +795,15 @@ stages:
         publishWebProjects: true
         arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
         zipAfterPublish: true
-
+  
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: drop'
       inputs:
         pathToPublish: '$(Build.ArtifactStagingDirectory)'
         artifactName: 'drop'
         publishLocation: 'Container'
-
-- stage: 'Dev'
+  
+  - stage: 'Dev'
   displayName: 'Deploy to the dev environment'
   dependsOn: Build
   condition: |
@@ -834,7 +834,7 @@ stages:
 
   ![](./media/image98.png)
 
->Note:In practice, you might deploy from some other branch, such as main. You can include logic that allows changes to be promoted to
+  Note:In practice, you might deploy from some other branch, such as main. You can include logic that allows changes to be promoted to
 the *Dev* stage from multiple branches, such as release and main.
 
 2.  Run below commands to change origin so it points to your **GEC repo** (the one you migrated to).
@@ -961,28 +961,28 @@ the *Test* stage.
   branches:
     include:
       - '*'
-
-pr:
+  
+  pr:
   branches:
     include:
       - '*'
-
-schedules:
-- cron: '0 3 * * *'
+  
+  schedules:
+  - cron: '0 3 * * *'
   displayName: 'Deploy every day at 3 A.M.'
   branches:
     include:
       - release
   always: false
-
-variables:
+  
+  variables:
   buildConfiguration: 'Release'
   releaseBranchName: 'release'
   dotnetSdkVersion: '8.x'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-
-stages:
-- stage: 'Build'
+  
+  stages:
+  - stage: 'Build'
   displayName: 'Build the web application'
   jobs:
   - job: 'Build'
@@ -994,19 +994,19 @@ stages:
       displayName: 'Use Node.js 18.20.8'
       inputs:
         version: '18.20.8'
-
+  
     - task: UseDotNet@2
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
       inputs:
         packageType: sdk
         version: '$(dotnetSdkVersion)'
-
+  
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
         command: 'install'
         verbose: false
-
+  
     - powershell: |
         $scssPath = "$(wwwrootDir)/scss"
         if (Test-Path $scssPath) {
@@ -1016,29 +1016,29 @@ stages:
           Write-Host "SCSS directory not found. Skipping Sass compilation."
         }
       displayName: 'Compile Sass assets'
-
+  
     - script: 'npx gulp'
       displayName: 'Run gulp tasks'
       workingDirectory: Tailspin.SpaceGame.Web
-
+  
     - script: |
         echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
       displayName: 'Write build info'
       workingDirectory: $(wwwrootDir)
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
       inputs:
         command: 'restore'
         projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Build the project - $(buildConfiguration)'
       inputs:
         command: 'build'
         arguments: '--no-restore --configuration $(buildConfiguration)'
         projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Publish the project - $(buildConfiguration)'
       inputs:
@@ -1047,15 +1047,15 @@ stages:
         publishWebProjects: true
         arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
         zipAfterPublish: true
-
+  
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: drop'
       inputs:
         pathToPublish: '$(Build.ArtifactStagingDirectory)'
         artifactName: 'drop'
         publishLocation: 'Container'
-
-- stage: 'Dev'
+  
+  - stage: 'Dev'
   displayName: 'Deploy to the dev environment'
   dependsOn: Build
   condition: |
@@ -1082,8 +1082,8 @@ stages:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
-
-- stage: 'Test'
+  
+  - stage: 'Test'
   displayName: 'Deploy to the test environment'
   dependsOn: Dev
   condition: |
@@ -1111,16 +1111,17 @@ stages:
               appName: '$(WebAppNameTest)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
   ```
-  ![](./media/image115.png)
+
+    ![](./media/image115.png)
 
 2.  From the integrated terminal to the index, add ***azure-pipelines.yml***. Then, commit the change, and push it
     up to GitHub.
 
-  +++git add azure-pipelines.yml+++
+    +++git add azure-pipelines.yml+++
 
-  +++git commit -m "Deploy to the Test stage"+++
+    +++git commit -m "Deploy to the Test stage"+++
 
-  +++git push origin release+++
+    +++git push origin release+++
 
   ![A screenshot of a computer program AI-generated content may be  incorrect.](./media/image116.png)
 
@@ -1257,28 +1258,28 @@ the *Staging* stage.
   branches:
     include:
       - '*'
-
-pr:
+  
+  pr:
   branches:
     include:
       - '*'
-
-schedules:
-- cron: '0 3 * * *'
+  
+  schedules:
+  - cron: '0 3 * * *'
   displayName: 'Deploy every day at 3 A.M.'
   branches:
     include:
       - release
   always: false
-
-variables:
+  
+  variables:
   buildConfiguration: 'Release'
   releaseBranchName: 'release'
   dotnetSdkVersion: '8.x'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-
-stages:
-- stage: 'Build'
+  
+  stages:
+  - stage: 'Build'
   displayName: 'Build the web application'
   jobs:
   - job: 'Build'
@@ -1290,19 +1291,19 @@ stages:
       displayName: 'Use Node.js 18.20.8'
       inputs:
         version: '18.20.8'
-
+  
     - task: UseDotNet@2
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
       inputs:
         packageType: sdk
         version: '$(dotnetSdkVersion)'
-
+  
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
         command: 'install'
         verbose: false
-
+  
     - powershell: |
         $scssPath = "$(wwwrootDir)/scss"
         if (Test-Path $scssPath) {
@@ -1312,29 +1313,29 @@ stages:
           Write-Host "SCSS directory not found. Skipping Sass compilation."
         }
       displayName: 'Compile Sass assets'
-
+  
     - script: 'npx gulp'
       displayName: 'Run gulp tasks'
       workingDirectory: Tailspin.SpaceGame.Web
-
+  
     - script: |
         echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
       displayName: 'Write build info'
       workingDirectory: $(wwwrootDir)
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
       inputs:
         command: 'restore'
         projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Build the project - $(buildConfiguration)'
       inputs:
         command: 'build'
         arguments: '--no-restore --configuration $(buildConfiguration)'
         projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-
+  
     - task: DotNetCoreCLI@2
       displayName: 'Publish the project - $(buildConfiguration)'
       inputs:
@@ -1343,15 +1344,15 @@ stages:
         publishWebProjects: true
         arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
         zipAfterPublish: true
-
+  
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact: drop'
       inputs:
         pathToPublish: '$(Build.ArtifactStagingDirectory)'
         artifactName: 'drop'
         publishLocation: 'Container'
-
-- stage: 'Dev'
+  
+  - stage: 'Dev'
   displayName: 'Deploy to the dev environment'
   dependsOn: Build
   condition: |
@@ -1378,8 +1379,8 @@ stages:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
-
-- stage: 'Test'
+  
+  - stage: 'Test'
   displayName: 'Deploy to the test environment'
   dependsOn: Dev
   condition: |
@@ -1411,7 +1412,7 @@ stages:
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image133.png)
 
-This code adds the *Staging* stage. The stage deploys to
+  This code adds the *Staging* stage. The stage deploys to
 the **staging** environment, which includes a release approval.
 
 2.  From the integrated terminal, add ***azure-pipelines.yml*** to the
@@ -1612,6 +1613,7 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
 
 
