@@ -190,7 +190,7 @@ be incorrect.](./media/image24.png)
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image25.png)
 
-  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add . step 4 : git commit -m "Resolved merge conflicts"**
+  **Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add . step 4 : git commit -m "Resolved merge conflicts"**
 
 12. **Go back to Azure DevOps project and check Repos-\> Files .You  should see your repo here.**
 
@@ -234,8 +234,9 @@ incorrect.](./media/image30.png)
 
   +++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
 
-  +++export ADO_ORG=<https://dev.azure.com/your-ado-org>+++ \# or simply
-"your-ado-org" if you prefer
+  +++export ADO_ORG=<https://dev.azure.com/your-ado-org>+++ 
+  
+  *or simply "your-ado-org" if you prefer*
 
   +++export GEC_ORG="your-githubEC-org”+++ e.g. devopstogtihub1234
 
@@ -453,55 +454,55 @@ incorrect.](./media/image61.png)
   ```
   trigger:
   - '*'
-
-pool:
+  
+  pool:
   vmImage: 'windows-latest'
-
-variables:
+  
+  variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '8.x'
-
-steps:
+  
+  steps:
   - task: UseNode@1
     displayName: 'Use Node.js 18.20.8'
     inputs:
       version: '18.20.8'
-
+  
   - task: UseDotNet@2
     displayName: 'Use .NET SDK $(dotnetSdkVersion)'
     inputs:
       version: '$(dotnetSdkVersion)'
-
-- task: Npm@1
+  
+  - task: Npm@1
   displayName: 'Run npm install'
   inputs:
     verbose: false
-
-- script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
+  
+  - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
   displayName: 'Compile Sass assets'
-
-- script: './node_modules/.bin/gulp'
+  
+  - script: './node_modules/.bin/gulp'
   displayName: 'Run gulp tasks'
-
-- script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
+  
+  - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displayName: 'Write build info'
   workingDirectory: $(wwwrootDir)
-
-- task: DotNetCoreCLI@2
+  
+  - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
-
-- task: DotNetCoreCLI@2
+  
+  - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
     command: 'build'
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
-
-- task: DotNetCoreCLI@2
+  
+  - task: DotNetCoreCLI@2
   displayName: 'Publish the project - $(buildConfiguration)'
   inputs:
     command: 'publish'
@@ -509,8 +510,8 @@ steps:
     publishWebProjects: false
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
-
-- task: PublishBuildArtifacts@1
+  
+  - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
   ```
@@ -607,7 +608,7 @@ incorrect.](./media/image71.png)
 
 10. Click on the running build.
 
-  >Note : if permission require then click on **View** next to the warning message “**This pipeline needs permission to access a resource before this run can continue”c**lick on **Permit -\> Permit** to grant permission to run build.
+  Note : if permission require then click on **View** next to the warning message “**This pipeline needs permission to access a resource before this run can continue”c**lick on **Permit -\> Permit** to grant permission to run build.
 
 11. Wait for them to be completed.
 
@@ -751,12 +752,14 @@ incorrect.](./media/image87.png)
 
   ![](./media/image89.png)
 
-4. replace the text in the previous step with the following "mistyped"
+4. Replace the text in the previous step with the following "mistyped"
     text, and then save the file: Note that the word "oficial" is
     intentionally mistyped. We'll address that error later in this
     module.Save the file
-
-  +++<p>Welcome to the oficial Space Game site!<p\>+++
+   
+  ```
+  <p>Welcome to the oficial Space Game site!<p\>
+  ```
 
   ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image90.png)
@@ -1033,6 +1036,7 @@ By the end of the lab, the repository was fully operational on GitHub
 Enterprise Cloud with CI/CD pipelines intact, build status visibility
 enabled, and collaboration rules in place, simulating a real-world
 migration and DevOps workflow.
+
 
 
 
