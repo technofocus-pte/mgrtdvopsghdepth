@@ -1,2 +1,2 @@
 # mgrtdvopsghdepth
-Migrate DevOps to GitHub
+Migrate Azure Repos to GitHub
