@@ -65,7 +65,7 @@ incorrect.](./media/image4.png)
 
     - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-    - Password: +++@lab.CloudPortalCredential(User1).Password+++
+    - Access Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![A screen shot of a computer program AI-generated content may be
 incorrect.](./media/image5.png)
@@ -293,6 +293,7 @@ In this lab, you learnt:
 
 6.  **Validate that each migration has been queued**, and optionally
     monitor results via gh ado2gh wait-for-migration and logs.
+
 
 
 
