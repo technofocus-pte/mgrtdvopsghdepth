@@ -367,7 +367,7 @@ incorrect.](./media/image50.png)
 
   - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-  - Password: +++@lab.CloudPortalCredential(User1).Password+++
+  - Temporary Access Pass (TAP) Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
   ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image51.png)
 
@@ -1249,6 +1249,7 @@ To delete the project:
     select **Delete** a second time.
 
   ![](./media/image149.png)
+
 
 
 
