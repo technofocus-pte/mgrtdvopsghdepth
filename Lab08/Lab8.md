@@ -234,7 +234,7 @@ incorrect.](./media/image30.png)
 
   +++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
 
-  +++export ADO_ORG=<https://dev.azure.com/your-ado-org>+++ 
+  +++export ADO_ORG=https://dev.azure.com/your-ado-org+++ 
   
   *or simply "your-ado-org" if you prefer*
 
@@ -1036,6 +1036,7 @@ By the end of the lab, the repository was fully operational on GitHub
 Enterprise Cloud with CI/CD pipelines intact, build status visibility
 enabled, and collaboration rules in place, simulating a real-world
 migration and DevOps workflow.
+
 
 
 
