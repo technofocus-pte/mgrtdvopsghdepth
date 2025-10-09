@@ -215,7 +215,7 @@ incorrect.](./media/image24.png)
 
   - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-  - Password: +++@lab.CloudPortalCredential(User1).Password+++
+  - Temporary Access Pass (TAP) Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
   ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image25.png)
 
@@ -414,7 +414,7 @@ incorrect.](./media/image49.png)
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image50.png)
 
-  **Important:** If the B1 SKU isn't available in your Azure subscription, **select a different plan**, such as S1 (Standard).
+  **Important:** This Azure subscription is limited to the SKU value B1.
 
 8.  To create the three App Service instances, one for each environment
     (*Dev*, *Test*, and *Staging*), run the following az webapp
@@ -456,7 +456,7 @@ incorrect.](./media/image54.png)
 9.  To list each App Service instance's host name and state, run the
     following az webapp list command.
 
-  +++az webapp list --resource-group $RESOURCE_GROUP --query "[].{hostName: defaultHostName, state: state}" --output table++
+  +++az webapp list --resource-group $RESOURCE_GROUP --query "[].{hostName: defaultHostName, state: state}" --output table+++
 
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image55.png)
@@ -1613,6 +1613,7 @@ This lab mirrored a typical enterprise GitHub workflow:
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
+
 
 
 
