@@ -19,7 +19,7 @@ repository.
 
 ## Exercise 1 : Enable Secret Protection
 
-1.  Open a browser and navigate to  +++https://github.com/technofocus-pte/secretscanningrepo.git++
+1.  Open a browser and navigate to  +++https://github.com/technofocus-pte/secretscanningrepo.git+++
 
 2.  Scroll down and click on **COPY EXERCISE** button. Sign in with your
     GitHub account
@@ -266,4 +266,5 @@ push protection. Let's practice that.
 
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image33.png)
+
 
