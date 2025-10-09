@@ -238,23 +238,21 @@ incorrect.](./media/image29.png)
   ![A screenshot of a login screen AI-generated content may be
 incorrect.](./media/image30.png)
 
-2.  Keep default values in “We need few more details “ page ,select your
-    country From filed and then click Continue.
-
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image31.png)
-
-3.  Search for +++Azure DevOps+++ and select **Azure DevOps organizations**.
+2.  Search for +++Azure DevOps+++ and select **Azure DevOps organizations**.
 
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image32.png)
 
-4.  Click on **My Azure DevOps Organization** hyper link.
+3.  Click on **My Azure DevOps Organization** hyper link.
 
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image33.png)
 
-5.  Keep the default values and then click on **Continue**
+4.  Keep default values in “We need few more details “ page ,select your
+    country From filed and then click **Continue**.
+
+  ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image31.png)
 
 6.  Click on the existing project- **dev-github-project-XXXX**
 
@@ -531,6 +529,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
