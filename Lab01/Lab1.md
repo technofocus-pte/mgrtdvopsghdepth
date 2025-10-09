@@ -122,7 +122,7 @@ may be incorrect.](./media/image12.png)
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image13.png)
 
-   > **Note**: IF the search bar is not visible. Right click on the Task bar, click on the **search** and then select **Show search box**.
+   > **Note**: If the search bar is not visible. Right click on the Task bar, click on the **search** and then select **Show search box**.
 
 ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/ext01.png)
@@ -531,6 +531,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
