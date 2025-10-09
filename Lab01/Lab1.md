@@ -367,12 +367,9 @@ incorrect.](./media/image53.png)
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image54.png)
 
-12. **Run below command to push local folder to Azure Devops .(Eg -**
-    <https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/_git/azure-search-openai-migrated).Repalce>
-    \< Devops Https url **\> with the https link you copied in previous
-    step -Azure DevOps repos**
+12. **Run below command to push local folder to Azure Devops .(Replace https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj with your org link )**
 
-  +++git remote set-url origin <Devops Https url>+++
+ +++git remote set-url origin https://dev.azure.com/dev2gthubmigr/dev-github-proj/_git/dev-github-proj+++
 
   ![A screen shot of a computer screen AI-generated content may beb incorrect.](./media/image55.png)
 
@@ -529,6 +526,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
