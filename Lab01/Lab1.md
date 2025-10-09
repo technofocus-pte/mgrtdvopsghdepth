@@ -119,11 +119,13 @@ may be incorrect.](./media/image12.png)
 
 4.  Press **Win + S** and search for +++Environment Variables+++ and select **Edit the system environment variables**.
 
-   > **Note**: IF the search bar is not visible. Right click on the Task bar, click on the **search** and then select **Show search box**.
-
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image13.png)
 
+   > **Note**: IF the search bar is not visible. Right click on the Task bar, click on the **search** and then select **Show search box**.
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/ext01.png)
 5.  In the **System Properties** window, click **Environment Variables**.
 
   ![A screenshot of a computer program AI-generated content may be
@@ -529,6 +531,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
