@@ -388,7 +388,7 @@ incorrect.](./media/image50.png)
 
     - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-    - Password: +++@lab.CloudPortalCredential(User1).Password+++
+    - Temporary Access Pass (TAP) Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
     ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image51.png)
 
@@ -1440,6 +1440,7 @@ This was done to mirror real-world governance where:
 We will practice this **end-to-end PR approval and merge process** in
 **Lab 8**, including automation options for scenarios where governance
 rules allow it.
+
 
 
 
