@@ -99,7 +99,7 @@ incorrect.](./media/image10.png)
     to be replaced with your Github account username in the below
     commands and run them.**
 
-  +++git config --global user.email "<you@example.com>"+++
+  +++git config --global user.email "you@example.com"+++
 
   +++git config --global user.name "Your Name"+++
 
@@ -126,7 +126,7 @@ incorrect.](./media/image12.png)
 
   - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-  - Password: +++@lab.CloudPortalCredential(User1).Password+++
+  - Temporary Access Pass (TAP) Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image15.png)
@@ -1036,6 +1036,7 @@ By the end of the lab, the repository was fully operational on GitHub
 Enterprise Cloud with CI/CD pipelines intact, build status visibility
 enabled, and collaboration rules in place, simulating a real-world
 migration and DevOps workflow.
+
 
 
 
