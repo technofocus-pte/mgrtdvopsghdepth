@@ -32,17 +32,19 @@ Let's start by creating a new Key Vault in the Azure portal.
 
     - Name : **+++azuredevops-key@lab.LabInstance.Id+++**
 
+    - Region : **@lab.CloudResourceGroup(ResourceGroup1).Location**
+
     - and keep all the default values and then click on **Review +
       Create.**
 
     ![](./media/image3.png)
 
-5.  After validation passes, select **Create** to create the Azure Key
+6.  After validation passes, select **Create** to create the Azure Key
     Vault.
 
     ![](./media/image4.png)
 
-6.  After the deployment is complete, select **Go to resource**.
+7.  After the deployment is complete, select **Go to resource**.
     Your *Key vault* pane appears.
 
     ![](./media/image5.png)
@@ -105,6 +107,7 @@ Next, add a new secret to the vault.
     secret.
 
     ![](./media/image16.png)
+
 
 
 
