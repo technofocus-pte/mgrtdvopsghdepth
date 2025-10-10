@@ -30,8 +30,7 @@ Let's start by creating a new Key Vault in the Azure portal.
 
     - Resource Group – Select **ResourceGroup1**
 
-    - Name : +++**azuredevops-keyXXXX+++ (XXXX Is your subscription id
-      shown in subscription field)**
+    - Name : **+++azuredevops-key@lab.LabInstance.Id+++**
 
     - and keep all the default values and then click on **Review +
       Create.**
@@ -106,5 +105,6 @@ Next, add a new secret to the vault.
     secret.
 
     ![](./media/image16.png)
+
 
 
