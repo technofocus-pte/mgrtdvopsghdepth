@@ -225,7 +225,7 @@ incorrect.](./media/image28.png)
 ## Task 4 : Create an Azure DevOps personal access token
 
 1.  Create an Azure DevOps personal access token (PAT). Open a new tab
-    in your browser and navigate to - +++https://portal.azure.com/++ and
+    in your browser and navigate to +++https://portal.azure.com+++ and
     Sign in with assigned account.
 
   - Username: +++@lab.CloudPortalCredential(User1).Username+++
@@ -270,7 +270,7 @@ incorrect.](./media/image31.png)
 9.  Enter the name as : +++**devopstoken+++** and select the following
     scopes and select **Full access** scopes and click on **Create**.
 
-![](./media/image37.png)
+    ![](./media/image37.png)
 
 10.  Copy the generated API token and save it in a safe location. For
     your security, it won't be shown again.
@@ -280,10 +280,10 @@ incorrect.](./media/image38.png)
 
 ## Task 5 : Push Repo in Azure DevOps
 
-1.  Open **GitBash** from Desktop and run below command to navigate to
+1.  Open **GitBash** from Taskbar and run below command to navigate to
     the project repo.
 
-  +++cd “C:\LabFiles\azure-search-openai-demo”+++
+  +++cd “C:\LabFiles\Lab01\azure-search-openai-demo”+++
 
   ![A screen shot of a computer AI-generated content may be
 incorrect.](./media/image39.png)
@@ -292,7 +292,7 @@ incorrect.](./media/image39.png)
     replaced with your Github account username in the below commands and
     run them.
 
-  +++git config --global user.email <you@example.com>+++
+  +++git config --global user.email *Your Email*+++
 
   +++git config --global user.name "Your Name"+++
 
@@ -387,9 +387,9 @@ incorrect.](./media/image54.png)
   ![A screenshot of a computer program AI-generated content may be
 incorrect.](./media/image57.png)
 
-  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
+    >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**
 
-  +++git commit -m "Resolved merge conflicts"+++
+    +++git commit -m "Resolved merge conflicts"+++
 
 15. Go back to Azure DevOps project and check Repos-\> Files .You should
     see your repo here .
