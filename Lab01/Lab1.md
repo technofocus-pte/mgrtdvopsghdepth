@@ -53,7 +53,7 @@ incorrect.](./media/image3.png)
 
 4.  Enter below values and then click on **Create enterprise.**
 
-    1.  Enterprise name : +++tfdevops-migr+++
+    1.  Enterprise name : +++tfdevops-migrXXXX+++ (Replace XXXX with unique number )
 
     2.  Enterprise URL slug : +++tfdevops-migr+++
 
@@ -78,7 +78,7 @@ incorrect.](./media/image5.png)
   ![A screenshot of a computer screen AI-generated content may be
 incorrect.](./media/image6.png)
 
-6.  Etner Organization account name : +++devopstogtihub+++ and click on **Create organization and
+6.  Etner Organization account name : +++devopstogtihubXXXX+++ (Replace XXXX with unique number ) and click on **Create organization and
     continue** button.
 
   ![A screenshot of a computer AI-generated content may be
@@ -526,6 +526,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
