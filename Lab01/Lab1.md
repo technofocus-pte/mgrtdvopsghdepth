@@ -311,7 +311,7 @@ incorrect.](./media/image40.png)
 incorrect.](./media/image41.png)
 
 4.  Switch back to Azure DevOps project. Click on + next to DevOps
-    project and select **New repository**
+    project and select **New repository** (i dont find **New repository** next to the project then clikc on Repos-> File->clikc project from top navigation menu and select **New repository**)
 
   ![](./media/image42.png)
 
@@ -526,6 +526,7 @@ This hands-on walkthrough enabled you to:
 - Run and monitor a trial migration to validate readiness
 
 - Gain confidence in using GEI tooling for future production migrations
+
 
 
 
