@@ -1,6 +1,6 @@
 # Lab 11 - Secure your repository's supply chain
 
-## Exercise 1: Review and add dependencies using dependency graph
+## Exercise 1 : Review and add dependencies using dependency graph
 
 **What's the big deal about securing your repository's supply chain?**:
 With the accelerated use of open source, most projects depend on
@@ -44,14 +44,13 @@ Dependency graph is enabled by default for all new public repositories.
 
 2.  Click on **COPY EXERCISE** .
 
-  ![](./media/image1.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab11/media/image1.png)
 
 3.  Keep default values and then click on **Create repository.**
 
-  ![](./media/image2.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab11/media/image2.png)
 
 4.  Navigate to the **Settings** tab.Click **Advanced
     Security**.Verify **Dependency Graph** is **Enabled**
 
-  ![](./media/image3.png)
-
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab11/media/image3.png)

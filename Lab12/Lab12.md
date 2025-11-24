@@ -9,7 +9,7 @@ immediately. Once you have a vault, adding and managing secrets can be
 done from any Azure administrative interface, including the Azure
 portal, the Azure CLI, and Azure PowerShell.
 
-### Task 1 : Create a new Azure Key Vault
+### Task 1: Create a new Azure Key Vault
 
 Let's start by creating a new Key Vault in the Azure portal.
 
@@ -18,15 +18,15 @@ Let's start by creating a new Key Vault in the Azure portal.
 
 2.  In the search bar enter +++**Key Vault+++**  and select it.
 
-    ![](./media/image1.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image1.png)
 
 3.  Select **Create**. The **Create key vault** pane appears.
 
-    ![](./media/image2.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image2.png)
 
 4.  On the **Basics** tab, enter the following values for each setting.
 
-    - Subscription : Your Azure subscription
+    - Subscription : **@lab.CloudSubscription.Id**
 
     - Resource Group – Select **ResourceGroup1**
 
@@ -37,45 +37,45 @@ Let's start by creating a new Key Vault in the Azure portal.
     - and keep all the default values and then click on **Review +
       Create.**
 
-    ![](./media/image3.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image3.png)
 
 6.  After validation passes, select **Create** to create the Azure Key
     Vault.
 
-    ![](./media/image4.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image4.png)
 
 7.  After the deployment is complete, select **Go to resource**.
     Your *Key vault* pane appears.
 
-    ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image5.png)
 
-### Task 2 : Assign a role to create key vault
+### Task 2: Assign a role to create key vault
 
 1.  Click on Access control (IAM) from left navigation menu. Click on
     **Add** drop down and then select **Add role assignment.**
 
-    ![](./media/image6.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image6.png)
 
 2.  Search for **+++Key Vault Administrator+++** and select it and then
     click on **Next**.
 
-    ![](./media/image7.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image7.png)
 
 3.  Click on **Select members** link ,search for you tenant and select
     it from the list and then click on **Select** button.
 
-    ![](./media/image8.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image8.png)
 
 4.  Click on **Review + assign** button.
 
-    ![](./media/image9.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image9.png)
 
 5.  Click on **Review + assign** button under **Review + assign**
     window.
 
-    ![](./media/image10.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image10.png)
 
-## Task 3 : Add a secret
+### Task 3: Add a secret
 
 Next, add a new secret to the vault.
 
@@ -85,29 +85,25 @@ Next, add a new secret to the vault.
 2.  In the top menu bar, select **Generate/Import**. The **Create a
     secret** pane appears.
 
-    ![](./media/image11.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image11.png)
 
 3.  Enter a **name, value**, and (optional) content type.
     Select **Create** to add the secret. The **Secrets** pane reappears.
 
-    ![](./media/image12.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image12.png)
 
-    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image13.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image13.png)
 
 4.  Select your secret from the list. The **Versions** pane appears for
     your secret.
 
-    ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image14.png)
 
 5.  Click on the current version.
 
-    ![](./media/image15.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image15.png)
 
 6.  Select **Show Secret Value** to see the value assigned to the
     secret.
 
-    ![](./media/image16.png)
-
-
-
-
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab12/media/image16.png)

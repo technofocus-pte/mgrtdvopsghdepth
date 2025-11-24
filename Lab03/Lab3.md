@@ -1,6 +1,6 @@
-# Lab 3 – Monitoring GitHub Repository Activity and Security Using Audit Logs & Insights
+# Lab 03 – Monitoring GitHub Repository Activity and Security Using Audit Logs & Insights
 
-## Objective
+**Objective**
 
 Learn how to monitor and secure your GitHub Enterprise Cloud (GEC)
 environment by:
@@ -11,7 +11,7 @@ Analyzing repository insights
 
 Enabling security scanning tools
 
-### Pre-requisites
+**Pre-requisites**
 
 Before starting, ensure:
 
@@ -23,7 +23,7 @@ Before starting, ensure:
 
 - GitHub CLI (gh) is installed & authenticated
 
-## Task 1: View Organization Audit Logs using GitHub CLI
+### Task 1: View Organization Audit Logs using GitHub CLI
 
 1.  Run below command to check audits in your organization (eg : gh api
     orgs/devopstogtihub/audit-log)
@@ -31,14 +31,14 @@ Before starting, ensure:
     +++gh api orgs/$GEC_ORG/audit-log+++
 
     ![A screen shot of a computer screen AI-generated content may be
-incorrect.](./media/image1.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image1.png)
 
 2.  You can use this link to check logs in browser eg-
     [https://github.com/organizations/\<YOURGIHUBT_GEC_ORG\>/settings/audit-log](https://github.com/organizations/%3cYOURGIHUBT_GEC_ORG%3e/settings/audit-log)
 
-    ![A screenshot of a computer AI-generated content may be  incorrect.](./media/image2.png)
+    ![A screenshot of a computer AI-generated content may be  incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image2.png)
 
-## Task 2: Filter Audit Log for Specific Events
+### Task 2: Filter Audit Log for Specific Events
 
 1.  Identify changes like repo creation, collaborator additions, branch
     rule edits with filters.
@@ -48,25 +48,25 @@ incorrect.](./media/image1.png)
 
     +++gh auth refresh -h github.com -s admin:enterprise+++
 
-    ![](./media/image3.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image3.png)
 
 3.  Enter the generated code and click on **Continue**
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image4.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image4.png)
 
 4.  Click on **Authorize github** button
 
-    ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image5.png)
 
     ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image6.png)
 
 5.  Switch back to GitBash and you should see Authentication complete
     message.
 
     ![A computer screen shot of a program AI-generated content may be
-incorrect.](./media/image7.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image7.png)
 
 6.  Repalce “**YOUR-ENTERPRISE-account** “ with your GEC account name
     and run below command to check view Enterprise-Wide Audit Log
@@ -74,7 +74,7 @@ incorrect.](./media/image7.png)
     +++gh api enterprises/YOUR-ENTERPRISE-account/audit-log+++
 
     ![A screen shot of a computer screen AI-generated content may be
-incorrect.](./media/image8.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image8.png)
 
 7.  Replace YOUR-ENTERPRISE-ACCOUNT with your enterprise account name
     and run command using filter ( to get account name -Github Account-
@@ -83,21 +83,21 @@ incorrect.](./media/image8.png)
     +++gh api enterprises/YOUR-ENTERPRISE-ACCOUNT/audit-log --jq '.\[\] | select(.action=="repo.create")'+++
 
     ![A black background with colorful text AI-generated content may be
-incorrect.](./media/image9.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image9.png)
 
-## Task 3: Enable GitHub Security & Code Scanning
+### Task 3: Enable GitHub Security & Code Scanning
 
 1.  Switch back to GitHub Enterprise account.
 
-    ![](./media/image10.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image10.png)
 
 2.  Click on your Enterprise account name
 
-    ![](./media/image11.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image11.png)
 
 3.  Navigate to **Settings → Advanced Security → New configuration**
 
-    ![](./media/image12.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image12.png)
 
 4.  Enter configuration name as – +++**GECsecurity+++,** description and
     enable below
@@ -108,34 +108,32 @@ incorrect.](./media/image9.png)
 
     - **Code Scanning** (Set up default workflow)
 
-    ![](./media/image13.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image13.png)
 
-    ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image14.png)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image15.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image15.png)
 
 3.  After enabled security alerts then click on **Save configuration**.
 
-    ![](./media/image16.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image16.png)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image17.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image17.png)
 
 ## Task 4: Analyze Repository Insights
 
 1.  Click on **Organization** tab and then click on your organization
     name
 
-    ![](./media/image18.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image18.png)
 
 2.  Click on **Repositories** tab and then click on migrated repo
 
-    ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image19.png)
 
 3.  Click on **Insights** tab
 
-    ![](./media/image20.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image20.png)
 
 4.  Explore:
 
@@ -149,9 +147,9 @@ incorrect.](./media/image17.png)
 
     - **Community Standards**: Checklist for README, License, etc.
 
-    ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab03/media/image21.png)
 
-## Summary
+### Summary
 
 By completing this lab, you:
 
@@ -165,4 +163,6 @@ By completing this lab, you:
 
 - Strengthened your GitHub observability, transparency, and compliance
   skills
+
+
 

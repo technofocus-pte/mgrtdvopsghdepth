@@ -33,7 +33,7 @@ organization is set up to complete the rest of this module.
 The modules in this learning path form a progression, in which you
 follow the Tailspin web team through its DevOps journey.
 
-### Task 1 : Move the work item to Doing
+### Task 1: Move the work item to Doing
 
 Here, you assign a work item to yourself on Azure Boards. You also move
 the work item to the Doing state. In practice, you and your team would
@@ -56,57 +56,58 @@ the *Space Game* website.
 1.  Switch back to your **Azure DevOps** tab, click on the existing
     project name.
 
-  ![](./media/image1.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image1.png)
 
 2.  Hover on **Boards** from left navigation menu and select **Boards**
 
-  ![](./media/image2.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image2.png)
 
 3.  Click on **New Item** under **To Do** column as shown in the below
     image.
 
-  ![](./media/image3.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image3.png)
 
 4.  Select **Backlog Items** and then click on **New item.**
 
-  ![](./media/image4.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image4.png)
 
 5.  Create the items below. Enter the item name and then click on **Add to top**.
 
 
-  +++Stabilize the build server+++
+    +++Stabilize the build server+++
 
-  +++Create a Git-based workflow+++
+    +++Create a Git-based workflow+++
 
-  +++Create unit tests+++
+    +++Create unit tests+++
 
-  +++Check code for vulnerabilities+++
+    +++Check code for vulnerabilities+++
 
-  +++Move model data to its own package+++
+    +++Move model data to its own package+++
 
-  +++Investigate hosted vs private build servers+++
+    +++Investigate hosted vs private build servers+++
 
 
-   ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image5.png)
 
-   ![](./media/image6.png) ![A screenshot of a computer AI-generated
- content may be incorrect.](./media/image7.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image6.png)
 
-6.  In the Create a multistage pipeline card, select the **Stabilize the
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image7.png)
+
+7.  In the Create a multistage pipeline card, select the **Stabilize the
     build server**. Then, assign the work item to yourself. Move the
     work item from the **To Do** column to the **Done** column.
 
-  ![](./media/image8.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image8.png)
 
-7.  In the Create a multistage pipeline card, select the **Create a
+8.  In the Create a multistage pipeline card, select the **Create a
     Git-based workflow**. Then, assign the work item to yourself. Move
     the work item from the **New** column to the **Committed** column.
 
-  ![](./media/image9.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image9.png)
 
-  ![](./media/image10.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image10.png)
 
-## 2: Fetch the branch from GitHub
+### Task 2: Fetch the branch from GitHub
 
 1.  In Visual Studio Code, Click on **File-\> Open Folder**
 
@@ -114,23 +115,21 @@ the *Space Game* website.
 
 3.  Click on **Terminal -> New Terminal- > GitBash**
 
- ![](./media/image11.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image11.png)
 
 4.  Open **Terminal** and run below command to go the folder
 
-  +++cd mslearn-tailspin-spacegame-web-deploy+++
+    +++cd mslearn-tailspin-spacegame-web-deploy+++
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image12.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image12.png)
 
 5.  A *remote* is a Git repository where team members collaborate (like a repository on GitHub). Here you list your remotes and add a remote that points to Microsoft's copy of the repository so that you can get the latest sample code.
 
 6.  Run the following command to list your remotes:
 
-  +++git remote -v+++
+    +++git remote -v+++
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image13.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image13.png)
 
 7.  Origin specifies your repository on GitHub. When you fork code from
     another repository, the original remote (the one you forked from) is
@@ -138,11 +137,11 @@ incorrect.](./media/image13.png)
 
 8.  Run the following command to create a remote named *upstream* that points to the Microsoft repository:
 
-  +++git remote add upstream https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git+++
+    +++git remote add upstream https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web-deploy.git+++
 
-  +++git remote -v+++
+    +++git remote -v+++
 
-  ![](./media/image14.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image14.png)
 
 9.  To fetch a branch named release from the Microsoft repository, and
     to switch to that branch, run the following git commands.
@@ -151,189 +150,180 @@ incorrect.](./media/image13.png)
 
     +++git checkout -B release upstream/release+++
 
-  ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image15.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image15.png)
 
-### Task 3 : Create Repos in ADO
+### Task 3: Create Repos in ADO
 
 1.  Switch back to DevOps Organization page and click on the existing
     project.
 
-  ![](./media/image16.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image16.png)
 
 2.  Hover on **Repos** from left navigation menu and select **Files**.
 
-  ![](./media/image17.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image17.png)
 
 3.  Click on the project drop down form top navigation menu and select
     **New repository**.
 
-  ![](./media/image18.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image18.png)
 
-4.  Enter the Repository name as  +++Lab07-tailspin-spacegame-web-deploy+++. **Unselect** “Add a README” checkbox and then click on **Create**.
+4.  Enter the Repository name as  +++Lab07-tailspin-spacegame-web-deploy+++. **Unselect** "Add a README" checkbox and then click on **Create**.
 
-  ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image19.png)
 
-  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image20.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image20.png)
 
 5.  Copy the HTTPS url to use in next exercise 2
 
-  ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image21.png)
 
-### Task 4 : Push Repo in Azure DevOps
+### Task 4: Push Repo in Azure DevOps
 
 1.  Replace you@example.com with your GitHub account and Your Name to be
     replaced with your GitHub account username in the below commands and
     run them.
 
-  +++git config --global user.email "you@example.com"+++
+    +++git config --global user.email "you@example.com"+++
 
-  +++git config --global user.name "Your Name"+++
+    +++git config --global user.name "Your Name"+++
 
-  ![](./media/image22.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image22.png)
 
 2.  **Run below commands to push the repo.**
 
-  +++git init+++
+    +++git init+++
 
-  +++git add .+++
+    +++git add .+++
 
-  +++git commit -m "Initial commit for migration lab"+++
+    +++git commit -m "Initial commit for migration lab"+++
 
-  ![A computer screen shot of a program AI-generated content may be
-incorrect.](./media/image23.png)
+    ![A computer screen shot of a program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image23.png)
 
 3.  Run below command to sign into Azure. Select Work or school account
     option and click on Continue.
 
-  +++az login+++
+    +++az login+++
 
-  ![A screenshot of a computer screen AI-generated content may be
-incorrect.](./media/image24.png)
+    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image24.png)
 
 4.  **Sign in with your cloud slice accounts.**
 
-  - Username: +++@lab.CloudPortalCredential(User1).Username+++
+    - Username: +++@lab.CloudPortalCredential(User1).Username+++
 
-  - Temporary Access Pass (TAP) Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
+    - Temporary Access Pass (TAP) Token: +++@lab.CloudPortalCredential(User1).AccessToken+++
 
-  ![A screenshot of a computer screen AI-generated content may be incorrect.](./media/image25.png)
+    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image25.png)
 
-  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image26.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image26.png)
 
 5.  Click on **Yes,all apps** button and then click on **Done.**
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image27.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image27.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image28.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image28.png)
 
 6.  Select your subscription and then press enter.
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image29.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image29.png)
 
-  ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image30.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image30.png)
 
-7.  **Run below command to push local folder to Azure Devops .(Replace **https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/_git/azure-search-openai-migrated **with the https link you copied in previous step -Azure DevOps
-    repos**
+7.  **Run below command to push local folder to Azure Devops .(Replace **https://dev.azure.com/ADOCourseOrg04/dev-github-proj-53969426/_git/azure-search-openai-migrated **with the https link you copied in previous step -Azure DevOps repos**
 
-  +++git remote set-url origin <Devops Repo Https url>+++
+    +++git remote set-url origin <Devops Repo Https url>+++
 
-  ![A screen shot of a computer program AI-generated content may be  incorrect.](./media/image31.png)
+    ![A screen shot of a computer program AI-generated content may be  incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image31.png)
 
 8.  Run below command to push the repo to Devops . if it prompts to sign in ,sign in with your DevOps account.
 
-  +++git push -u origin --all++++
+    +++git push -u origin --all++++
 
-  ![A screen shot of a computer program AI-generated content may be
-incorrect.](./media/image32.png)
+    ![A screen shot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image32.png)
 
-  >**Note : If you already have repo in Devops then follow steps to pull and resolve conflict – 1. Pull from DevOps with unrelated
-history:** **git pull origin main --allow-unrelated-histories Step 2 : Resolve conflicts in files like .gitignore, README.md. Step 3 : Stage the resolved files - git add .**>git commit -m "Resolved merge conflicts"**
+    >[!note]**Note**: If you already have repo in Devops then follow steps to pull and resolve conflict
+    >1. Pull from DevOps with unrelated history: **git pull origin main --allow-unrelated-histories**
+    >2. Resolve conflicts in files like .gitignore, README.md.
+    >3. Stage the resolved files - git add . >git commit -m "Resolved merge conflicts"
 
 9.  Go back to Azure Devops project and check Repos-> Files .You should see your repo here .
 
-  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image33.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image33.png)
 
-### Task 5 : Migrate Azure DevOps Repo to GitHub Enterprise Cloud
+### Task 5: Migrate Azure DevOps Repo to GitHub Enterprise Cloud
 
 1.  Switch back to Visual Studio and run below commands to set
     environment varaibles. Make sure to update variables with your
     values and then run them.
 
-  +++export AZURE_DEVOPS_PAT="YOUR_AZDO_PAT"+++
+    +++export AZURE_DEVOPS_PAT="YOUR_AZDO_PAT"+++
 
-  +++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
+    +++export GH_PAT="ghp_xxxxxxxxxxxxxxxxxxxxx"+++
 
-  +++export ADO_ORG=https://dev.azure.com/your-ado-org+++ # or simply "your-ado-org" if you prefer
+    +++export ADO_ORG=https://dev.azure.com/your-ado-org+++ # or simply "your-ado-org" if you prefer
 
-  +++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
+    +++export GEC_ORG="your-githubEC-org"+++ # e.g. devopstogtihub1234
 
-  +++export ADO_PROJECT=" **dev-github-proj-XXXXX**"+++ #ADO project – replace XXXXX with your project number
+    +++export ADO_PROJECT=" **dev-github-proj-@lab.LabInstance.Id**"+++ #ADO project 
 
-  ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image34.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image34.png)
 
 2.  Run below commands to verify GitHub login status. If not logged in
     then run 2^(nd) command gh auth login and follow the process to
     loginto GitHub.
 
-  +++gh auth status+++
+    +++gh auth status+++
 
-  +++gh auth login+++
+    +++gh auth login+++
 
-  ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image35.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image35.png)
 
 3.  Run below command to install GitHub Enterprise importer extension.
 
-  +++gh extension install github/gh-ado2gh+++
+    +++gh extension install github/gh-ado2gh+++
 
-  ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image36.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image36.png)
 
 4.  Run below command to grant migrator role to your account.(replace
     your-github-username with your username)
 
-  +++gh gei grant-migrator-role --github-org $GEC_ORG --actor <your-github-username> --actor-type USER+++
+    +++gh gei grant-migrator-role --github-org $GEC_ORG --actor <your-github-username> --actor-type USER+++
 
-  ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image37.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image37.png)
 
-  eg :gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
+    >Example: gh gei grant-migrator-role --github-org devopstogtihub --actor chintharlamanjula --actor-type USER
 
 5.  Run below dry-run command to migrate repos to GEC and copy migration id **(Note: We have used repo -** **tailspin-spacegame-web-deploy . You can check this in your ADO-\>Org-\> Project-\> Repo )**
 
-  +++gh ado2gh migrate-repo --ado-org  $ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo Lab07-tailspin-spacegame-web-deploy --github-org $GEC_ORG --github-repo Lab07-tailspin-spacegame-web-deploy  --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
+    +++gh ado2gh migrate-repo --ado-org  $ADO_ORG --ado-team-project $ADO_PROJECT --ado-repo Lab07-tailspin-spacegame-web-deploy --github-org $GEC_ORG --github-repo Lab07-tailspin-spacegame-web-deploy  --ado-pat $AZURE_DEVOPS_PAT --github-pat $GH_PAT --queue-only+++
 
-  ![](./media/image38.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image38.png)
 
 6.  Copy repository migration and update below command with migration id
     and run.
 
-  +++gh ado2gh wait-for-migration  --migration-id <MIGRATION_ID> --github-pat $GH_PAT+++
+    +++gh ado2gh wait-for-migration  --migration-id <MIGRATION_ID> --github-pat $GH_PAT+++
 
-  ![](./media/image39.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image39.png)
 
 7.  Switch back to GitHub browser tab, click profile and select **Your enterprises**.
 
-  ![](./media/image40.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image40.png)
 
 8.  Click on your enterprise account.
 
-  ![](./media/image41.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image41.png)
 
 9.  Click on **Organizations** tab and then select the organization you
     have created.
 
-  ![](./media/image42.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image42.png)
 
 10.  Click on **Repositories** tab and you should see migrated repo
 
-  ![](./media/image43.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image43.png)
+
+---
 
 ## Exercise 2 : Create the Azure App Service environments
 
@@ -353,7 +343,7 @@ Shell. This browser-based shell experience is hosted in the cloud. In
 Cloud Shell, the Azure CLI is configured for use with your Azure
 subscription.
 
-## Task 1 : Create the App Service instances
+### Task 1: Create the App Service instances
 
 Here, you create the App Service instances for the three stages you
 deploy to: *Dev*, *Test*, and *Staging*. Here's a brief overview of the
@@ -363,126 +353,116 @@ process you follow:
     From the menu, select **Cloud Shell**. When prompted, select
     the **Bash** experience.
 
-  ![](./media/image44.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image44.png)
 
 2.  Select No storage account needed radio button and select your
     subscription and then click on **Apply**.
 
-  ![](./media/image45.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image45.png)
 
 3.  Run below command to get existing resource group and set it as
     default.
 
-  +++az group list --output table+++
+    +++az group list --output table+++
 
-  +++az config set defaults.group=<YourResourceGroupName>+++
+    +++az config set defaults.group=<YourResourceGroupName>+++
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image46.png)
 
 4.  Run below command to get location of your resource group and then
     run az configure to set your default resource group region.
     Replace \<REGION\> with the region of your resource group.
 
-  +++az configure --defaults location=centralindia+++
+    +++az configure --defaults location=centralindia+++
 
-  ![A screenshot of a computer screen AI-generated content may be
-incorrect.](./media/image47.png)
+    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image47.png)
 
 5.  From the Cloud Shell, generate a random number that makes your web
     app's domain name unique.
 
-  +++webappsuffix=$RANDOM+++
+    +++webappsuffix=$RANDOM+++
 
-  +++export RESOURCE_GROUP=ResourceGroup1+++
+    +++export RESOURCE_GROUP=ResourceGroup1+++
 
-  ![A screenshot of a computer screen AI-generated content may be
-incorrect.](./media/image48.png)
+    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image48.png)
 
 6.  Run below command to register Microsoft.web service provider.
 
-  +++az provider register --namespace Microsoft.Web+++
+    +++az provider register --namespace Microsoft.Web+++
 
-  ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image49.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image49.png)
 
 7.  To create the App Service plan named *tailspin-space-game-asp*, run
     the following az appservice plan create command.
 
-  +++az appservice plan create --name tailspin-space-game --resource-group $RESOURCE_GROUP --sku B1 --is-linux+++
+    +++az appservice plan create --name tailspin-space-game --resource-group $RESOURCE_GROUP --sku B1 --is-linux+++
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image50.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image50.png)
 
-  **Important:** This Azure subscription is limited to the SKU value B1.
+    >[!alert]**Important**: This Azure subscription is limited to the SKU value B1.
 
 8.  To create the three App Service instances, one for each environment
     (*Dev*, *Test*, and *Staging*), run the following az webapp
     create commands.
 
-  +++az webapp create --name tailspin-space-game-web-dev-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
+    +++az webapp create --name tailspin-space-game-web-dev-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
 
-  ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image51.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image51.png)
 
-  +++az webapp create --name tailspin-space-game-web-test-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
+    +++az webapp create --name tailspin-space-game-web-test-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
 
-  ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image52.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image52.png)
 
-  +++az webapp create --name tailspin-space-game-web-staging-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
+    +++az webapp create --name tailspin-space-game-web-staging-$webappsuffix --resource-group $RESOURCE_GROUP --plan tailspin-space-game --runtime "DOTNETCORE|8.0"+++
 
-  ![A screen shot of a computer program AI-generated content may be
-incorrect.](./media/image53.png)
+    ![A screen shot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image53.png)
 
-  ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image54.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image54.png)
 
-  For learning purposes, you apply the same App Service plan, B1 Basic, to
-  each App Service instance here. In practice, you'd assign a plan that
-  matches your expected workload.
-  
-  For example, for the environments that map to
-  the *Dev* and *Test* stages, B1 Basic might be appropriate because you
-  want only your team to access the environments.
-  
-  For the *Staging* environment, you'd select a plan that matches your
-  production environment. That plan would likely provide greater CPU,
-  memory, and storage resources. Under the plan, you can run performance
-  tests, like load tests, in an environment that resembles your production
-  environment. You can run the tests without affecting live traffic to
-  your site.
+    >[!note]**Note**:
+    >For learning purposes, you apply the same App Service plan, B1 Basic, to
+    >each App Service instance here. In practice, you'd assign a plan that
+    >matches your expected workload.
+    >
+    >For example, for the environments that map to
+    >the *Dev* and *Test* stages, B1 Basic might be appropriate because you
+    >want only your team to access the environments.
+    >
+    >For the *Staging* environment, you'd select a plan that matches your
+    >production environment. That plan would likely provide greater CPU,
+    >memory, and storage resources. Under the plan, you can run performance
+    >tests, like load tests, in an environment that resembles your production
+    >environment. You can run the tests without affecting live traffic to
+    >your site.
 
 9.  To list each App Service instance's host name and state, run the
     following az webapp list command.
 
-  +++az webapp list --resource-group $RESOURCE_GROUP --query "[].{hostName: defaultHostName, state: state}" --output table+++
+    +++az webapp list --resource-group $RESOURCE_GROUP --query "[].{hostName: defaultHostName, state: state}" --output table+++
 
-  ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image55.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image55.png)
 
 10. Go back to the Azure portal tab and click on **Resource groups**  tile.
 
-  ![](./media/image56.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image56.png)
 
 11. Click on resource group name
 
-  ![](./media/image57.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image57.png)
 
 12. Click on **Dev** app service name +++tailspin-space-game-web-dev-XXXX+++ replace XXXX with unique number .
 
-  ![](./media/image58.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image58.png)
 
 13. Click on default domain link.
 
-  ![](./media/image59.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image59.png)
 
 13. Default home page appears.
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image60.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image60.png)
 
-### Task 2 : Create pipeline variables in Azure Pipelines
+### Task 2: Create pipeline variables in Azure Pipelines
 
 In Create a release pipeline with Azure Pipelines, you added a variable
 to your pipeline that stores the name of your web app in App Service.
@@ -498,196 +478,196 @@ configuration.
 
 1.  In Azure DevOps, go back to your  project.
 
-  ![](./media/image61.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image61.png)
 
 2.  Select **Pipelines ->** **Library** from left navigation menu.
 
-  ![](./media/image62.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image62.png)
 
 3.  Select **+ Variable group**.
 
-  ![](./media/image63.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image63.png)
 
 4.  Under **Properties**, enter +++**Release+++** for the variable group
     name. Under **Variables**, select **+ Add**.
 
-  ![](./media/image64.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image64.png)
 
 5.  For the name of your variable, enter +++***WebAppNameDev+++***. For
     the value, enter the name of the App Service instance that
     corresponds to your *Dev* environment, such
-    as ***tailspin-space-game-web-dev-XXXX***.( these are your host name
+    as **+++tailspin-space-game-web-dev-@lab.LabInstance.Id+++**.(these are your host name
     and you can also get from Azure portal-\> Resource group-\> App
     service name for dev,test and staging)
 
-  ![](./media/image65.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image65.png)
 
 6.  Repeat the previous two steps twice more to create variables for
     your *Test* and *Staging* environments. Replace XXXX with your app
     number and **Save**.
 
-  |||
-  |--|--|
-  |Variable name|Value|
-  |+++WebAppNameTest+++|+++tailspin-space-game-web-test-XXXX+++|
-  |+++WebAppNameStaging+++|+++tailspin-space-game-web-staging-XXXX+++|
+    |||
+    |--|--|
+    |Variable name|Value|
+    |+++WebAppNameTest+++|+++tailspin-space-game-web-test-@lab.LabInstance.Id+++|
+    |+++WebAppNameStaging+++|+++tailspin-space-game-web-staging-@lab.LabInstance.Id+++|
 
-  ![](./media/image66.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image66.png)
 
 7.  Click on Environment from left navigation menu and click on **New
     environment**
 
-  ![](./media/image67.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image67.png)
 
 8.  Enter Name as +++**test+++** and then click on **Create**.
 
-  ![](./media/image68.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image68.png)
 
 9.  Repeat above step and create +++**staging+++** environment.
 
-  ![](./media/image69.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image69.png)
 
-## Task 3 : Create a service connection for ARM and GitHub
+### Task 3: Create a service connection for ARM and GitHub
 
 Here, you create a service connection that enables Azure Pipelines to
 access your Azure subscription. Azure Pipelines uses this service
 connection to deploy the website to App Service. You created a similar
 service connection in the previous labs.
 
-** Important:**Make sure that you're signed in to both the Azure portal and Azure DevOps under the same Microsoft account.
+>[!alert]**Important**: Make sure that you're signed in to both the Azure portal and Azure DevOps under the same Microsoft account.
 
 1.  From the lower-left corner of the page, select **Project settings**.
 
-  ![](./media/image70.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image70.png)
 
 2.  Under **Pipelines**, select **Service connections**. Select **Create
     service connection**.
 
-  ![](./media/image71.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image71.png)
 
 3.  Select **Azure Resource Manager**, and then select **Next**.
 
-  ![](./media/image72.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image72.png)
 
 4.  Fill in these fields. Then, select **Grant access permission to all
     pipelines** check box and then click on **Save**.
 
-  - Scope level : **Subscription**
-  - Subscription : Your Azure subscription
-  - Resource Group : **ResourceGroup1**
+    - Scope level : **Subscription**
+    - Subscription : @lab.CloudSubscription.Id
+    - Resource Group : **ResourceGroup1**
   
-  ![](./media/image73.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image73.png)
 
-  ![](./media/image74.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image74.png)
 
 5.  Click on **Service connections** from left navigation menu again.
 
-  ![](./media/image75.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image75.png)
 
 6.  Click on the **New Service connection** button.
 
-  ![](./media/image76.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image76.png)
 
 7.  Select **GitHub** and then click **Next**.
 
-  ![](./media/image77.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image77.png)
 
 8.  Select **AzurePipelines** from **OAuth Configuration** drop down and
     then click on **Authorize** button.
 
-  ![](./media/image78.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image78.png)
 
 9.  Keep the default service name, select **Grant access permission to
     all pipelines** security check box and then click on **Save** .
 
-  ![](./media/image79.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image79.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image80.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image80.png)
 
 10. Click on project name from top navigation menu.
 
-  ![](./media/image81.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image81.png)
 
-## Task 4 : Create and Configure pipeline to use GEC repo
+### Task 4: Create and Configure pipeline to use GEC repo
 
 1.  Click on **Pipelines** from left navigation menu and then select
     Pipeline.
 
-  ![](./media/image82.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image82.png)
 
 2.  Click on **Create Pipeline**.
 
-  ![](./media/image83.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image83.png)
 
 3.  Select **Azure Repo git** tile
 
-  ![](./media/image84.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image84.png)
 
 4.  Select the **Lab07-** **tailspin-spacegame-web-deploy** repo.
 
-  ![](./media/image85.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image85.png)
 
 5.  Select **ASP.NET**
 
-  ![](./media/image86.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image86.png)
 
 6.  Click on **Save and run** drop down and select **Save**.
 
-  ![](./media/image87.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image87.png)
 
 7.  Keep the default commit message and then click on **Save**.
 
-  ![](./media/image88.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image88.png)
 
 8.  Select the **Pipelines** from the left navigation menu and select
     the pipeline to **Edit**.
 
-  ![](./media/image89.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image89.png)
 
 9.  Select **release** branch and then click next to **Run** button and
     select **Triggers**.
 
-  ![](./media/image90.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image90.png)
 
 10. Configure CI settings under **Triggers** tab, **select Override the
     YAML continuous integration trigger from here** checkbox and then
     include **release** branch
 
-  ![](./media/image91.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image91.png)
 
 11. Select **YAML** tab and select **Get sources-\>GitHub** and then
     click on **Repository**
 
-  ![](./media/image92.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image92.png)
 
 12. Select the repo
     (**devopstogithubXXXX/Lab07-migrate-multistagerepos**) which was
     migrated in above tasks and then click on **Select** button.
 
-  ![](./media/image93.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image93.png)
 
 13. Click on **Pipeline** under YAML
 
-  ![](./media/image94.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image94.png)
 
 14. Select **Azure Pipeline** under **Default agent pool for YAML** drop
     down and then click on **Save & queue-\> Save**.
 
-  ![](./media/image95.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image95.png)
 
 15. Enter some comments and click on **Save** to save the build
     pipeline.
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image96.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image96.png)
 
 16. Switch back to GitHub browser tab and navigate to the Lab07 repo
-and click on Code-> copy Https url to use in next task
+    and click on Code-> copy Https url to use in next task
 
-  eg- https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
+    >Example: https://github.com/devopstogtihub1234/Lab07-tailspin-spacegame-web-deploy.git
 
-  ![](./media/image97.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image97.png)
+
+---
 
 ## Exercise 3 - Promote to the Dev stage
 
@@ -705,7 +685,7 @@ The *Dev* stage resembles the deployment stage that you made in
 the Create a release pipeline in Azure Pipelines module. There, you used
 a CI trigger to start the build process. Here you do the same.
 
-### Task 1 : Promote changes to the Dev stage
+### Task 1: Promote changes to the Dev stage
 
 Here, you modify your pipeline configuration to promote the build to
 the *Dev* stage.
@@ -832,97 +812,91 @@ the *Dev* stage.
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
   ```
 
-  ![](./media/image98.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image98.png)
 
-  Note:In practice, you might deploy from some other branch, such as main. You can include logic that allows changes to be promoted to
-the *Dev* stage from multiple branches, such as release and main.
+    >[!note]**Note**: In practice, you might deploy from some other branch, such as main. You can include logic that allows changes to be promoted to the *Dev* stage from multiple branches, such as release and main.
 
 2.  Run below commands to change origin so it points to your **GEC repo** (the one you migrated to).
 
-  # Remove the old origin
-  +++git remote remove origin+++
+    # Remove the old origin
+    +++git remote remove origin+++
   
-  # Add your GEC repo as the new origin .Replace your-GEC-org with your org name – eg devopstogtihub1234
-  
-  +++git remote add origin https://github.com/<your-GEC-org>/lab07-migrate-repos.git+++
+    # Add your GEC repo as the new origin .Replace your-GEC-org with your org name – eg devopstogtihub1234
+    +++git remote add origin https://github.com/<your-GEC-org>/lab07-migrate-repos.git+++
 
-  # Verify remotes
-  
-  +++git remote -v+++
+    # Verify remotes
+    +++git remote -v+++
 
- ![](./media/image99.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image99.png)
 
 3.  From the integrated terminal, add ***azure-pipelines.yml*** to the
     index. Commit the change, and push it up to GitHub.
 
-  +++git add azure-pipelines.yml+++
+    +++git add azure-pipelines.yml+++
 
-  +++git commit -m "Deploy to the Dev stage"+++
+    +++git commit -m "Deploy to the Dev stage"+++
 
-  +++git push origin release+++
+    +++git push origin release+++
 
-  ![A computer screen shot of a program AI-generated content may be
-incorrect.](./media/image100.png)
+    ![A computer screen shot of a program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image100.png)
 
 4.  Switch back Azure DevOps project and click on **Pipeline** form left
     navigation menu and then click on the running pipeline.
 
-  ![](./media/image101.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image101.png)
 
 5.  Click on the running build
 
-  ![](./media/image102.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image102.png)
 
-6.  Click on **View** button next to warning message **“This pipeline
+6.  Click on **View** button next to warning message **"This pipeline
     needs permission to access a resource before this run can continue
-    to Build the web application**”
+    to Build the web application**"
 
-  ![](./media/image103.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image103.png)
 
 7.  Review the permission and permit access by clicking on **Permit**
     button.
 
-  ![](./media/image104.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image104.png)
 
 8.  Wait for the Build to complete.
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image105.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image105.png)
 
-  ![](./media/image106.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image106.png)
 
-9.  Now click on **View** again next to the warning message “  
+9.  Now click on **View** again next to the warning message "  
     **This pipeline needs permission to access 2 resources before this
-    run can continue to Deploy to the dev environment”**
+    run can continue to Deploy to the dev environment"**
 
-  ![](./media/image107.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image107.png)
 
 10. Provide permission to both dev and release
 
-  ![](./media/image108.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image108.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image109.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image109.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image110.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image110.png)
 
 11. Wait for the deployment to be completed.
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image111.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image111.png)
 
-  ![](./media/image112.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image112.png)
 
 12. Switch back to Azure App service tab and click on Dynamic URL of Dev
     app.
 
-  ![](./media/image113.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image113.png)
 
 13. You see that the *Space Game* website is deployed to App Service,
     and is running.
 
-  ![](./media/image114.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image114.png)
+
+---
 
 ## Exercise 4 - Promote to the Test stage
 
@@ -948,7 +922,7 @@ For learning purposes, we’ll define the schedule but also allow the
 build to go directly from Dev to Test without waiting for 3 A.M. This
 lets you complete the lab without delay.
 
-### Task 1 : Promote changes to the Test stage
+### Task 1: Promote changes to the Test stage
 
 Here, you modify your pipeline configuration to deploy the build to
 the *Test* stage.
@@ -956,58 +930,58 @@ the *Test* stage.
 1.  In Visual Studio Code, replace the code **azure-pipelines.yml** with
     below code and save the file
 
-  ```
-  trigger:
-  branches:
-    include:
-      - '*'
+    ```
+    trigger:
+    branches:
+      include:
+        - '*'
   
-  pr:
-  branches:
-    include:
-      - '*'
+    pr:
+    branches:
+      include:
+        - '*'
   
-  schedules:
-  - cron: '0 3 * * *'
-  displayName: 'Deploy every day at 3 A.M.'
-  branches:
-    include:
-      - release
-  always: false
+    schedules:
+    - cron: '0 3 * * *'
+    displayName: 'Deploy every day at 3 A.M.'
+    branches:
+      include:
+        - release
+    always: false
   
-  variables:
-  buildConfiguration: 'Release'
-  releaseBranchName: 'release'
-  dotnetSdkVersion: '8.x'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+    variables:
+    buildConfiguration: 'Release'
+    releaseBranchName: 'release'
+    dotnetSdkVersion: '8.x'
+    wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   
-  stages:
-  - stage: 'Build'
-  displayName: 'Build the web application'
-  jobs:
-  - job: 'Build'
-    displayName: 'Build job'
-    pool:
-      vmImage: 'windows-latest'
-    steps:
-    - task: UseNode@1
-      displayName: 'Use Node.js 18.20.8'
-      inputs:
-        version: '18.20.8'
+    stages:
+    - stage: 'Build'
+      displayName: 'Build the web application'
+    jobs:
+    - job: 'Build'
+      displayName: 'Build job'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+      - task: UseNode@1
+        displayName: 'Use Node.js 18.20.8'
+        inputs:
+          version: '18.20.8'
   
-    - task: UseDotNet@2
-      displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-      inputs:
-        packageType: sdk
-        version: '$(dotnetSdkVersion)'
+      - task: UseDotNet@2
+        displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+        inputs:
+          packageType: sdk
+          version: '$(dotnetSdkVersion)'
   
-    - task: Npm@1
-      displayName: 'Run npm install'
-      inputs:
-        command: 'install'
-        verbose: false
+      - task: Npm@1
+        displayName: 'Run npm install'
+        inputs:
+          command: 'install'
+          verbose: false
   
-    - powershell: |
+      - powershell: |
         $scssPath = "$(wwwrootDir)/scss"
         if (Test-Path $scssPath) {
           Write-Host "SCSS directory found. Compiling..."
@@ -1015,104 +989,104 @@ the *Test* stage.
         } else {
           Write-Host "SCSS directory not found. Skipping Sass compilation."
         }
-      displayName: 'Compile Sass assets'
+        displayName: 'Compile Sass assets'
   
-    - script: 'npx gulp'
-      displayName: 'Run gulp tasks'
-      workingDirectory: Tailspin.SpaceGame.Web
+      - script: 'npx gulp'
+        displayName: 'Run gulp tasks'
+        workingDirectory: Tailspin.SpaceGame.Web
   
-    - script: |
-        echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
-      displayName: 'Write build info'
-      workingDirectory: $(wwwrootDir)
+      - script: |
+          echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
+        displayName: 'Write build info'
+        workingDirectory: $(wwwrootDir)
   
-    - task: DotNetCoreCLI@2
-      displayName: 'Restore project dependencies'
-      inputs:
-        command: 'restore'
-        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+      - task: DotNetCoreCLI@2
+        displayName: 'Restore project dependencies'
+        inputs:
+          command: 'restore'
+          projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
   
-    - task: DotNetCoreCLI@2
-      displayName: 'Build the project - $(buildConfiguration)'
-      inputs:
-        command: 'build'
-        arguments: '--no-restore --configuration $(buildConfiguration)'
-        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+      - task: DotNetCoreCLI@2
+        displayName: 'Build the project - $(buildConfiguration)'
+        inputs:
+          command: 'build'
+          arguments: '--no-restore --configuration $(buildConfiguration)'
+          projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
   
-    - task: DotNetCoreCLI@2
-      displayName: 'Publish the project - $(buildConfiguration)'
-      inputs:
-        command: 'publish'
-        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-        publishWebProjects: true
-        arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
-        zipAfterPublish: true
+      - task: DotNetCoreCLI@2
+        displayName: 'Publish the project - $(buildConfiguration)'
+        inputs:
+          command: 'publish'
+          projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+          publishWebProjects: true
+          arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+          zipAfterPublish: true
   
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: drop'
-      inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)'
-        artifactName: 'drop'
-        publishLocation: 'Container'
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Artifact: drop'
+        inputs:
+          pathToPublish: '$(Build.ArtifactStagingDirectory)'
+          artifactName: 'drop'
+          publishLocation: 'Container'
   
-  - stage: 'Dev'
-  displayName: 'Deploy to the dev environment'
-  dependsOn: Build
-  condition: |
-    and(
-      succeeded(),
-      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
-    )
-  jobs:
-  - deployment: Deploy
-    pool:
-      vmImage: 'windows-latest'
-    environment: dev
-    variables:
-      - group: Release
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - download: current
-            artifact: drop
-          - task: AzureWebApp@1
-            displayName: 'Azure App Service Deploy: website'
-            inputs:
-              azureSubscription: 'Resource Manager - Tailspin - Space Game'
-              appName: '$(WebAppNameDev)'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+    - stage: 'Dev'
+      displayName: 'Deploy to the dev environment'
+      dependsOn: Build
+      condition: |
+        and(
+          succeeded(),
+          eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+        )
+      jobs:
+      - deployment: Deploy
+        pool:
+          vmImage: 'windows-latest'
+        environment: dev
+        variables:
+          - group: Release
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+              - download: current
+                artifact: drop
+              - task: AzureWebApp@1
+                displayName: 'Azure App Service Deploy: website'
+                inputs:
+                  azureSubscription: 'Resource Manager - Tailspin - Space Game'
+                  appName: '$(WebAppNameDev)'
+                  package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
   
-  - stage: 'Test'
-  displayName: 'Deploy to the test environment'
-  dependsOn: Dev
-  condition: |
-    or(
-      eq(variables['Build.Reason'], 'Schedule'),
-      succeeded()
-    )
-  jobs:
-  - deployment: Deploy
-    pool:
-      vmImage: 'windows-latest'
-    environment: test
-    variables:
-      - group: Release
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - download: current
-            artifact: drop
-          - task: AzureWebApp@1
-            displayName: 'Azure App Service Deploy: website'
-            inputs:
-              azureSubscription: 'Resource Manager - Tailspin - Space Game'
-              appName: '$(WebAppNameTest)'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
-  ```
+    - stage: 'Test'
+      displayName: 'Deploy to the test environment'
+      dependsOn: Dev
+      condition: |
+        or(
+          eq(variables['Build.Reason'], 'Schedule'),
+          succeeded()
+        )
+      jobs:
+      - deployment: Deploy
+        pool:
+          vmImage: 'windows-latest'
+        environment: test
+        variables:
+          - group: Release
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+              - download: current
+                artifact: drop
+              - task: AzureWebApp@1
+                displayName: 'Azure App Service Deploy: website'
+                inputs:
+                  azureSubscription: 'Resource Manager - Tailspin - Space Game'
+                  appName: '$(WebAppNameTest)'
+                  package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+    ```
 
-    ![](./media/image115.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image115.png)
 
 2.  From the integrated terminal to the index, add ***azure-pipelines.yml***. Then, commit the change, and push it
     up to GitHub.
@@ -1123,59 +1097,56 @@ the *Test* stage.
 
     +++git push origin release+++
 
-  ![A screenshot of a computer program AI-generated content may be  incorrect.](./media/image116.png)
+    ![A screenshot of a computer program AI-generated content may be  incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image116.png)
 
 3.  Switch back to **Azure Devops-\> Project-\>Pipelines** and click on
     Pipeline name-**mslearn-tailspin-spacegame-deploy**
 
-  ![](./media/image117.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image117.png)
 
 4.  Click on **Deploy to Test Stage running** job
 
-  ![](./media/image118.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image118.png)
 
 5.  Wait for the deployment to dev stage complete
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image119.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image119.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image120.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image120.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image121.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image121.png)
 
-6.  Click on View next to the warning message **“This pipeline needs
+6.  Click on View next to the warning message **"This pipeline needs
     permission to access a resource before this run can continue to
-    Deploy to the test environment”**
+    Deploy to the test environment"**
 
-  ![](./media/image122.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image122.png)
 
 7.  Click on **Permit-\>Permit** to permit access to deploy to test
     environment.
 
-  ![](./media/image123.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image123.png)
 
 8.  Wait for the deployment to be completed
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image124.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image124.png)
 
-  ![](./media/image125.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image125.png)
 
 9.  Switch back to Azure portal-\>Resource group and click on Azure Test
     app service name.
 
-  ![](./media/image126.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image126.png)
 
 10. Click on Default domain
 
-  ![](./media/image127.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image127.png)
 
 11. App is up and running.
 
-  ![A screenshot of a game AI-generated content may be
-incorrect.](./media/image128.png)
+    ![A screenshot of a game AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image128.png)
+
+---
 
 ## Exercise 5 : Promote to Staging
 
@@ -1190,7 +1161,7 @@ In this part, you'll:
 - Define the *Staging* stage, which runs only after an approver verifies
   the results of the *Test* stage.
 
-### Task 1 : Update approvals in the staging environment
+### Task 1: Update approvals in the staging environment
 
 Here, you create an environment in Azure Pipelines for *Staging*. For
 learning purposes, you assign yourself as the approver. In practice, you
@@ -1201,25 +1172,18 @@ changes so that they can be promoted from *Test* to *Staging*.
 Earlier in this module, you specified environment settings for
 both *Dev* and *Test* stages. Here's an example for the *Dev* stage.
 
-\- stage: 'Deploy'
-
-displayName: 'Deploy the web application'
-
-dependsOn: Build
-
-jobs:
-
-\- deployment: Deploy
-
-pool:
-
-name: Default s
-
-environment: dev
-
-variables:
-
-\- group: Release
+```nocopy
+- stage: 'Deploy'
+  displayName: 'Deploy the web application'
+  dependsOn: Build
+  jobs:
+  - deployment: Deploy
+    pool:
+      name: Default s
+      environment: dev
+    variables:
+  - group: Release
+```
 
 You can define an environment through Azure Pipelines that includes
 specific criteria for your release. This criteria can include the
@@ -1230,22 +1194,22 @@ one stage to the next. Here, you specify those approvals.
 1.  Switch back to Azure DevOps tab, click on **Environments** and then
     select **staging** environment**.**
 
-  ![](./media/image129.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image129.png)
 
 2.  Select **Approvals and checks** tab and then select **Approvals**
     check.
 
-  ![](./media/image130.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image130.png)
 
 3.  Under **Approvers**, select cloud slice account.
     Under **Instructions to approvers**, enter ***Approve this change
     when it's ready for staging*** and then click on **Create**.
 
-  ![](./media/image131.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image131.png)
 
-  ![](./media/image132.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image132.png)
 
-### Task 2 : Promote changes to Staging
+### Task 2: Promote changes to Staging
 
 Here you modify your pipeline configuration to deploy the build to
 the *Staging* stage.
@@ -1253,241 +1217,233 @@ the *Staging* stage.
 1.  Switch back to Visual Studio Code, replace the
      *azure-pipelines.yml* code with below code.
 
-  ```
-  trigger:
-  branches:
-    include:
-      - '*'
+    ```
+    trigger:
+    branches:
+      include:
+        - '*'
   
-  pr:
-  branches:
-    include:
-      - '*'
+    pr:
+    branches:
+      include:
+        - '*'
   
-  schedules:
-  - cron: '0 3 * * *'
-  displayName: 'Deploy every day at 3 A.M.'
-  branches:
-    include:
-      - release
-  always: false
+    schedules:
+    - cron: '0 3 * * *'
+    displayName: 'Deploy every day at 3 A.M.'
+    branches:
+      include:
+        - release
+          always: false
   
-  variables:
-  buildConfiguration: 'Release'
-  releaseBranchName: 'release'
-  dotnetSdkVersion: '8.x'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  
-  stages:
-  - stage: 'Build'
-  displayName: 'Build the web application'
-  jobs:
-  - job: 'Build'
-    displayName: 'Build job'
-    pool:
-      vmImage: 'windows-latest'
-    steps:
-    - task: UseNode@1
-      displayName: 'Use Node.js 18.20.8'
-      inputs:
-        version: '18.20.8'
-  
-    - task: UseDotNet@2
-      displayName: 'Use .NET SDK $(dotnetSdkVersion)'
-      inputs:
-        packageType: sdk
-        version: '$(dotnetSdkVersion)'
-  
-    - task: Npm@1
-      displayName: 'Run npm install'
-      inputs:
-        command: 'install'
-        verbose: false
-  
-    - powershell: |
-        $scssPath = "$(wwwrootDir)/scss"
-        if (Test-Path $scssPath) {
-          Write-Host "SCSS directory found. Compiling..."
-          npx sass $scssPath:$(wwwrootDir)/css
-        } else {
-          Write-Host "SCSS directory not found. Skipping Sass compilation."
-        }
-      displayName: 'Compile Sass assets'
-  
-    - script: 'npx gulp'
-      displayName: 'Run gulp tasks'
-      workingDirectory: Tailspin.SpaceGame.Web
-  
-    - script: |
-        echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
-      displayName: 'Write build info'
-      workingDirectory: $(wwwrootDir)
-  
-    - task: DotNetCoreCLI@2
-      displayName: 'Restore project dependencies'
-      inputs:
-        command: 'restore'
-        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-  
-    - task: DotNetCoreCLI@2
-      displayName: 'Build the project - $(buildConfiguration)'
-      inputs:
-        command: 'build'
-        arguments: '--no-restore --configuration $(buildConfiguration)'
-        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-  
-    - task: DotNetCoreCLI@2
-      displayName: 'Publish the project - $(buildConfiguration)'
-      inputs:
-        command: 'publish'
-        projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
-        publishWebProjects: true
-        arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
-        zipAfterPublish: true
-  
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: drop'
-      inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)'
-        artifactName: 'drop'
-        publishLocation: 'Container'
-  
-  - stage: 'Dev'
-  displayName: 'Deploy to the dev environment'
-  dependsOn: Build
-  condition: |
-    and(
-      succeeded(),
-      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
-    )
-  jobs:
-  - deployment: Deploy
-    pool:
-      vmImage: 'windows-latest'
-    environment: dev
     variables:
-      - group: Release
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - download: current
-            artifact: drop
-          - task: AzureWebApp@1
-            displayName: 'Azure App Service Deploy: website'
-            inputs:
-              azureSubscription: 'Resource Manager - Tailspin - Space Game'
-              appName: '$(WebAppNameDev)'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+    buildConfiguration: 'Release'
+    releaseBranchName: 'release'
+    dotnetSdkVersion: '8.x'
+    wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   
-  - stage: 'Test'
-  displayName: 'Deploy to the test environment'
-  dependsOn: Dev
-  condition: |
-    or(
-      eq(variables['Build.Reason'], 'Schedule'),
-      succeeded()
-    )
-  jobs:
-  - deployment: Deploy
-    pool:
-      vmImage: 'windows-latest'
-    environment: test
-    variables:
-      - group: Release
-    strategy:
-      runOnce:
-        deploy:
+    stages:
+    - stage: 'Build'
+      displayName: 'Build the web application'
+      jobs:
+        - job: 'Build'
+          displayName: 'Build job'
+          pool:
+            vmImage: 'windows-latest'
           steps:
-          - download: current
-            artifact: drop
-          - task: AzureWebApp@1
-            displayName: 'Azure App Service Deploy: website'
+          - task: UseNode@1
+            displayName: 'Use Node.js 18.20.8'
             inputs:
-              azureSubscription: 'Resource Manager - Tailspin - Space Game'
-              appName: '$(WebAppNameTest)'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+              version: '18.20.8'
+  
+          - task: UseDotNet@2
+            displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+            inputs:
+              packageType: sdk
+              version: '$(dotnetSdkVersion)'
+  
+          - task: Npm@1
+            displayName: 'Run npm install'
+            inputs:
+              command: 'install'
+              verbose: false
+  
+          - powershell: |
+              $scssPath = "$(wwwrootDir)/scss"
+              if (Test-Path $scssPath) {
+                Write-Host "SCSS directory found. Compiling..."
+                npx sass $scssPath:$(wwwrootDir)/css
+              } else {
+                Write-Host "SCSS directory not found. Skipping Sass compilation."
+              }
+            displayName: 'Compile Sass assets'
+  
+          - script: 'npx gulp'
+            displayName: 'Run gulp tasks'
+            workingDirectory: Tailspin.SpaceGame.Web
+  
+          - script: |
+              echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt
+            displayName: 'Write build info'
+            workingDirectory: $(wwwrootDir)
+  
+          - task: DotNetCoreCLI@2
+            displayName: 'Restore project dependencies'
+            inputs:
+              command: 'restore'
+              projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+  
+          - task: DotNetCoreCLI@2
+            displayName: 'Build the project - $(buildConfiguration)'
+            inputs:
+              command: 'build'
+              arguments: '--no-restore --configuration $(buildConfiguration)'
+              projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+  
+          - task: DotNetCoreCLI@2
+            displayName: 'Publish the project - $(buildConfiguration)'
+            inputs:
+              command: 'publish'
+              projects: 'Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
+              publishWebProjects: true
+              arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
+              zipAfterPublish: true
+  
+          - task: PublishBuildArtifacts@1
+            displayName: 'Publish Artifact: drop'
+            inputs:
+              pathToPublish: '$(Build.ArtifactStagingDirectory)'
+              artifactName: 'drop'
+              publishLocation: 'Container'
+  
+    - stage: 'Dev'
+      displayName: 'Deploy to the dev environment'
+      dependsOn: Build
+      condition: |
+        and(
+          succeeded(),
+          eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+        )
+      jobs:
+      - deployment: Deploy
+        pool:
+          vmImage: 'windows-latest'
+        environment: dev
+        variables:
+          - group: Release
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+              - download: current
+                artifact: drop
+              - task: AzureWebApp@1
+                displayName: 'Azure App Service Deploy: website'
+                inputs:
+                  azureSubscription: 'Resource Manager - Tailspin - Space Game'
+                  appName: '$(WebAppNameDev)'
+                  package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+  
+    - stage: 'Test'
+      displayName: 'Deploy to the test environment'
+      dependsOn: Dev
+      condition: |
+        or(
+          eq(variables['Build.Reason'], 'Schedule'),
+          succeeded()
+        )
+      jobs:
+      - deployment: Deploy
+        pool:
+          vmImage: 'windows-latest'
+        environment: test
+        variables:
+          - group: Release
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+              - download: current
+                artifact: drop
+              - task: AzureWebApp@1
+                displayName: 'Azure App Service Deploy: website'
+                inputs:
+                  azureSubscription: 'Resource Manager - Tailspin - Space Game'
+                  appName: '$(WebAppNameTest)'
+                  package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
   ```
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image133.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image133.png)
 
-  This code adds the *Staging* stage. The stage deploys to
-the **staging** environment, which includes a release approval.
+    >[!note]**Note**: This code adds the *Staging* stage. The stage deploys to
+    >the **staging** environment, which includes a release approval.
 
 2.  From the integrated terminal, add ***azure-pipelines.yml*** to the
     index. Next, commit the change and push it up to GitHub.
 
-  +++git add azure-pipelines.yml+++
+    +++git add azure-pipelines.yml+++
 
-  +++git commit -m "Deploy to Staging"+++
+    +++git commit -m "Deploy to Staging"+++
 
-  +++git push origin release+++
+    +++git push origin release+++
 
-  ![](./media/image134.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image134.png)
 
 3.  Switch back to the Azure Pipeline and click on the running pipeline.
 
-  ![](./media/image135.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image135.png)
 
 4.  Click on the **Deploy to Staging** run.
 
-  ![](./media/image136.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image136.png)
 
 5.  Wait for the build, dev and test deployment to be completed.
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image137.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image137.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image138.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image138.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image139.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image139.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image140.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image140.png)
 
-6.  Click on **View** next to the warning message “  
-    **This pipeline needs permission to access a resource before this
-    run can continue to Deploy to the staging environment”**
+6.  Click on **View** next to the warning message "**This pipeline needs permission to access a resource before this
+    run can continue to Deploy to the staging environment**"
 
-  ![](./media/image141.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image141.png)
 
 7.  Click on **Permit ->Permit** to permit access to deploy to the
     staging environment.
 
-  ![](./media/image142.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image142.png)
 
 8.  Add a comment and then click on **Approve** button. In practice, to
     verify that they meet your requirements, you should inspect the
     changes.
 
-  ![](./media/image143.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image143.png)
 
 9.  Wait for the deployment to be completed.
 
-  ![](./media/image144.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image144.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image145.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image145.png)
 
 10. Switch back to **Azure portal- \> Resource group** and select
     **Staging Azure app service**
 
-  ![](./media/image146.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image146.png)
 
 11. Click on **Default domain**.
 
-  ![](./media/image147.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image147.png)
 
 12. You see that the *Space Game* website is deployed to App Service and
     is running.
 
-  ![A screenshot of a game AI-generated content may be
-incorrect.](./media/image148.png)
+    ![A screenshot of a game AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image148.png)
 
-### Task 3 : Promote Staging changes to main in GEC
+### Task 3: Promote Staging changes to main in GEC
 
 Now that your changes have passed manual approval and are successfully
 deployed to the Staging environment, it’s time to promote them to the
@@ -1496,43 +1452,45 @@ main branch in GitHub Enterprise Cloud (GEC).
 1.  Switch back to GitHub tab and click on profile and select **Your
     enterprises**
 
-  ![](./media/image149.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image149.png)
 
 2.  Click on Enterprise account name.
 
-  ![](./media/image150.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image150.png)
 
 3.  Click on Organizations tab and select your enterprise organization.
 
-  ![](./media/image151.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image151.png)
 
 4.  Click on repositories tab and then click on your
     **Lab07-migrate-multistagerepos** repository
 
-  ![](./media/image152.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image152.png)
 
 5.  In yellow banner ,click on **Compare & pull request** button next to
-    **“release had recent pushes XX minutes ago”**
+    **"release had recent pushes XX minutes ago"**
 
-  ![](./media/image153.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image153.png)
 
 6.  Add the pr title as +++**Promote post-Staging approval+++** and
-    select base branch as “**main**” and source branch as “**release”.**
+    select base branch as "**main**" and source branch as "**release".**
     Add a brief description (optional for lab) and then click **Create
     pull request**.
 
-  ![](./media/image154.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image154.png)
 
 7.  Scroll down and click on **Merge pull request.**
 
-  ![](./media/image155.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image155.png)
 
 8.  Keep the default commit message and then click on **Confirm merge**
     button.
 
- ![](./media/image156.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image156.png)
 
- ![](./media/image157.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image157.png)
+
+---
 
 ## Exercise 6 : Clean up your Azure DevOps environment
 
@@ -1540,23 +1498,23 @@ You're finished with the tasks for this module. In this unit, you clean
 up your Azure resources, move the work item to the **Done** state on
 Azure Boards, and clean up your Azure DevOps environment.
 
-### Task 1 : Clean up Azure resources
+### Task 1: Clean up Azure resources
 
 1.  Go to the Azure portal, and click on **ResourceGroup1**
 
-  ![](./media/image158.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image158.png)
 
 2.  Select all resource and click on delete ( **DO NOT DELETE resource
     group**)
 
- ![](./media/image159.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image159.png)
 
 3.  Enter delete in the text box and click on **Delete** and confirm
     deletion.
 
-  ![](./media/image160.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image160.png)
 
-### Task 2 : Move the work item to Done
+### Task 2: Move the work item to Done
 
 Now, move the work item that you assigned to yourself earlier in this
 module. Move **Create a multistage pipeline** to the **Done** column.
@@ -1573,51 +1531,42 @@ completed, what went well, and what you can improve.
 1.  From Azure DevOps project, go to **Boards**, and from the menu,
     select **Boards**.
 
-  ![](./media/image161.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image161.png)
 
 2.  Move the **Create a multistage pipeline** work item, from
     the **Committed** column to the **Done** column.
 
-  ![](./media/image162.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image162.png)
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image163.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image163.png)
 
-### Task 3 : Disable the pipeline or delete your project
+### Task 3: Disable the pipeline or delete your project
 
 1.  In Azure Pipelines, go to your pipeline.
 
-  ![](./media/image164.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image164.png)
 
 2.  From the dropdown, select **Settings**.
 
-  ![](./media/image165.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image165.png)
 
 3.  Under **Processing of new run requests**, select **Disabled**, and
     then select **Save**.Now, your pipeline no longer processes build
     requests.
 
-  ![](./media/image166.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab07/media/image166.png)
 
-## Summary
+### Summary
 
 This lab mirrored a typical enterprise GitHub workflow:
 
-1.  Developer commits changes to a branch.
+- Developer commits changes to a branch.
 
-2.  Opens a Pull Request.
+- Opens a Pull Request.
 
-3.  Code review & approval required before merge.
+- Code review & approval required before merge.
 
-4.  Merge triggers pipeline to deploy changes.
+- Merge triggers pipeline to deploy changes.
 
 This flow ensures every change is reviewed, discussed, and tested before
 it reaches main.
-
-
-
-
-
-
-
-

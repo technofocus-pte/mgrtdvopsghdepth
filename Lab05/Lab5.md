@@ -1,4 +1,4 @@
-# Lab 5 - Create a GitHub Issue Template and Branch Protection Rules
+# Lab 05 - Create a GitHub Issue Template and Branch Protection Rules
 
 **Objective**
 
@@ -6,7 +6,7 @@ Standardize issue reporting and enforce code quality across your
 repositories by creating reusable issue templates and applying branch
 protection rules.
 
-## Task 1. Create Issue Template File
+### Task 1: Create Issue Template File
 
 1. Swtich back to GitBash and run below commands to create the following directory and file structure in your local repo
 
@@ -14,14 +14,13 @@ protection rules.
 
     +++cd Lab05-IssueTemplateAndBranchRules+++
 
-    ![](./media/image1.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image1.png)
 
 2. Run below command to initialize the git
 
     +++git init+++
 
-    ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image2.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image2.png)
 
 3. Run below command to create folder and file
 
@@ -31,8 +30,7 @@ incorrect.](./media/image2.png)
 
     +++vi bug_report.md+++
 
-    ![A screenshot of a computer screen AI-generated content may be
-incorrect.](./media/image3.png)
+    ![A screenshot of a computer screen AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image3.png)
 
 4. Add the template below to the file . Press Esc, type :wq and hit
 Enter to save and exit
@@ -64,8 +62,7 @@ Enter to save and exit
     Add any other context.
     ```
 
-    ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image4.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image4.png)
 
 4. Run below command to stage and Commit
 
@@ -75,17 +72,15 @@ incorrect.](./media/image4.png)
 
     +++git commit -m "Add bug report issue template"+++
 
-    ![](./media/image5.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image5.png)
 
     5. Run below command to create Repo in GEC Org via GitHub CLI. Replace <GEC_ORG_NAME> **with your GEC’s organization name**
 
     +++gh repo create $GEC_ORG/Lab05-IssueTemplateAndBranchRules --public --confirm --clone+++
 
-    ![A screen shot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+    ![A screen shot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image6.png)
 
-6. Run below command to push local repo to the New GEC Repo. Make sure
-to replace the remote URL if your org/repo name is different.
+6. Run below command to push local repo to the New GEC Repo. Make sure to replace the remote URL if your org/repo name is different.
 
     +++git remote add origin https://github.com/$GEC_ORG/Lab05-IssueTemplateAndBranchRules.git+++
 
@@ -93,16 +88,13 @@ to replace the remote URL if your org/repo name is different.
 
     +++git push -u origin main+++
 
-    ![A computer screen with text and images AI-generated content may be
-incorrect.](./media/image7.png)
+    ![A computer screen with text and images AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image7.png)
 
-7. Go back to your GitHub browser tab and navigate to GEC’s
-organization and check repositories.
+7. Go back to your GitHub browser tab and navigate to GEC’s organization and check repositories.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image8.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image8.png)
 
-## Task 2: Create Branch Protection Rules
+### Task 2: Create Branch Protection Rules
 
 1.  Switch back to GitBash. Replace YOUR_ORG and YOUR_REPO with your
     actual values and run below command. You can add more protection
@@ -114,24 +106,22 @@ incorrect.](./media/image8.png)
       --input - <<EOF
     {
       "required_status_checks": {
-      "strict": true,
-      "contexts": []
-    },
-   "enforce_admins": true,
-    "required_pull_request_reviews": {
-    "dismiss_stale_reviews": true,
-    "required_approving_review_count": 1
-   },
-  "restrictions": null
-  }
- EOF
+        "strict": true,
+        "contexts": []
+      },
+      "enforce_admins": true,
+      "required_pull_request_reviews": {
+        "dismiss_stale_reviews": true,
+        "required_approving_review_count": 1
+      },
+      "restrictions": null
+    }
+    EOF
     ```
 
-    ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image9.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image9.png)
 
-    ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image10.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/Cloud-slice/Lab05/media/image10.png)
 
 2.  The above script enforces PR review with at least 1 approval,
     dismisses stale reviews on new commits, enforces rules even for
@@ -144,5 +134,3 @@ incorrect.](./media/image10.png)
 
 - You enforced Branch Protection Rules using the GitHub CLI with the
   REST API.
-
-

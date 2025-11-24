@@ -1,6 +1,6 @@
-# Lab 2 - Post-Migration GitHub Repository Configuration Using CLI and Web UI
+# Lab 02 - Post-Migration GitHub Repository Configuration Using CLI and Web UI
 
-## Objective:
+**Objective**:
 
 Continue from Lab 1 and configure the migrated repository in GitHub
 Enterprise Cloud (GEC). Students will use GitHub CLI and GitHub Web UI
@@ -17,18 +17,18 @@ to set up metadata, permissions, security, and insights.
 
 - Admin access to the target repository
 
-## Task 1: View Repository Settings in Browser
+### Task 1: View Repository Settings in Browser
 
 1.  Switch back to GitBash and run it. This opens the repo in browser.
 
     +++gh repo view $GEC_ORG dev-github-proj-migrated-trial --web+++
 
     ![A black screen with white text AI-generated content may be
-incorrect.](./media/image1.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image1.png)
 
 2.  Click on **Settings** tab
 
-  ![](./media/image2.png)
+  ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image2.png)
 
 3.  Navigate to **Settings** tab and explore:
 
@@ -41,14 +41,14 @@ incorrect.](./media/image1.png)
   - Security
 
   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image3.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image3.png)
 
   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image4.png)
+incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image4.png)
 
-  ![](./media/image5.png)
+  ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image5.png)
 
-## Task 2 : Edit Repository Metadata using CLI
+### Task 2: Edit Repository Metadata using CLI
 
 1.  Now that our repo is migrated to GitHub, we'll add a meaningful
     description and categorize it with tags (topics) so that it’s easier
@@ -58,7 +58,7 @@ incorrect.](./media/image4.png)
 
   +++gh repo edit $GEC_ORG dev-github-proj-migrated-trial  --description "Migrated repo: Exploring GitHub settings"  --add-topic migration  --add-topic github-enterprise  --add-topic training+++
 
-  ![](./media/image6.png)
+  ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image6.png)
 
     >Note : Use relevant topics that reflect the project purpose (e.g.,
 data-science, migrated-repo, azure, gei, etc.).
@@ -68,13 +68,13 @@ data-science, migrated-repo, azure, gei, etc.).
 
     +++gh repo view $GEC_ORG dev-github-proj-migrated-trial --web+++
 
-   ![](./media/image7.png)
+   ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image7.png)
 
 4.  You should see the updated description and topics
 
-  ![](./media/image8.png)
+  ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image8.png)
 
-## Task 3 : Add Collaborators and Assign Roles
+### Task 3: Add Collaborators and Assign Roles
 
 1.  Let us grant another GitHub user access to your repository. Replace
     ***<YOUR_GEC_ORG>*** with you’re your GEC org name and
@@ -87,68 +87,62 @@ data-science, migrated-repo, azure, gei, etc.).
 
     +++gh api  -X PUT -H "Accept: application/vnd.github+json"  repos/$GEC_ORG /dev-github-proj-migrated-trial/collaborators/$GITHUB_USERNAME  -f permission=write+++
 
-    ![A computer screen with green and blue text AI-generated content may be
-incorrect.](./media/image9.png)
+    ![A computer screen with green and blue text AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image9.png)
 
-    ![A screen shot of a computer program AI-generated content may be
-incorrect.](./media/image10.png)
+    ![A screen shot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image10.png)
 
-    ![A screenshot of a computer program AI-generated content may be
-incorrect.](./media/image11.png)
+    ![A screenshot of a computer program AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image11.png)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image12.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image12.png)
 
-3.  Ask your teammate , they got invitation and ask them to authenticate
+3.  Ask your teammate, they got invitation and ask them to authenticate
 
-  ![A screenshot of a web page AI-generated content may be incorrect.](./media/image13.png)
+    ![A screenshot of a web page AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image13.png)
 
 4.  Your team mate should have access to write permission to the repo
 
-  ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image14.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image14.png)
 
 5.  Switch back to your GitHub account and the migrate repo . Click on
     **Settings ->** **Collaborators and Teams** and you should see your
     team mate name under Manage access section with correct role.
 
-  ![](./media/image15.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image15.png)
 
-## Task 4 : Configure Branch Protection 
+### Task 4 : Configure Branch Protection 
 
 1.  Click on **Branches -\>** **Add branch ruleset**
 
-  ![](./media/image16.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image16.png)
 
 2.  Enter +++**main+++** in **Ruleset Name** text box and select
     **Active** from **Enforcement status** drop down.
 
-  ![](./media/image17.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image17.png)
 
 3.  Under Target branches, select **Add target -\> Include by pattern.**
 
-  ![](./media/image18.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image18.png)
 
 4.  Enter **main** in **Branch naming pattern** and then click on **Add
     inclusion pattern**.( we used main for the lab purpose , you can use
     branch in your repos)
 
-  ![](./media/image19.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image19.png)
 
 5.  Scroll down and under **Branch rules**, select the following:
 
-    - Require a pull request before merging- Automatically request Copilot
-  code review
+    - Require a pull request before merging- Automatically request Copilot code review
 
     - Require linear history
 
-  ![A screenshot of a computer AI-generated content may be incorrect.](./media/image20.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image20.png)
 
 6.  Scroll down and click **Create** or **Save changes**.
 
-  ![](./media/image21.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image21.png)
 
-  ![](./media/image22.png)
+    ![](https://raw.githubusercontent.com/technofocus-pte/mgrtdvopsghdepth/refs/heads/Cloud-slice/Lab02/media/image22.png)
 
 ## Summary 
 
@@ -164,5 +158,4 @@ incorrect.](./media/image14.png)
 
 - Ensured the repository is ready for collaboration and compliant with
   common DevOps standards
-
 
