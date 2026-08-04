@@ -1,3 +1,14 @@
+---
+lab:
+  title: Lab 5 - Create a GitHub Issue Template and Branch Protection Rules
+  description: +++gh repo create devopstogtihub/Lab05-IssueTemplateAndBranchRules --public --confirm --clone+++
+  duration: 38 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - GitHub
+---
+
 # Lab 5 - Create a GitHub Issue Template and Branch Protection Rules
 
 **Objective**
