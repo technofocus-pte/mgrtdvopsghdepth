@@ -1,3 +1,18 @@
+---
+lab:
+  title: Lab 06 - Migrate Azure DevOps Repositories and Deploy via Azure Pipelines using GitHub Enterprise Cloud
+  description: 'In this exercise, you create a multistage pipeline to build and deploy your application to Azure App Service. You learn how to:'
+  duration: 182 minutes
+  level: 500
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure App Service
+    - Azure DevOps
+    - Azure Pipelines
+    - GitHub
+---
+
 # Lab 06 - Migrate Azure DevOps Repositories and Deploy via Azure Pipelines using GitHub Enterprise Cloud
 
 ### Objective : 
