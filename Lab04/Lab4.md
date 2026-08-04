@@ -1,3 +1,16 @@
+---
+lab:
+  title: \### Objective
+  description: Learn how to simulate the dry-run migration of multiple Azure DevOps (ADO) repositories into GitHub Enterprise Cloud (GEC) using a batch-driven scripting approach. This lab leverages GitHub CLI, GitHub Enterprise Importer (GEI), and custom shell scripts to validate the readiness of large-scale repo migrations before executing actual transfers.
+  duration: 74 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure DevOps
+    - GitHub
+---
+
 Lab 04 - Simulate Dry Run Migration of Multiple Repositories from ADO to
 GEC
 
