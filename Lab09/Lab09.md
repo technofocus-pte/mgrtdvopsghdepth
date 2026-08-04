@@ -1,3 +1,16 @@
+---
+lab:
+  title: Lab 09 -Testing & Code Quality in GitHub After Azure DevOps Migration
+  description: Here, you ensure that your Azure DevOps organization is set up to complete the rest of this module. You do this by running a template that creates a project for you in Azure DevOps.
+  duration: 164 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure DevOps
+    - GitHub
+---
+
 # Lab 09 -Testing & Code Quality in GitHub After Azure DevOps Migration
 
 ## Exercise 1 - Set up your Azure DevOps environment
