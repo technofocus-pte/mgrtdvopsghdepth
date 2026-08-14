@@ -1,3 +1,18 @@
+---
+lab:
+  title: Lab 07 - Enable GitHub Collaboration and Code Review Workflows with Azure Pipelines
+  description: In this exercise, you make sure that your Azure DevOps organization is set up to complete the rest of this module. You also create the Azure App Service environments that you deploy to later.
+  duration: 184 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure App Service
+    - Azure DevOps
+    - Azure Pipelines
+    - GitHub
+---
+
 # Lab 07 - Enable GitHub Collaboration and Code Review Workflows with Azure Pipelines
 
 Objectives  

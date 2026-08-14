@@ -1,3 +1,14 @@
+---
+lab:
+  title: Lab 2 - Post-Migration GitHub Repository Configuration Using CLI & Web UI
+  description: +++gh repo view devopstogtihub/dev-github-proj-migrated-trial –web+++
+  duration: 56 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - GitHub
+---
+
 # Lab 2 - Post-Migration GitHub Repository Configuration Using CLI & Web UI
 
 **Objective:**  

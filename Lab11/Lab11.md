@@ -1,3 +1,12 @@
+---
+lab:
+  title: Lab 11 - Secure your repository's supply chain
+  description: your work. Give her a moment and keep watch in the comments. You will see her respond with progress info and the next lesson.
+  duration: 38 minutes
+  level: 100
+  islab: true
+---
+
 # Lab 11 - Secure your repository's supply chain
 
 ## Exercise 1: Review and add dependencies using dependency graph

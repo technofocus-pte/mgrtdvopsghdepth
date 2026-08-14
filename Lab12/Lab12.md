@@ -1,3 +1,18 @@
+---
+lab:
+  title: Lab 12 - Integrate GitHub with Azure Key Vault for Secret Management
+  description: 'To get some quick experience with Azure Key Vault, let''s create a new Key Vault and do the most basic operation available: store a secret. Creating a vault in the Azure portal requires no initial configuration. Your signed-in user identity is automatically granted the full set of secret management permissions, and you can start adding secrets immediately. Once you have a vault, adding and managing secrets can be done from any Azure administrative interface, including the Azure portal, the Azure CLI, and Azure PowerShell.'
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Key Vault
+    - Azure Portal
+    - Azure PowerShell
+    - GitHub
+---
+
 # Lab 12 - Integrate GitHub with Azure Key Vault for Secret Management
 
 To get some quick experience with Azure Key Vault, let's create a new

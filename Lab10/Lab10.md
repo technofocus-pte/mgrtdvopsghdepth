@@ -1,3 +1,14 @@
+---
+lab:
+  title: Lab 10 - Implement Secret Scanning and Protection in GitHub
+  description: In this exercise, you will configure your repository to prevent new secrets from being exposed.
+  duration: 15 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - GitHub
+---
+
 # Lab 10 - Implement Secret Scanning and Protection in GitHub
 
 GitHub scans repositories for known types of secrets, to prevent

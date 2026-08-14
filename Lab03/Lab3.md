@@ -1,3 +1,14 @@
+---
+lab:
+  title: Lab 3 – Monitoring GitHub Repository Activity and Security Using Audit Logs & Insights
+  description: 'Learn how to monitor and secure your GitHub Enterprise Cloud (GEC) environment by:'
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - GitHub
+---
+
 # Lab 3 – Monitoring GitHub Repository Activity and Security Using Audit Logs & Insights
 
 ### Objective

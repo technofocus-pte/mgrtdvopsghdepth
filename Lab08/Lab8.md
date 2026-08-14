@@ -1,3 +1,17 @@
+---
+lab:
+  title: Lab 08 - Migrating Repositories from Azure DevOps to GitHub Enterprise Cloud Using GitHub CLI
+  description: 'The objective of this lab is to learn and practice the complete workflow for migrating an existing Azure DevOps repository to GitHub Enterprise Cloud (GEC) using the GitHub CLI, while integrating Azure Pipelines for CI/CD. This includes:'
+  duration: 5 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure DevOps
+    - Azure Pipelines
+    - GitHub
+---
+
 # Lab 08 - Migrating Repositories from Azure DevOps to GitHub Enterprise Cloud Using GitHub CLI
 
 The objective of this lab is to learn and practice the complete workflow
